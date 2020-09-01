@@ -2,13 +2,16 @@
   "name": "equa11y",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./index.ts",
     "prod": "tsc && node ./build/index.js",
     "go": "node index.ts"
+  },
+  "bin": {
+    "equal": "./index.ts"
   },
   "repository": {
     "type": "git",
