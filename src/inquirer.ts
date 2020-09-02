@@ -1,6 +1,10 @@
 import inquirer from 'inquirer';
 
-module.exports = {
+interface QuestionObj {
+  askPreferences(): Promise<any>;
+}
+
+export const inquirerFile: QuestionObj = {
   askPreferences: () => {
     const questions = [
       {
@@ -13,13 +17,6 @@ module.exports = {
         name: 'phrase',
         type: 'input',
         message: 'Enter your phrase:',
-        // validate: function(value: string) {
-        //   if (value.length) {
-        //     return true;
-        //   } else {
-        //     return 'Please enter your phrase.';
-        //   }
-        // }
       },
     ];
     return inquirer.prompt(questions);
