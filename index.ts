@@ -4,16 +4,14 @@ import chalk from 'chalk';
 import clear from 'clear';
 import figlet from 'figlet';
 import { inquirerFile } from './src/inquirer';
+import { puppet } from './src/tests';
 
 clear();
 
 const run = async () => {
-  const credentials = await inquirerFile.askPreferences();
-  console.log(
-    chalk.keyword(credentials.color)(
-      figlet.textSync(credentials.phrase, { horizontalLayout: 'full' }),
-    ),
-  );
+  console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
+  const inputURL = await inquirerFile.askPreferences();
+  puppet(inputURL.url);
 };
 
 run();

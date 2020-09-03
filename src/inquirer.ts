@@ -8,15 +8,9 @@ export const inquirerFile: QuestionObj = {
   askPreferences: () => {
     const questions = [
       {
-        name: 'color',
-        type: 'list',
-        message: 'Choose your color:',
-        choices: ['green', 'yellow', 'cyan', 'magenta'],
-      },
-      {
-        name: 'phrase',
+        name: 'url',
         type: 'input',
-        message: 'Enter your phrase:',
+        message: 'Input URL:',
       },
     ];
     return inquirer.prompt(questions);

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ts-node-dev --respawn ./src/tests.ts",
     "tsc": "tsc",
     "dev": "ts-node-dev --respawn ./index.ts",
     "prod": "tsc && node ./build/server/server.js",
@@ -46,6 +46,8 @@
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@types/puppeteer": "^3.0.1",
+    "axe-puppeteer": "^1.1.0",
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
@@ -55,6 +57,7 @@
     "inquirer": "^7.3.3",
     "lodash": "^4.17.20",
     "minimist": "^1.2.5",
+    "puppeteer": "^5.2.1",
     "touch": "^3.1.0"
   }
 }
