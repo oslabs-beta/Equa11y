@@ -6,7 +6,7 @@
   "scripts": {
     "test": "ts-node-dev --respawn ./src/tests.ts",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn ./index.ts",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
     "prod": "tsc && node ./build/server/server.js",
     "lint": "eslint src/** --color"
   },

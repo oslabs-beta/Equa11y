@@ -3,8 +3,8 @@
 import chalk from 'chalk';
 import clear from 'clear';
 import figlet from 'figlet';
-import { inquirerFile } from './src/inquirer';
-import { puppet } from './src/tests';
+import { inquirerFile } from './inquirer';
+import { puppet } from './tests';
 
 clear();
 
