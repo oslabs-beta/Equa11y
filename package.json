@@ -11,7 +11,7 @@
     "lint": "eslint src/** --color"
   },
   "bin": {
-    "equal": "./build/index.js"
+    "equal": "./index.js"
   },
   "files": [
     "build"
