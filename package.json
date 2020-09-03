@@ -1,6 +1,6 @@
 {
   "name": "equa11y",
-  "version": "1.2.1",
+  "version": "2.1.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "eslint src/** --color"
   },
   "bin": {
-    "equal": "./index.ts"
+    "equal": "./build/index.js"
   },
   "files": [
     "build"
