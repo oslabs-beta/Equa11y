@@ -12,7 +12,7 @@ export const puppet = async (URL: string): Promise<any> => {
   await page.goto(inputtedUrl);
 
   const results = await new AxePuppeteer(page).analyze();
-  console.log(results);
+  console.log(results.violations);
 
   await page.close();
   await browser.close();
