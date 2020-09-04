@@ -9,9 +9,8 @@ export const puppet = async (URL: string): Promise<any> => {
   const inputtedUrl = `${URL}`;
   await page.setBypassCSP(true);
 
-  // await page.goto(inputtedUrl);
-  await page.goto('http://www.google.com');
-
+  await page.goto(inputtedUrl);
+  // await page.goto('http://www.google.com');
 
   const results = await new AxePuppeteer(page).analyze();
 
