@@ -12,14 +12,16 @@ clear();
 const { Spinner } = CLI;
 const spinner = new Spinner('Loading, please wait!');
 
+console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
 const run = async () => {
-  console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
-
   const inputURL = await inquirerFile.askPreferences();
   spinner.start();
   const data = await puppet(inputURL.url);
   spinner.stop();
-  console.log(data);
+
+  const loop = await inquirerFile.askLoop(data);
+  if (loop.res === 'quit') process.exit(0);
+  else if (loop.res === 'search again') run();
 };
 
 run();
