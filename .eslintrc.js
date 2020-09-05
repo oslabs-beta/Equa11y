@@ -40,12 +40,9 @@ module.exports = {
     'no-param-reassign': 0,
     'no-return-assign': 0,
     'no-constant-condition': ['error', { checkLoops: false }],
-    'lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
+    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     'import/no-default-export': 1,
     'import/prefer-default-export': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
   },
 };

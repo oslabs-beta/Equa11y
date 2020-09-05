@@ -3,7 +3,7 @@ import { AxePuppeteer } from 'axe-puppeteer';
 
 // const APP = 'http://localhost:3000/';
 
-export const puppet = async (URL: string): Promise<any> => {
+export const puppet = async (URL: string) => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   const inputtedUrl = `${URL}`;

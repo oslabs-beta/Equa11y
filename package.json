@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/oslabs-beta/Equa11y#readme",
   "devDependencies": {
+    "@types/axe-core": "^2.0.7",
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.0",
     "@types/cli-color": "^2.0.0",
