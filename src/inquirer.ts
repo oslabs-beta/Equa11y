@@ -1,12 +1,14 @@
 import inquirer from 'inquirer';
+import { menu } from './menu';
+import { Result } from 'axe-core';
 
 interface QuestionObj {
-  askPreferences(): Promise<any>;
+  askPath(): Promise<any>;
   askLoop(results: any): Promise<any>;
 }
 
 export const inquirerFile: QuestionObj = {
-  askPreferences: () => {
+  askPath: () => {
     const questions = [
       {
         name: 'url',
@@ -18,7 +20,15 @@ export const inquirerFile: QuestionObj = {
   },
 
   askLoop: (data) => {
-    const results = data.map((issue: any) => issue.description);
+    // sort issues into common occurances
+    const sorted = data.reduce((acc: any, cur: any) => {
+      (acc[cur.impact]) ? acc[cur.impact].push(cur) : acc[cur.impact] = [ cur ];
+      return acc;
+    }, {});
+    // process sorted issues into menu form
+    const processed = Object.keys(sorted).map((issueLevel: any) => menu.create(issueLevel, sorted[issueLevel]));
+    // compile an array of stringified menu options
+    const options = processed.map((option: any) => menu.stringify(option));
     const questions = [
       {
         name: 'res',
@@ -26,8 +36,8 @@ export const inquirerFile: QuestionObj = {
         message: 'anything else?',
         choices: [
           'search again',
-          'quit', 
-          ...results,
+          'quit',
+          ...options,
         ],
       }
     ]

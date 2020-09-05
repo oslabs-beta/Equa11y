@@ -14,8 +14,9 @@ const spinner = new Spinner('Loading, please wait!');
 
 console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
 const run = async () => {
-  const inputURL = await inquirerFile.askPreferences();
+  const inputURL = await inquirerFile.askPath();
   spinner.start();
+  // const data = await puppet('http://www.google.com');
   const data = await puppet(inputURL.url);
   spinner.stop();
 
