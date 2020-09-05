@@ -1,13 +1,14 @@
 import inquirer from 'inquirer';
+import { Result } from 'axe-core';
 
-interface QuestionObj {
-  askPreferences(): Promise<any>;
-  askLoop(results: any): Promise<any>;
-  askError(): Promise<any>;
+interface Prompts {
+  askPath(): Promise<{ url: string }>;
+  askLoop(results: Result[]): Promise<{ res: string }>;
+  askError(): Promise<{ startOver: string }>;
 }
 
-export const inquirerFile: QuestionObj = {
-  askPreferences: () => {
+export const prompts: Prompts = {
+  askPath: () => {
     const questions = [
       {
         name: 'url',
@@ -18,14 +19,14 @@ export const inquirerFile: QuestionObj = {
     return inquirer.prompt(questions);
   },
 
-  askLoop: data => {
-    const results = data.map((issue: any) => issue.description);
+  askLoop: results => {
+    const descriptions = results.map(result => result.description);
     const questions = [
       {
         name: 'res',
         type: 'list',
         message: 'anything else?',
-        choices: ['search again', 'quit', ...results],
+        choices: ['search again', 'quit', ...descriptions],
       },
     ];
     return inquirer.prompt(questions);
