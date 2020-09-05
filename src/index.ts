@@ -17,8 +17,8 @@ const run = async () => {
   try {
     const inputURL = await prompts.askPath();
     spinner.start();
-    const data = await puppet(inputURL.url);
-
+    const data = await puppet(inputURL.url); // real prompt for publishing
+    // const data = await puppet('http://www.google.com'); // optional hardcoding for dev
     spinner.stop();
 
     const loop = await prompts.askLoop(data);
