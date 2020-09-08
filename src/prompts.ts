@@ -3,7 +3,7 @@ import { menu } from './menu';
 
 interface Prompts {
   askPath(): Promise<{ url: string }>;
-  askOptions(results: any, target?:string): Promise<{ res: string }>;
+  askOptions(results: any, target?: string): Promise<{ res: string }>;
   askError(): Promise<{ startOver: string }>;
 }
 
