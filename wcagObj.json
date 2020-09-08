@@ -695,11 +695,21 @@
                           "techniques": [
                             {
                               "id": "TECH:G158",
-                              "title": "Providing an alternative for time-based media for audio-only content"
+                              "title": "Providing an alternative for time-based media for audio-only content",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G158.html",
+                              "tests": {
+                                "procedure": "1. View the audio-only content while referring to the alternative for time-based media. 2. Check that the dialogue in the transcript matches the dialogue and information presented in the audio-only presentation. 3. If the audio includes multiple voices, check that the transcript identifies who is speaking for all dialogue. 4. Check that at least one of the following is true: 1. The transcript itself can be programmatically determined from the text alternative for the audio-only content 2. The transcript is referred to from the programmatically determined text alternative for the audio-only content 5. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                                "expected-results": "all of the above checks are true."
+                              }
                             },
                             {
                               "id": "TECH:SL17",
-                              "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement"
+                              "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL17.html",
+                              "tests": {
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application has audio-only media content and is expected to supply a text alternative, or has media that is expected to be replaced entirely with a transcript or similar text alternative. 2. Check for a control that indicates that activating it will supply static alternative content for the media. Activate the control. 3. Verify that the media control is replaced with alternate content, and that assistive technologies represent the change to the user interface.",
+                                "expected-results": "#3 is true."
+                              }
                             }
                           ]
                         },
@@ -708,15 +718,30 @@
                           "techniques": [
                             {
                               "id": "TECH:G159",
-                              "title": "Providing an alternative for time-based media for video-only content"
+                              "title": "Providing an alternative for time-based media for video-only content",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G159.html",
+                              "tests": {
+                                "procedure": "1. View the video-only content while referring to the alternative for time-based media. 2. Check that the information in the transcript includes the same information that is in the video-only presentation. 3. If the video includes multiple people or characters, check that the transcript identifies which person or character is associated with each action described. 4. Check that at least one of the following is true: 1. The transcript itself can be programmatically determined from the text alternative for the video-only content 2. The transcript is referred to from the programmatically determined text alternative for the video-only content 5. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                                "expected-results": "all of the above checks are true."
+                              }
                             },
                             {
                               "id": "TECH:G166",
-                              "title": "Providing audio that describes the important video content and describing it as such"
+                              "title": "Providing audio that describes the important video content and describing it as such",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G166.html",
+                              "tests": {
+                                "procedure": "For a Web page that contains video-only content: 1. Check that there is link to an audio alternative which describes the contents of the video immediately before or after the video-only content.",
+                                "expected-results": "Check #1 is true."
+                              }
                             },
                             {
                               "id": "TECH:SL17",
-                              "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement"
+                              "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL17.html",
+                              "tests": {
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application has audio-only media content and is expected to supply a text alternative, or has media that is expected to be replaced entirely with a transcript or similar text alternative. 2. Check for a control that indicates that activating it will supply static alternative content for the media. Activate the control. 3. Verify that the media control is replaced with alternate content, and that assistive technologies represent the change to the user interface.",
+                                "expected-results": "#3 is true."
+                              }
                             }
                           ]
                         }
@@ -728,7 +753,12 @@
                   "advisory": [
                     {
                       "id": "TECH:H96",
-                      "title": "Using the track element to provide audio descriptions"
+                      "title": "Using the track element to provide audio descriptions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H96.html",
+                      "tests": {
+                        "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind descriptions in the language of the video",
+                        "expected-results": "Check #1 is true."
+                      }
                     }
                   ]
                 },
@@ -736,11 +766,21 @@
                   "failure": [
                     {
                       "id": "TECH:F30",
-                      "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)"
+                      "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F30.html",
+                      "tests": {
+                        "procedure": "1. Check each text alternative to see if it is not actually a text alternative for the non-text content.",
+                        "expected-results": "If step #1 is true then this failure condition applies and content fails the Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F67",
-                      "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information"
+                      "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F67.html",
+                      "tests": {
+                        "procedure": "For all non-text content that requires a long description 1. Check that the long description serves the same purpose or presents the same information as the non-text content.",
+                        "expected-results": "If step #1 is false, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     }
                   ]
                 }
@@ -760,39 +800,84 @@
                   "sufficient": [
                     {
                       "id": "TECH:G93",
-                      "title": "Providing open (always visible) captions"
-                    },
-                    {
-                      "id": "TECH:G87",
-                      "title": "Providing closed captions"
+                      "title": "Providing open (always visible) captions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G93.html",
+                      "tests": {
+                        "procedure": "1. Watch the synchronized media with closed captioning turned off. 2. Check that captions (of all dialogue and important sounds) are visible.",
+                        "expected-results": "#2 is true."
+                      }
                     },
                     {
                       "id": "TECH:G87",
                       "title": "Providing closed captions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G87.html",
+                      "tests": {
+                        "procedure": "1. Turn on the closed caption feature of the media player 2. View the synchronized media content 3. Check that captions (of all dialogue and important sounds) are visible",
+                        "expected-results": "#3 is true."
+                      }
+                    },
+                    {
+                      "id": "TECH:G87",
+                      "title": "Providing closed captions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G87.html",
+                      "tests": {
+                        "procedure": "1. Turn on the closed caption feature of the media player 2. View the synchronized media content 3. Check that captions (of all dialogue and important sounds) are visible",
+                        "expected-results": "#3 is true."
+                      },
                       "using": [
                         {
                           "id": "TECH:SM11",
-                          "title": "Providing captions through synchronized text streams in SMIL 1.0"
+                          "title": "Providing captions through synchronized text streams in SMIL 1.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM11.html",
+                          "tests": {
+                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with captions 3. Check whether captions are displayed",
+                            "expected-results": "#3 is true"
+                          }
                         },
                         {
                           "id": "TECH:SM12",
-                          "title": "Providing captions through synchronized text streams in SMIL 2.0"
+                          "title": "Providing captions through synchronized text streams in SMIL 2.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM12.html",
+                          "tests": {
+                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with captions 3. Check whether captions are displayed",
+                            "expected-results": "#3 is true"
+                          }
                         },
                         {
                           "id": "TECH:H95",
-                          "title": "Using the track element to provide captions"
+                          "title": "Using the track element to provide captions",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H95.html",
+                          "tests": {
+                            "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind captions in the language of the video.",
+                            "expected-results": "Check #1 is true."
+                          }
                         },
                         {
                           "id": "TECH:FLASH9",
-                          "title": "Applying captions to prerecorded synchronized media"
+                          "title": "Applying captions to prerecorded synchronized media",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH9.html",
+                          "tests": {
+                            "procedure": "Watch all video content displayed by your Flash movie. Ensure that: 1. Captions are available for all audio content, either turned on by default or as a user preference. 2. The captions properly describe all audio information contained in the video.",
+                            "expected-results": "#1 and #2 are true"
+                          }
                         },
                         {
                           "id": "TECH:SL16",
-                          "title": "Providing Script-Embedded Text Captions for MediaElement Content"
+                          "title": "Providing Script-Embedded Text Captions for MediaElement Content",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL16.html",
+                          "tests": {
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application plays media that is expected to have text captioning. 2. Check that a text area in the user interface shows captions for the media.",
+                            "expected-results": "#2 is true."
+                          }
                         },
                         {
                           "id": "TECH:SL28",
-                          "title": "Using Separate Text-Format Text Captions for MediaElement Content"
+                          "title": "Using Separate Text-Format Text Captions for MediaElement Content",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL28.html",
+                          "tests": {
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application plays media that is expected to have text captioning. 2. Check that the text area in the textbox shows captions for the media, and that the captions synchronize with media in an expected way.",
+                            "expected-results": "#2 is true."
+                          }
                         }
                       ]
                     }
@@ -803,15 +888,30 @@
                   "failure": [
                     {
                       "id": "TECH:F8",
-                      "title": "Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects"
+                      "title": "Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F8.html",
+                      "tests": {
+                        "procedure": "1. View the material with captioning turned on. 2. Check that all dialogue is accompanied by a caption. 3. Check that all important sounds are captioned.",
+                        "expected-results": "If check #2 and check #3 are false, then this failure condition applies and the content fails the Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F75",
-                      "title": "Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page"
+                      "title": "Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F75.html",
+                      "tests": {
+                        "procedure": "1. Check for captions on synchronized media alternatives. 2. Check that the synchronized media alternative does not provide more information than is presented on the page in text. NOTE: Synchronized media alternatives often use different words to present what is on the page but it should not present new information on the topic of the page.",
+                        "expected-results": "If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
+                      }
                     },
                     {
                       "id": "TECH:F74",
-                      "title": "Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative"
+                      "title": "Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F74.html",
+                      "tests": {
+                        "procedure": "1. Check pages that provide synchronized media alternatives to text. 2. Check that synchronized media is clearly labeled with the text for which it is an alternative.",
+                        "expected-results": "If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
+                      }
                     }
                   ]
                 }
@@ -832,14 +932,29 @@
                     {
                       "id": "TECH:G69",
                       "title": "Providing an alternative for time based media",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G69.html",
+                      "tests": {
+                        "procedure": "1. View the synchronized media presentation while referring to the alternative for time-based media. 2. Check that the dialogue in the alternative for time-based media matches the dialogue in the synchronized media presentation. 3. Check that the alternative for time-based media has descriptions of sounds. 4. Check that the alternative for time-based media has descriptions of setting and setting changes. 5. Check that the alternative for time-based media has descriptions of actions and expressions of any 'actors' (people, animals etc). 6. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "expected-results": "#2, 3, 4, 5 are true."
+                      },
                       "using": [
                         {
                           "id": "TECH:G58",
-                          "title": "Placing a link to the alternative for time-based media immediately next to the non-text content"
+                          "title": "Placing a link to the alternative for time-based media immediately next to the non-text content",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G58.html",
+                          "tests": {
+                            "procedure": "1. Check for the presence of a link immediately before or after the non-text content. 2. Check that it is a valid link that points directly to the collated document of this particular synchronized media. 3. Check for the availability of a link or back function to get the user back to the original location of the synchronized media content.",
+                            "expected-results": "Items #1 through 3 are all true."
+                          }
                         },
                         {
                           "id": "TECH:SL17",
-                          "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement"
+                          "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL17.html",
+                          "tests": {
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application has audio-only media content and is expected to supply a text alternative, or has media that is expected to be replaced entirely with a transcript or similar text alternative. 2. Check for a control that indicates that activating it will supply static alternative content for the media. Activate the control. 3. Verify that the media control is replaced with alternate content, and that assistive technologies represent the change to the user interface.",
+                            "expected-results": "#3 is true."
+                          }
                         }
                       ]
                     },
@@ -849,45 +964,90 @@
                       "using": [
                         {
                           "id": "TECH:H53",
-                          "title": "Using the body of the object element"
+                          "title": "Using the body of the object element",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H53.html",
+                          "tests": {
+                            "procedure": "1. Check that the body of each object element contains a text alternative for the object.",
+                            "expected-results": "#1 is true."
+                          }
                         }
                       ]
                     },
                     {
                       "id": "TECH:G78",
-                      "title": "Providing a second, user-selectable, audio track that includes audio descriptions"
+                      "title": "Providing a second, user-selectable, audio track that includes audio descriptions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G78.html",
+                      "tests": {
+                        "procedure": "1. Check that the ability exists to turn on the audio track that includes audio descriptions. For example, by using a control within the content itself or by selecting a control or preference in the media player or operating system. 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used to convey important information regarding visual content",
+                        "expected-results": "Checks #1 and #3 are true."
+                      }
                     },
                     {
                       "and": [
                         {
                           "id": "TECH:G78",
-                          "title": "Providing a second, user-selectable, audio track that includes audio descriptions"
+                          "title": "Providing a second, user-selectable, audio track that includes audio descriptions",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G78.html",
+                          "tests": {
+                            "procedure": "1. Check that the ability exists to turn on the audio track that includes audio descriptions. For example, by using a control within the content itself or by selecting a control or preference in the media player or operating system. 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used to convey important information regarding visual content",
+                            "expected-results": "Checks #1 and #3 are true."
+                          }
                         },
                         {
                           "id": "TECH:SL1",
-                          "title": "Accessing Alternate Audio Tracks in Silverlight Media"
+                          "title": "Accessing Alternate Audio Tracks in Silverlight Media",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
+                          "tests": {
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "expected-results": "#2 and #3 are true."
+                          }
                         }
                       ]
                     },
                     {
                       "id": "TECH:G173",
                       "title": "Providing a version of a movie with audio descriptions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G173.html",
+                      "tests": {
+                        "procedure": "1. Open the version of the media that includes audio description. 2. Listen to the movie. 3. Check to see if gaps in dialogue are used to convey important information regarding visual content. 4. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "expected-results": "#3 and #4 are true."
+                      },
                       "using": [
                         {
                           "id": "TECH:SM6",
-                          "title": "Providing audio description in SMIL 1.0"
+                          "title": "Providing audio description in SMIL 1.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM6.html",
+                          "tests": {
+                            "procedure": "1. Find method for turning on audio description from content/player (unless it is always played by default) 2. Play file with audio description 3. Check whether audio description is played",
+                            "expected-results": "#3 is true"
+                          }
                         },
                         {
                           "id": "TECH:SM7",
-                          "title": "Providing audio description in SMIL 2.0"
+                          "title": "Providing audio description in SMIL 2.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM7.html",
+                          "tests": {
+                            "procedure": "1. Find method for turning on audio description from content/player (unless it is always played by default) 2. Play file with audio description 3. Check whether audio description is played",
+                            "expected-results": "#3 is true"
+                          }
                         },
                         {
                           "id": "TECH:FLASH26",
-                          "title": "Applying audio descriptions to Flash video"
+                          "title": "Applying audio descriptions to Flash video",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH26.html",
+                          "tests": {
+                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: 1. Audio descriptions have been made available using separate sound files. 2, A button is provided that allows users to enable or disable the audio descriptions",
+                            "expected-results": "#1 and #2 are true"
+                          }
                         },
                         {
                           "id": "TECH:SL1",
-                          "title": "Accessing Alternate Audio Tracks in Silverlight Media"
+                          "title": "Accessing Alternate Audio Tracks in Silverlight Media",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
+                          "tests": {
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "expected-results": "#2 and #3 are true."
+                          }
                         },
                         {
                           "id": "TECH:text",
@@ -898,22 +1058,47 @@
                     {
                       "id": "TECH:G8",
                       "title": "Providing a movie with extended audio descriptions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G8.html",
+                      "tests": {
+                        "procedure": "1. Open the version of the movie that includes extended audio descriptions. 2. Check that the video halts for extended audio description when there is not enough space to include necessary narration between the natural dialogue. 3. Check that the necessary information is in the audio description. 4. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "expected-results": "Checks #2, #3 and #4 are true."
+                      },
                       "using": [
                         {
                           "id": "TECH:SM1",
-                          "title": "Adding extended audio description in SMIL 1.0"
+                          "title": "Adding extended audio description in SMIL 1.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM1.html",
+                          "tests": {
+                            "procedure": "1. Play file with extended audio descriptions 2. Play file with audio description 3. Check whether video freezes in places and plays extended audio description",
+                            "expected-results": "#3 is true"
+                          }
                         },
                         {
                           "id": "TECH:SM2",
-                          "title": "Adding extended audio description in SMIL 2.0"
+                          "title": "Adding extended audio description in SMIL 2.0",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM2.html",
+                          "tests": {
+                            "procedure": "1. Play file with extended audio description 2. Check whether video freezes in places and plays extended audio description",
+                            "expected-results": "#2 is true"
+                          }
                         },
                         {
                           "id": "TECH:FLASH26",
-                          "title": "Applying audio descriptions to Flash video"
+                          "title": "Applying audio descriptions to Flash video",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH26.html",
+                          "tests": {
+                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: 1. Audio descriptions have been made available using separate sound files. 2. A button is provided that allows users to enable or disable the audio descriptions",
+                            "expected-results": "#1 and #2 are true"
+                          }
                         },
                         {
                           "id": "TECH:SL1",
-                          "title": "Accessing Alternate Audio Tracks in Silverlight Media"
+                          "title": "Accessing Alternate Audio Tracks in Silverlight Media",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
+                          "tests": {
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "expected-results": "#2 and #3 are true."
+                          }
                         },
                         {
                           "id": "TECH:text",
@@ -923,7 +1108,12 @@
                     },
                     {
                       "id": "TECH:G203",
-                      "title": "Using a static text alternative to describe a talking head video"
+                      "title": "Using a static text alternative to describe a talking head video",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G203.html",
+                      "tests": {
+                        "procedure": "1. Check that there is no important time-based information in the video track 2. Check that the programmatically associated description of the media contains any context of the content that is not contained in the audio track (e.g. speaker identification, credits, context)",
+                        "expected-results": "All checks are true."
+                      }
                     }
                   ]
                 },
@@ -931,7 +1121,12 @@
                   "advisory": [
                     {
                       "id": "TECH:H96",
-                      "title": "Using the track element to provide audio descriptions"
+                      "title": "Using the track element to provide audio descriptions",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H96.html",
+                      "tests": {
+                        "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind descriptions in the language of the video.",
+                        "expected-results": "Check #1 is true."
+                      }
                     }
                   ]
                 },
@@ -1308,175 +1503,385 @@
                           "techniques": [
                             {
                               "id": "TECH:ARIA11",
-                              "title": "Using ARIA landmarks to identify regions of a page"
+                              "title": "Using ARIA landmarks to identify regions of a page",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA12",
-                              "title": "Using role=heading to identify headings"
+                              "title": "Using role=heading to identify headings",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA13",
-                              "title": "Using aria-labelledby to name regions and landmarks"
+                              "title": "Using aria-labelledby to name regions and landmarks",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA16",
-                              "title": "Using aria-labelledby to provide a name for user interface controls"
+                              "title": "Using aria-labelledby to provide a name for user interface controls",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA17",
-                              "title": "Using grouping roles to identify related form controls"
+                              "title": "Using grouping roles to identify related form controls",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA20",
-                              "title": "Using the region role to identify a region of the page"
+                              "title": "Using the region role to identify a region of the page",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "and": [
                                 {
                                   "id": "TECH:G115",
-                                  "title": "Using semantic elements to mark up structure"
+                                  "title": "Using semantic elements to mark up structure",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H49",
-                                  "title": "Using semantic markup to mark emphasized or special text"
+                                  "title": "Using semantic markup to mark emphasized or special text",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 }
                               ]
                             },
                             {
                               "id": "TECH:G117",
-                              "title": "Using text to convey information that is conveyed by variations in presentation of text"
+                              "title": "Using text to convey information that is conveyed by variations in presentation of text",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:G140",
-                              "title": "Separating information and structure from presentation to enable different presentations"
+                              "title": "Separating information and structure from presentation to enable different presentations",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:ARIA24",
-                              "title": "Semantically identifying a font icon with role=\"img\""
+                              "title": "Semantically identifying a font icon with role=\"img\"",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:text",
                               "title": "Making information and relationships conveyed through presentation programmatically determinable using the following techniques:",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              },
                               "using": [
                                 {
                                   "id": "TECH:G138",
-                                  "title": "Using semantic markup whenever color cues are used"
+                                  "title": "Using semantic markup whenever color cues are used",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H51",
-                                  "title": "Using table markup to present tabular information"
+                                  "title": "Using table markup to present tabular information",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF6",
-                                  "title": "Using table elements for table markup in PDF Documents"
+                                  "title": "Using table elements for table markup in PDF Documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF20",
-                                  "title": "Using Adobe Acrobat Pro's Table Editor to repair mistagged tables"
+                                  "title": "Using Adobe Acrobat Pro's Table Editor to repair mistagged tables",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H39",
-                                  "title": "Using caption elements to associate data table captions with data tables"
+                                  "title": "Using caption elements to associate data table captions with data tables",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH31",
-                                  "title": "Specifying caption text for a DataGrid"
+                                  "title": "Specifying caption text for a DataGrid",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H73",
-                                  "title": "Using the summary attribute of the table element to give an overview of data tables"
+                                  "title": "Using the summary attribute of the table element to give an overview of data tables",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH23",
-                                  "title": "Adding summary information to a DataGrid"
+                                  "title": "Adding summary information to a DataGrid",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H63",
-                                  "title": "Using the scope attribute to associate header cells and data cells in data tables"
+                                  "title": "Using the scope attribute to associate header cells and data cells in data tables",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H43",
-                                  "title": "Using id and headers attributes to associate data cells with header cells in data tables"
+                                  "title": "Using id and headers attributes to associate data cells with header cells in data tables",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH21",
-                                  "title": "Using the DataGrid component to associate column headers with cells"
+                                  "title": "Using the DataGrid component to associate column headers with cells",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H44",
-                                  "title": "Using label elements to associate text labels with form controls"
+                                  "title": "Using label elements to associate text labels with form controls",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H65",
-                                  "title": "Using the title attribute to identify form controls when the label element cannot be used"
+                                  "title": "Using the title attribute to identify form controls when the label element cannot be used",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF10",
-                                  "title": "Providing labels for interactive form controls in PDF documents"
+                                  "title": "Providing labels for interactive form controls in PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF12",
-                                  "title": "Providing name, role, value information for form fields in PDF documents"
+                                  "title": "Providing name, role, value information for form fields in PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH32",
-                                  "title": "Using auto labeling to associate text labels with form controls"
+                                  "title": "Using auto labeling to associate text labels with form controls",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH29",
-                                  "title": "Setting the label property for form components"
+                                  "title": "Setting the label property for form components",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:FLASH25",
-                                  "title": "Labeling a form control by setting its accessible name"
+                                  "title": "Labeling a form control by setting its accessible name",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H71",
-                                  "title": "Providing a description for groups of form controls using fieldset and legend elements"
+                                  "title": "Providing a description for groups of form controls using fieldset and legend elements",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:SL20",
-                                  "title": "Relying on Silverlight AutomationPeer Behavior to Set AutomationProperties.Name"
+                                  "title": "Relying on Silverlight AutomationPeer Behavior to Set AutomationProperties.Name",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:SL26",
-                                  "title": "Using LabeledBy to Associate Labels and Targets in Silverlight"
+                                  "title": "Using LabeledBy to Associate Labels and Targets in Silverlight",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H85",
-                                  "title": "Using OPTGROUP to group OPTION elements inside a SELECT"
+                                  "title": "Using OPTGROUP to group OPTION elements inside a SELECT",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H48",
-                                  "title": "Using ol, ul and dl for lists or groups of links"
+                                  "title": "Using ol, ul and dl for lists or groups of links",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H42",
-                                  "title": "Using h1-h6 to identify headings"
+                                  "title": "Using h1-h6 to identify headings",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF9",
-                                  "title": "Providing headings by marking content with heading tags in PDF documents"
+                                  "title": "Providing headings by marking content with heading tags in PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:SCR21",
-                                  "title": "Using functions of the Document Object Model (DOM) to add content to a page"
+                                  "title": "Using functions of the Document Object Model (DOM) to add content to a page",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF11",
-                                  "title": "Providing links and link text using the Link annotation and the /Link structure element in PDF documents"
+                                  "title": "Providing links and link text using the Link annotation and the /Link structure element in PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF17",
-                                  "title": "Specifying consistent page numbering for PDF documents"
+                                  "title": "Specifying consistent page numbering for PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:PDF21",
-                                  "title": "Using List tags for lists in PDF documents"
+                                  "title": "Using List tags for lists in PDF documents",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:H97",
-                                  "title": "Grouping related links using the nav element"
+                                  "title": "Grouping related links using the nav element",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 }
                               ]
                             }
@@ -1487,27 +1892,57 @@
                           "techniques": [
                             {
                               "id": "TECH:G117",
-                              "title": "Using text to convey information that is conveyed by variations in presentation of text"
+                              "title": "Using text to convey information that is conveyed by variations in presentation of text",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:FLASH8",
-                              "title": "Adding a group name to the accessible name of a form control"
+                              "title": "Adding a group name to the accessible name of a form control",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              }
                             },
                             {
                               "id": "TECH:text",
                               "title": "Making information and relationships conveyed through presentation programmatically determinable or available in text using the following techniques:",
+                              "url": "",
+                              "tests": {
+                                "procedure": "",
+                                "expected-results": ""
+                              },
                               "using": [
                                 {
                                   "id": "TECH:T1",
-                                  "title": "Using standard text formatting conventions for paragraphs"
+                                  "title": "Using standard text formatting conventions for paragraphs",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:T2",
-                                  "title": "Using standard text formatting conventions for lists"
+                                  "title": "Using standard text formatting conventions for lists",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 },
                                 {
                                   "id": "TECH:T3",
-                                  "title": "Using standard text formatting conventions for headings"
+                                  "title": "Using standard text formatting conventions for headings",
+                                  "url": "",
+                                  "tests": {
+                                    "procedure": "",
+                                    "expected-results": ""
+                                  }
                                 }
                               ]
                             }
@@ -1521,23 +1956,48 @@
                   "advisory": [
                     {
                       "id": "TECH:C22",
-                      "title": "Using CSS to control visual presentation of text"
+                      "title": "Using CSS to control visual presentation of text",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:G162",
-                      "title": "Positioning labels to maximize predictability of relationships"
+                      "title": "Positioning labels to maximize predictability of relationships",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:ARIA1",
-                      "title": "Using the aria-describedby property to provide a descriptive label for user interface controls"
+                      "title": "Using the aria-describedby property to provide a descriptive label for user interface controls",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:ARIA2",
-                      "title": "Identifying a required field with the aria-required property"
+                      "title": "Identifying a required field with the aria-required property",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:G141",
-                      "title": "Organizing a page using headings"
+                      "title": "Organizing a page using headings",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     }
                   ]
                 },
@@ -1545,47 +2005,102 @@
                   "failure": [
                     {
                       "id": "TECH:F2",
-                      "title": "Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text"
+                      "title": "Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F33",
-                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content"
+                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F34",
-                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content"
+                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F42",
-                      "title": "Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links"
+                      "title": "Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F43",
-                      "title": "Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content"
+                      "title": "Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F46",
-                      "title": "Failure of Success Criterion 1.3.1 due to using th elements, layout tables"
+                      "title": "Failure of Success Criterion 1.3.1 due to using th elements, layout tables",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F48",
-                      "title": "Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information"
+                      "title": "Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F87",
-                      "title": "Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS"
+                      "title": "Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F90",
-                      "title": "Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes"
+                      "title": "Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F91",
-                      "title": "Failure of Success Criterion 1.3.1 for not correctly marking up table headers"
+                      "title": "Failure of Success Criterion 1.3.1 for not correctly marking up table headers",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     },
                     {
                       "id": "TECH:F92",
-                      "title": "Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+                      "title": "Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information",
+                      "url": "",
+                      "tests": {
+                        "procedure": "",
+                        "expected-results": ""
+                      }
                     }
                   ]
                 }
@@ -1605,7 +2120,12 @@
                   "sufficient": [
                     {
                       "id": "TECH:G57",
-                      "title": "Ordering the content in a meaningful sequence"
+                      "title": "Ordering the content in a meaningful sequence",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G57.html",
+                      "tests": {
+                        "procedure": "1. Linearize content using a standard approach for the technology (e.g., removing layout styles or running a linearization tool 2. Check to see if the order of content yields the same meaning as the original",
+                        "expected-results": "Check #2 is true."
+                      }
                     },
                     {
                       "and": [
@@ -1616,22 +2136,47 @@
                         {
                           "id": "TECH:G57",
                           "title": "Ordering the content in a meaningful sequence",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G57.html",
+                          "tests": {
+                            "procedure": "1. Linearize content using a standard approach for the technology (e.g., removing layout styles or running a linearization tool 2. Check to see if the order of content yields the same meaning as the original",
+                            "expected-results": "Check #2 is true."
+                          },
                           "using": [
                             {
                               "id": "TECH:H34",
-                              "title": "Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline"
+                              "title": "Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H34.html",
+                              "tests": {
+                                "procedure": "1. Examine the source for places where text changes direction. 2. When text changes direction, check whether neutral characters such as spaces or punctuation occur adjacent to text that is rendered in the non-default direction. 3. When #2 is true and the HTML bidirectional algorithm would produce the wrong placement of the neutral characters, check whether the neutral characters are followed by Unicode right-to-left or left-to-right marks that cause neutral characters to be placed as part of the preceding characters.",
+                                "expected-results": "Check #3 is true."
+                              }
                             },
                             {
                               "id": "TECH:H56",
-                              "title": "Using the dir attribute on an inline element to resolve problems with nested directional runs"
+                              "title": "Using the dir attribute on an inline element to resolve problems with nested directional runs",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H56.html",
+                              "tests": {
+                                "procedure": "1. Examine the text direction of text in the document 2. If the text direction is right-to-left, check that for the ancestor element that has a dir attribute, the attribute has the value 'rtl' 3. If the text direction is left-to-right, check that there is no ancestor element with a dir attribute, or that for the ancestor element that has a dir attribute, the attribute has the value 'ltr'",
+                                "expected-results": "Checks #2 and #3 are true for all text."
+                              }
                             },
                             {
                               "id": "TECH:C6",
-                              "title": "Positioning content based on structural markup"
+                              "title": "Positioning content based on structural markup",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C6.html",
+                              "tests": {
+                                "procedure": "For content which uses CSS for positioning 1. Remove the style information from the document or turn off use of style sheets in the user agent. 2. Check that the structural relations and the meaning of the content are preserved.",
+                                "expected-results": "Check #2 is true."
+                              }
                             },
                             {
                               "id": "TECH:C8",
-                              "title": "Using CSS letter-spacing to control spacing within a word"
+                              "title": "Using CSS letter-spacing to control spacing within a word",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C8.html",
+                              "tests": {
+                                "procedure": "For each word that appears to have non-standard spacing between characters: 1. Check whether the CSS letter-spacing property was used to control spacing.",
+                                "expected-results": "Check #1 is true."
+                              }
                             }
                           ]
                         }
@@ -1639,19 +2184,39 @@
                     },
                     {
                       "id": "TECH:C27",
-                      "title": "Making the DOM order match the visual order"
+                      "title": "Making the DOM order match the visual order",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C27.html",
+                      "tests": {
+                        "procedure": "1. Visually examine the order of the content in the Web page as it is presented to the end user. 2. Examine the elements in the DOM using a tool that allows you to see the DOM. 3. Ensure that the order of the content in the source code sections match the visual presentation of the content in the Web page. (e.g., for an English language page the order is from top to bottom and from left to right.) ",
+                        "expected-results": "Step #3 is true."
+                      }
                     },
                     {
                       "id": "TECH:FLASH15",
-                      "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash"
+                      "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH15.html",
+                      "tests": {
+                        "procedure": "1. Use a screen reader to navigate through the Flash movie, one element at a time. 2. Check that the order in which the screen reader announces the content, matches the logical visual order. 3. When focus has been placed inside the Flash movie, press the Tab key repeatedly to traverse its contents by keyboard. 4. Verify that all interactive and focusable elements are reachable by keyboard, in a logical order.",
+                        "expected-results": "Checks #2 and #4 are true."
+                      }
                     },
                     {
                       "id": "TECH:PDF3",
-                      "title": "Ensuring correct tab and reading order in PDF documents"
+                      "title": "Ensuring correct tab and reading order in PDF documents",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF3.html",
+                      "tests": {
+                        "procedure": "1. Verify that the content is in the correct reading order by one of the following: - Read the PDF document with a screen reader or a tool that reads aloud, listening to hear that each element is read in the correct order. - Use a tool that exposes the document through the accessibility API, and verify that the reading order is correct. 2. Verify that the tab order is correct for focusable content by one of the following: - Use the tab key to traverse the focus order in the document. - Use a tool that is capable of showing the page object entry that specifies the tab order setting to open the PDF document and view the setting.",
+                        "expected-results": "#1 and Check #2 are true."
+                      }
                     },
                     {
                       "id": "TECH:SL34",
-                      "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties"
+                      "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL34.html",
+                      "tests": {
+                        "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. 2. Engage the screen reader. Press the TAB key to traverse the sequence of elements inside the Silverlight content area. 3. Verify that the order in which elements are traversed in a tab sequence is also the expected order of the elements as they are presented visually, particularly in such cases where the order of each element is significant per SC 1.3.2.",
+                        "expected-results": "#3 is true."
+                      }
                     }
                   ]
                 },
@@ -1660,23 +2225,48 @@
                   "failure": [
                     {
                       "id": "TECH:F34",
-                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content"
+                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F34.html",
+                      "tests": {
+                        "procedure": "1. Examine the document for visually formatted tables. 2. Check whether the tables are created using white space characters to layout the tabular data.",
+                        "expected-results": "If step #2 is true, then this failure condition applies and the content fails these Success Criteria."
+                      }
                     },
                     {
                       "id": "TECH:F33",
-                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content"
+                      "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F33.html",
+                      "tests": {
+                        "procedure": "1. Examine the document for data or information presented in columnar format. 2. Check whether the columns are created using white space characters to lay out the information.",
+                        "expected-results": "If step #2 is true, then this failure condition applies and the content fails these Success Criteria."
+                      }
                     },
                     {
                       "id": "TECH:F32",
-                      "title": "Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word"
+                      "title": "Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F32.html",
+                      "tests": {
+                        "procedure": "For each word that appears to have non-standard spacing between characters: 1. Check whether any words in the text of the content contain white space characters.",
+                        "expected-results": "If step #1 is true, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F49",
-                      "title": "Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized"
+                      "title": "Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F49.html",
+                      "tests": {
+                        "procedure": "1. Linearize the content in either of the following ways: - Present the content in source code order - Remove the table markup from around the content 2. Check that the linear reading order matches any meaningful sequence conveyed through presentation.",
+                        "expected-results": "If check #2 is false, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F1",
-                      "title": "Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS"
+                      "title": "Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F1.html",
+                      "tests": {
+                        "procedure": "For content which uses CSS for positioning: 1. Remove the style information from the document or turn off use of style sheets in the user agent. 2. Check that the reading order of the content is correct and the meaning of the content is preserved.",
+                        "expected-results": "If step #2 is false, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     }
                   ]
                 }
@@ -1703,7 +2293,12 @@
                   "sufficient": [
                     {
                       "id": "TECH:G96",
-                      "title": "Providing textual identification of items that otherwise rely only on sensory information to be understood"
+                      "title": "Providing textual identification of items that otherwise rely only on sensory information to be understood",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G96.html",
+                      "tests": {
+                        "procedure": "Find all references in the Web page that mention the shape, size, or position of an object. For each such item: 1. Check that the reference contains additional information that allows the item to be located and identified without any knowledge of its shape, size, or relative position.",
+                        "expected-results": "Check #1 is true"
+                      }
                     }
                   ]
                 },
@@ -1712,11 +2307,21 @@
                   "failure": [
                     {
                       "id": "TECH:F14",
-                      "title": "Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location"
+                      "title": "Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F14.html",
+                      "tests": {
+                        "procedure": "1. Examine the Web page for textual references to content within the Web page. 2. Check that the references do not rely on only the visual shape or location of the content.",
+                        "expected-results": "If step #2 is false, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F26",
-                      "title": "Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information"
+                      "title": "Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F26.html",
+                      "tests": {
+                        "procedure": "For each instruction that refers to non-text marks that convey information: 1. Check whether there are other means to determine the information conveyed by the non-text marks.",
+                        "expected-results": "If #1 is false, then this failure condition applies and the content fails this Success Criterion."
+                      }
                     }
                   ]
                 }
@@ -3148,11 +3753,21 @@
                   "sufficient": [
                     {
                       "id": "TECH:G21",
-                      "title": "Ensuring that users are not trapped in content"
+                      "title": "Ensuring that users are not trapped in content",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G21.html",
+                      "tests": {
+                        "procedure": "1. Tab through content from start to finish. 2, Check to see that keyboard focus is not trapped in any of the content. 3. If keyboard focus appears to be trapped in any of the content, check that help information is available explaining how to exit the content and can be accessed via the keyboard.",
+                        "expected-results": "#2 is false"
+                      }
                     },
                     {
                       "id": "TECH:FLASH17",
-                      "title": "Providing keyboard access to a Flash object and avoiding a keyboard trap"
+                      "title": "Providing keyboard access to a Flash object and avoiding a keyboard trap",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH17.html",
+                      "tests": {
+                        "procedure": "For a Flash content on a web page: 1. If possible, confirm that the source of the Flash content imports and initializes the SWFFocus class 2. Press the tab key to move through tabbable items on the page 3. Confirm that it is possible to tab into the Flash content 4. Continue tabbing and confirm that it is possible to tab out of the flash content",
+                        "expected-results": "Checks 3 and 4 are true"
+                      }
                     }
                   ]
                 },
@@ -3161,7 +3776,12 @@
                   "failure": [
                     {
                       "id": "TECH:F10",
-                      "title": "Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type"
+                      "title": "Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F10.html",
+                      "tests": {
+                        "procedure": "1. Using a keyboard, navigate through the content. 2. Check to see that the keyboard focus is not 'trapped' and it is possible to move keyboard focus out of the plug-in content without closing the user agent or restarting the system.",
+                        "expected-results": "If the keyboard focus becomes 'trapped,' then this failure condition applies and content fails the Success Criterion and conformance requirement 5."
+                      }
                     }
                   ]
                 }
@@ -3667,15 +4287,30 @@
                   "sufficient": [
                     {
                       "id": "TECH:G19",
-                      "title": "Ensuring that no component of the content flashes more than three times in any 1-second period"
+                      "title": "Ensuring that no component of the content flashes more than three times in any 1-second period",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G19.html",
+                      "tests": {
+                        "procedure": "1. Check that there are no more than three flashes during any 1-second period. 2. If there are three flashes, check that the Light/Dark status at the end of the 1-second period is the same as at the start.",
+                        "expected-results": "Both Step 1 and Step 2 are true."
+                      }
                     },
                     {
                       "id": "TECH:G176",
-                      "title": "Keeping the flashing area small enough"
+                      "title": "Keeping the flashing area small enough",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G176.html",
+                      "tests": {
+                        "procedure": "1. The small safe area is calculated. 2. Check that only one area of the screen is flashing at any time. 3. Check that the flashing content would fit into a contiguous container whose area is less than the small safe area.",
+                        "expected-results": "Checks #2 and #3 are true."
+                      }
                     },
                     {
                       "id": "TECH:G15",
-                      "title": "Using a tool to ensure that content does not violate the general flash threshold or red flash threshold"
+                      "title": "Using a tool to ensure that content does not violate the general flash threshold or red flash threshold",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G15.html",
+                      "tests": {
+                        "procedure": "Check to see to see that content does not violate the general flash and/or red flash threshold 1. Use a tool to determine that neither the General Flash nor Red Flash threshold were exceeded",
+                        "expected-results": "Check #1 is true."
+                      }
                     }
                   ]
                 },
@@ -3885,7 +4520,12 @@
                   "sufficient": [
                     {
                       "id": "TECH:G59",
-                      "title": "Placing the interactive elements in an order that follows sequences and relationships within the content"
+                      "title": "Placing the interactive elements in an order that follows sequences and relationships within the content",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G59.html",
+                      "tests": {
+                        "procedure": "1. Determine the order of interactive elements in the content. 2. Determine the logical order of interactive elements. 3. Check that the order of the interactive elements in the content is the same as the logical order.",
+                        "expected-results": "Check #3 is true."
+                      }
                     },
                     {
                       "id": "TECH:text",
@@ -3893,23 +4533,48 @@
                       "using": [
                         {
                           "id": "TECH:H4",
-                          "title": "Creating a logical tab order through links, form controls, and objects"
+                          "title": "Creating a logical tab order through links, form controls, and objects",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H4.html",
+                          "tests": {
+                            "procedure": "1. Check if tabindex is used 2. If tabindex is used, check that the tab order specified by the tabindex attributes follows relationships in the content.",
+                            "expected-results": "Check #2 is true."
+                          }
                         },
                         {
                           "id": "TECH:FLASH15",
-                          "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash"
+                          "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH15.html",
+                          "tests": {
+                            "procedure": "1. Use a screen reader to navigate through the Flash movie, one element at a time. 2. Check that the order in which the screen reader announces the content, matches the logical visual order. 3. When focus has been placed inside the Flash movie, press the Tab key repeatedly to traverse its contents by keyboard. 4. Verify that all interactive and focusable elements are reachable by keyboard, in a logical order.",
+                            "expected-results": "Checks #2 and #4 are true."
+                          }
                         },
                         {
                           "id": "TECH:C27",
-                          "title": "Making the DOM order match the visual order"
+                          "title": "Making the DOM order match the visual order",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C27.html",
+                          "tests": {
+                            "procedure": "1. Visually examine the order of the content in the Web page as it is presented to the end user. 2. Examine the elements in the DOM using a tool that allows you to see the DOM. 3. Ensure that the order of the content in the source code sections match the visual presentation of the content in the Web page. (e.g., for an English language page the order is from top to bottom and from left to right.)",
+                            "expected-results": "Step #3 is true."
+                          }
                         },
                         {
                           "id": "TECH:PDF3",
-                          "title": "Ensuring correct tab and reading order in PDF documents"
+                          "title": "Ensuring correct tab and reading order in PDF documents",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF3.html",
+                          "tests": {
+                            "procedure": "1. Verify that the content is in the correct reading order by one of the following: - Read the PDF document with a screen reader or a tool that reads aloud, listening to hear that each element is read in the correct order. - Use a tool that exposes the document through the accessibility API, and verify that the reading order is correct. 2. Verify that the tab order is correct for focusable content by one of the following: - Use the tab key to traverse the focus order in the document - Use a tool that is capable of showing the page object entry that specifies the tab order setting to open the PDF document and view the setting.",
+                            "expected-results": "#1 and Check #2 are true."
+                          }
                         },
                         {
                           "id": "TECH:SL34",
-                          "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties"
+                          "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL34.html",
+                          "tests": {
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. 2. Engage the screen reader. Press the TAB key to traverse the sequence of elements inside the Silverlight content area. 3. Verify that the order in which elements are traversed in a tab sequence is also the expected order of the elements as they are presented visually, particularly in such cases where the order of each element is significant per SC 1.3.2.",
+                            "expected-results": "#3 is true."
+                          }
                         }
                       ]
                     },
@@ -3919,15 +4584,30 @@
                       "using": [
                         {
                           "id": "TECH:SCR26",
-                          "title": "Inserting dynamic content into the Document Object Model immediately following its trigger element"
+                          "title": "Inserting dynamic content into the Document Object Model immediately following its trigger element",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR26.html",
+                          "tests": {
+                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. 2. Check that the dialogs are triggered from the click event of a button or a link. 3. Using a tool that allows you to inspect the DOM generated by script, check that the dialog is next in the DOM.",
+                            "expected-results": "#2 and #3 are true."
+                          }
                         },
                         {
                           "id": "TECH:SCR37",
-                          "title": "Creating Custom Dialogs in a Device Independent Way"
+                          "title": "Creating Custom Dialogs in a Device Independent Way",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR37.html",
+                          "tests": {
+                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. 2. Check that the dialogs can be opened by tabbing to the area and hitting enter. 3. Check that, once opened, the dialog is next in the tab order. 4. Check that the dialogs are triggered from the click event of a button or a link. 5. Using a tool that allows you to inspect the DOM generated by script, check that the dialog is next in the DOM.",
+                            "expected-results": "Checks #2, #3, #4 and #5 are true."
+                          }
                         },
                         {
                           "id": "TECH:SCR27",
-                          "title": "Reordering page sections using the Document Object Model"
+                          "title": "Reordering page sections using the Document Object Model",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR27.html",
+                          "tests": {
+                            "procedure": "1. Find all components in the Web Unit which can be reordered via drag and drop. 2. Check that there is also a mechanism to reorder them using menus build of lists of links. 3, Check that the menus are contained within the reorderable items in the DOM. 4. Check that scripts for reordering are triggered only from the onclick event of links. 5. Check that items are reordered in the DOM, not only visually.",
+                            "expected-results": "#2 through #5 are true."
+                          }
                         }
                       ]
                     }
@@ -3938,11 +4618,21 @@
                   "failure": [
                     {
                       "id": "TECH:F44",
-                      "title": "Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability"
+                      "title": "Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F44.html",
+                      "tests": {
+                        "procedure": "1. If tabindex is used, check that the tab order specified by the tabindex attributes follows relationships in the content.",
+                        "expected-results": "If check #1 is false, then this failure condition applies and content fails the Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F85",
-                      "title": "Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent to their trigger control in the sequential navigation order"
+                      "title": "Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent to their trigger control in the sequential navigation order",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F85.html",
+                      "tests": {
+                        "procedure": "For each menu or dialog embedded on a Web page that is opened via a trigger control: 1, Activate the trigger control via the keyboard. - Check whether focus is in the menu or dialog. - Check whether advancing the focus in the sequential navigation order puts focus in the menu or dialog. 2. Dismiss the menu or dialog. - Check whether focus is on the trigger control. - Check whether advancing the focus backwards in the sequential navigation order puts focus in the trigger control.",
+                        "expected-results": "- If both points under step 1 are false, then this failure condition applies and the content fails this success criterion. - If both points under step 2 are false, then this failure condition applies and the content fails this success criterion."
+                      }
                     }
                   ]
                 }
@@ -4524,11 +5214,21 @@
                   "sufficient": [
                     {
                       "id": "TECH:G210",
-                      "title": "Ensuring that drag-and-drop actions can be cancelled"
+                      "title": "Ensuring that drag-and-drop actions can be cancelled",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G210.html",
+                      "tests": {
+                        "procedure": "For content that is draggable, check whether the drag-and-drop action can be reversed by: 1. Releasing the picked-up item outside a drop target 2. Dragging the picked-up item back to its old position 3. A confirmation dialog or an undo control appears after the item has been dropped",
+                        "expected-results": "At least one option of #1, #2, #3 is true"
+                      }
                     },
                     {
                       "id": "TECH:G211",
-                      "title": "Matching the accessible name to the visible label"
+                      "title": "Matching the accessible name to the visible label",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G211.html",
+                      "tests": {
+                        "procedure": "1. For input controls, examine each input that has adjacent text which serves as its label 2. For each input, check that the entire string of text (disregarding letter case and punctuation) matches the accessible name for the input, according to the accessible name computation 3. For buttons, links, menus and other non-input controls, examine each control that contains text which serves as its label 4. For each non-input control, check that the entire string of text (disregarding letter case and punctuation) matches the accessible name for the input",
+                        "expected-results": "Checks #2 and #4 are true"
+                      }
                     },
                     {
                       "id": "TECH:text",
@@ -4624,7 +5324,12 @@
                   "sufficient": [
                     {
                       "id": "TECH:G213",
-                      "title": "Provide conventional controls and an application setting for motion activated input"
+                      "title": "Provide conventional controls and an application setting for motion activated input",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html",
+                      "tests": {
+                        "procedure": "For each input that performs a function in response to a motion sensor: 1. Check that there is a mechanism to perform the same function that does not rely on a sensor. 2. Check that there is a user setting which disables the motion detection.",
+                        "expected-results": "Check #1 and #2 are true."
+                      }
                     },
                     {
                       "id": "TECH:text",
@@ -5168,7 +5873,12 @@
                   "sufficient": [
                     {
                       "id": "TECH:G107",
-                      "title": "Using \"activate\" rather than \"focus\" as a trigger for changes of context"
+                      "title": "Using \"activate\" rather than \"focus\" as a trigger for changes of context",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G107.html",
+                      "tests": {
+                        "procedure": "1. Using a keyboard, cycle focus through all content 2. Check that no changes of context occur when any component receives focus.",
+                        "expected-results": "#2 is true"
+                      }
                     }
                   ]
                 },
@@ -5176,11 +5886,17 @@
                   "advisory": [
                     {
                       "id": "TECH:G200",
-                      "title": "Opening new windows and tabs from a link only when necessary"
+                      "title": "Opening new windows and tabs from a link only when necessary",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G200.html"
                     },
                     {
                       "id": "TECH:G201",
-                      "title": "Giving users advanced warning when opening a new window"
+                      "title": "Giving users advanced warning when opening a new window",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html",
+                      "tests": {
+                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is initiated by a user request: 1. Check that there is a warning spoken in assistive technology that this link opens to a new window. 2. Check that there is a visual warning in text that this link opens to a new window.",
+                        "expected-results": "Checks #1 and check #2 are true."
+                      }
                     }
                   ]
                 },
@@ -5188,7 +5904,12 @@
                   "failure": [
                     {
                       "id": "TECH:F55",
-                      "title": "Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received"
+                      "title": "Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F55.html",
+                      "tests": {
+                        "procedure": "1. Use the keyboard to verify that you can get to all interactive elements using the keyboard. 2. Check that when focus is placed on each element, focus remains there until user moves it.",
+                        "expected-results": "If #2 is false then this failure condition applies and content fails the Success Criterion."
+                      }
                     }
                   ]
                 }
@@ -5212,36 +5933,76 @@
                     {
                       "id": "TECH:G80",
                       "title": "Providing a submit button to initiate a change of context",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G80.html",
+                      "tests": {
+                        "procedure": "1. Find all forms in the content 2. For each form, check that it has a submit button",
+                        "expected-results": "#2 is true"
+                      },
                       "using": [
                         {
                           "id": "TECH:H32",
-                          "title": "Providing submit buttons"
+                          "title": "Providing submit buttons",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H32.html",
+                          "tests": {
+                            "procedure": "1. Find all forms in the content 2. For each form, check that it has a submit button (input type=\"submit\", input type=\"image\", or button type=\"submit\")",
+                            "expected-results": "#2 is true"
+                          }
                         },
                         {
                           "id": "TECH:H84",
-                          "title": "Using a button with a select element to perform an action"
+                          "title": "Using a button with a select element to perform an action",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H84.html",
+                          "tests": {
+                            "procedure": "For each select element/button element combination: 1. Check that focus (including keyboard focus) on an option in the select element does not result in any actions 2. Check that selecting the button performs the action associated with the current select value",
+                            "expected-results": "All checks are true."
+                          }
                         },
                         {
                           "id": "TECH:FLASH4",
-                          "title": "Providing submit buttons in Flash"
+                          "title": "Providing submit buttons in Flash",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH4.html",
+                          "tests": {
+                            "procedure": "1. Find all interactive control instances (that are not submit buttons) in the flash movie that can initiate a change of context, e.g. a combobox, radio button or checkbox. 2. For each instance, confirm that the event handler(s) responsible for the change of context are not associated with the controls themselves, but with a separate button instead.",
+                            "expected-results": "#2 is true"
+                          }
                         },
                         {
                           "id": "TECH:PDF15",
-                          "title": "Providing submit buttons with the submit-form action in PDF forms"
+                          "title": "Providing submit buttons with the submit-form action in PDF forms",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF15.html",
+                          "tests": {
+                            "procedure": "1. For each page that submits a form, visually verify that the form contains a submit button and check one of the following: - Tab to the button and check that it submits the form in response to user action to select the button. - Open the PDF document with a tool that is capable of showing the submit-form action and check that the button action is to submit the form.",
+                            "expected-results": "#1 is true for each page that contains a form."
+                          }
                         },
                         {
                           "id": "TECH:SL10",
-                          "title": "Implementing a Submit-Form Pattern in Silverlight"
+                          "title": "Implementing a Submit-Form Pattern in Silverlight",
+                          "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL10.html",
+                          "tests": {
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. To test UI Automation based behavior such as reading AutomationProperties.HelpText, use Microsoft Windows as platform. 2. Verify that the user interface design of the form includes a clearly indicated Submit button (a control that adequately communicates to users that activating it will cause input to be submitted and might cause a change of context). 3. Provide values for the various input fields of the form, and verify that doing so does not in and of itself change the context. 4. Verify that if change of context occurs at all, that action is delayed until after the Submit button is activated.",
+                            "expected-results": "#2, #3, and #4 are true."
+                          }
                         }
                       ]
                     },
                     {
                       "id": "TECH:G13",
-                      "title": "Describing what will happen before a change to a form control that causes a change of context to occur is made"
+                      "title": "Describing what will happen before a change to a form control that causes a change of context to occur is made",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G13.html",
+                      "tests": {
+                        "procedure": "1. Locate content where changing the setting of a form control results in a change of context 2. Check to see that an explanation of what will happen when the control is changed is available prior to the controls activation",
+                        "expected-results": "Check #2 is true"
+                      }
                     },
                     {
                       "id": "TECH:SCR19",
-                      "title": "Using an onchange event on a select element without causing a change of context"
+                      "title": "Using an onchange event on a select element without causing a change of context",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR19.html",
+                      "tests": {
+                        "procedure": "1. Navigate to the trigger select element (in this example, the one to select continents) and change the value of the select. 2. Navigate to the select element that is updated by the trigger (in this example, the one to select countries). 3. Check that the matching option values are displayed in the other select element. 4. Navigate to the trigger select element, navigate through the options but do not change the value. 5. Check that the matching option values are still displayed in the associated element. - It is recommended that the select elements are tested with an assistive technology to verify that the changes to the associated element are recognized.",
+                        "expected-results": "Step #3 and #5 are true."
+                      }
                     }
                   ]
                 },
@@ -5249,7 +6010,12 @@
                   "advisory": [
                     {
                       "id": "TECH:G201",
-                      "title": "Giving users advanced warning when opening a new window"
+                      "title": "Giving users advanced warning when opening a new window",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html",
+                      "tests": {
+                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is initiated by a user request: 1. Check that there is a warning spoken in assistive technology that this link opens to a new window. 2. Check that there is a visual warning in text that this link opens to a new window.",
+                        "expected-results": "Checks #1 and check #2 are true."
+                      }
                     }
                   ]
                 },
@@ -5257,11 +6023,21 @@
                   "failure": [
                     {
                       "id": "TECH:F36",
-                      "title": "Failure of Success Criterion 3.2.2 due to automatically submitting a form and given a value"
+                      "title": "Failure of Success Criterion 3.2.2 due to automatically submitting a form and given a value",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F36.html",
+                      "tests": {
+                        "procedure": "1. Enter data in all fields on page starting at top. 2. Enter data in last field and exit from it (tab out of it). 3. Check whether leaving the last field causes change of context.",
+                        "expected-results": "If step #3 is true, then this failure condition applies and content fails the Success Criterion."
+                      }
                     },
                     {
                       "id": "TECH:F37",
-                      "title": "Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed"
+                      "title": "Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F37.html",
+                      "tests": {
+                        "procedure": "1. Find each form in a page. 2. For each form control that is a radio button, check box or an item in a select list, check if changing the selection of the control launches a new window. 3. For each new window resulting from step 2, check if the user is warned in advance.",
+                        "expected-results": "If step #3 is false, then this failure condition applies and content fails the Success Criterion."
+                      }
                     }
                   ]
                 }
@@ -5484,23 +6260,48 @@
                           "techniques": [
                             {
                               "id": "TECH:G83",
-                              "title": "Providing text descriptions to identify required fields that were not completed"
+                              "title": "Providing text descriptions to identify required fields that were not completed",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G83.html",
+                              "tests": {
+                                "procedure": "1. Fill out a form, deliberately leaving one or more required (mandatory) fields blank, and submit it. 2. Check that a text description is provided identifying the mandatory field(s) that was not completed. 3. Check that other data previously entered by the user is re-displayed, unless the data is in a security related field where it would be inappropriate to retain the data for re-display (e.g. password).",
+                                "expected-results": "#2 and #3 are true"
+                              }
                             },
                             {
                               "id": "TECH:ARIA21",
-                              "title": "Using Aria-Invalid to Indicate An Error Field"
+                              "title": "Using Aria-Invalid to Indicate An Error Field",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html",
+                              "tests": {
+                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. Check that aria-invalid is not set to true when a validation failure does not exist. 2. Check that aria-invalid is set to true when a validation failure does exist. 3. Check that the programmatically associated labels / programmatically associated instructional text for the field provide enough information to understand the error.",
+                                "expected-results": "Checks #1-3 are true."
+                              }
                             },
                             {
                               "id": "TECH:SCR18",
-                              "title": "Providing client-side validation and alert"
+                              "title": "Providing client-side validation and alert",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18.html",
+                              "tests": {
+                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an alert describing the error is provided.",
+                                "expected-results": "#2 is true"
+                              }
                             },
                             {
                               "id": "TECH:PDF5",
-                              "title": "Indicating required form controls in PDF forms"
+                              "title": "Indicating required form controls in PDF forms",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF5.html",
+                              "tests": {
+                                "procedure": "For each form field that is required, verify that validation information and instructions are provided by applying the following: 1. Check that the required status is indicated in the form control's label. 2. Leave the field blank and submit the form. Check that an alert describing the error is provided. 3. Use a tool that exposes the document through the accessibility API, and verify that the required property is indicated.",
+                                "expected-results": "#1, #2, and #3 are true."
+                              }
                             },
                             {
                               "id": "TECH:SL35",
-                              "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight"
+                              "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL35.html",
+                              "tests": {
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application is expected to contain form fields, and a Submit pattern for form interaction as described in. 2. Navigate through the items of a form until an editable field is read. Enter a value that triggers the validation. 3. Navigate to Submit button and activate it to attempt to submit the form. 4. Verify that a Validation Summary now appears, and is focusable. 5. Verify that the Validation Summary provides enough information to correct any error. 6. Navigate back to input elements that have validation issues. Correct the errors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. Verify that Validation Summary is no longer displayed and that the screen reader does not focus to/read any further validation information.",
+                                "expected-results": "#4, #5, and #8 are true."
+                              }
                             }
                           ]
                         },
@@ -5509,43 +6310,93 @@
                           "techniques": [
                             {
                               "id": "TECH:ARIA18",
-                              "title": "Using aria-alertdialog to Identify Errors"
+                              "title": "Using aria-alertdialog to Identify Errors",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA18.html",
+                              "tests": {
+                                "procedure": "1. Trigger the error that causes the alertdialog to appear. 2. Determine that the alertdialog contains at least one focusable control, and the focus moves to that control when the alertdialog opens. 3. Determine that the tab order is constrained within the alertdialog while it is open, and when the dialog is dismissed, the focus moves back to the position it had before the dialog opene, if possible. 4. Examine the element with role=\"alertdialog\" applied. 5. Determine that either the aria-label or aria-labelledby attribute has been correctly used to give the alertdialog an accessible name. 6. Determine that the contents of the alertdialog identifies the input error. 7. Determine whether contents of the alertdialog suggests how to fix the error.",
+                                "expected-results": "Checks 2, 3, 5 and 6 are true. For SC 3.3.3, Check 7 is also true."
+                              }
                             },
                             {
                               "id": "TECH:ARIA19",
-                              "title": "Using ARIA role=alert or Live Regions to Identify Errors"
+                              "title": "Using ARIA role=alert or Live Regions to Identify Errors",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19.html",
+                              "tests": {
+                                "procedure": "1. Determine that an empty error container role=alert or aria-live=assertive attribute is present in the DOM at page load. 2. Trigger the error that causes the content in the live region to appear or update. 3. Determine that the error message was injected into the already present error container.",
+                                "expected-results": "#1 and #3 are true."
+                              }
                             },
                             {
                               "id": "TECH:ARIA21",
-                              "title": "Using Aria-Invalid to Indicate An Error Field"
+                              "title": "Using Aria-Invalid to Indicate An Error Field",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html",
+                              "tests": {
+                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. Check that aria-invalid is not set to true when a validation failure does not exist. 2. Check that aria-invalid is set to true when a validation failure does exist. 3. Check that the programmatically associated labels / programmatically associated instructional text for the field provide enough information to understand the error.",
+                                "expected-results": "Checks #1-3 are true."
+                              }
                             },
                             {
                               "id": "TECH:G84",
-                              "title": "Providing a text description when the user provides information that is not in the list of allowed values"
+                              "title": "Providing a text description when the user provides information that is not in the list of allowed values",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G84.html",
+                              "tests": {
+                                "procedure": "1. Enter invalid data in a form field. 2. Check that information is provided in text about the problem.",
+                                "expected-results": "#2 is true."
+                              }
                             },
                             {
                               "id": "TECH:G85",
-                              "title": "Providing a text description when user input falls outside the required format or values"
+                              "title": "Providing a text description when user input falls outside the required format or values",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G85.html",
+                              "tests": {
+                                "procedure": "1. Fill out a form, deliberately enter user input that falls outside the required format or values 2. Check that a text description is provided that identifies the field in error and provides some information about the nature of the invalid entry and how to fix it. 3. Check that other data previously entered by the user is re-displayed, unless the data is in a security related field where it would be inappropriate to retain the data for re-display (e.g. password).",
+                                "expected-results": "#2 and #3 are true"
+                              }
                             },
                             {
                               "id": "TECH:SCR18",
-                              "title": "Providing client-side validation and alert"
+                              "title": "Providing client-side validation and alert",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18.html",
+                              "tests": {
+                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an alert describing the error is provided.",
+                                "expected-results": "#2 is true"
+                              }
                             },
                             {
                               "id": "TECH:SCR32",
-                              "title": "Providing client-side validation and adding error text via the DOM"
+                              "title": "Providing client-side validation and adding error text via the DOM",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR32.html",
+                              "tests": {
+                                "procedure": "Create error messages using anchor tags and appropriate scripting via the technique above. 1. Load the page. 2. Enter a valid value in the field(s) associated with an error message and verify that no error messages are displayed. 3. Enter an invalid value in the field(s) associated with an error message and verify that the correct error message for the field is displayed. 4. Verify that the error messages receive focus. 5. Enter a valid value in the field(s) associated with the displayed error message and verify that the error message is removed. 6. Repeat for all fields with associated error messages created via anchor tags. NOTE It is recommended that you also run the above procedure using an assistive technology.",
+                                "expected-results": "Checks #2, #3, #4, and #5 are all true."
+                              }
                             },
                             {
                               "id": "TECH:FLASH12",
-                              "title": "Providing client-side validation and adding error text via the accessible description"
+                              "title": "Providing client-side validation and adding error text via the accessible description",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH12.html",
+                              "tests": {
+                                "procedure": "When a Flash movie provides interactive forms that can be submitted, confirm that: 1. The validation warnings are placed next to the control visually. 2. The validation warnings are added to the accessible name or description of each control.",
+                                "expected-results": "#1 and #2 are true"
+                              }
                             },
                             {
                               "id": "TECH:PDF22",
-                              "title": "Indicating when user input falls outside the required format or values in PDF forms"
+                              "title": "Indicating when user input falls outside the required format or values in PDF forms",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22.html",
+                              "tests": {
+                                "procedure": "For each form field that requires specific input, verify that validation information and instructions are provided by applying the following: 1. Check that the format or value that is required is indicated in the form control's label. 2. Use an erroneous format or value and move off the field: make sure that an alert describing the error is provided.",
+                                "expected-results": "#1 and #2 are true."
+                              }
                             },
                             {
                               "id": "TECH:SL35",
-                              "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight"
+                              "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight",
+                              "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL35.html",
+                              "tests": {
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application is expected to contain form fields, and a Submit pattern for form interaction as described in . 2. Navigate through the items of a form until an editable field is read. Enter a value that triggers the validation. 3, Navigate to Submit button and activate it to attempt to submit the form. 4. Verify that a Validation Summary now appears, and is focusable. 5. Verify that the Validation Summary provides enough information to correct any error. 6. Navigate back to input elements that have validation issues. Correct the errors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. Verify that Validation Summary is no longer displayed and that the screen reader does not focus to/read any further validation information.",
+                                "expected-results": "#4, #5, and #8 are true."
+                              }
                             }
                           ]
                         }
@@ -5557,11 +6408,21 @@
                   "advisory": [
                     {
                       "id": "TECH:G139",
-                      "title": "Creating a mechanism that allows users to jump to errors"
+                      "title": "Creating a mechanism that allows users to jump to errors",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G139.html",
+                      "tests": {
+                        "procedure": "1. Fill out a form, deliberately leaving a required (mandatory) field blank, and make an input error on another field and submit the form. 2. Check that a text message is provided that identifies the field that is missing required data. 3. Check that a text message is provided that identifies the field with the input error. 4. Check that there is a link to each field that is missing required data from the missing data message 5. Check that there is a link to the list of errors from the error message. NOTE Success Criterion 3.3.2 requires that if an input error is detected and suggestions for correction are known and can be provided without jeopardizing the security or purpose of the content, the suggestions are provided to the user.",
+                        "expected-results": "- If #2 is true, then #4 is true. - If #3 is true, then #5 is true."
+                      }
                     },
                     {
                       "id": "TECH:G199",
-                      "title": "Providing success feedback when data is submitted successfully"
+                      "title": "Providing success feedback when data is submitted successfully",
+                      "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G199.html",
+                      "tests": {
+                        "procedure": "1. Fill in form fields with no errors. 2. Submit the form. 3. Check that a feedback message on the screen confirms that the submission was successful.",
+                        "expected-results": "Check #3 is true."
+                      }
                     }
                   ]
                 },
