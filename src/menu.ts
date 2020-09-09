@@ -15,22 +15,20 @@ interface Dropdown {
 }
 
 export const menu: Dropdown = {
-  askMenu: (results, targetLevel) => {
-    // sort issues into common occurances i.e. { critical: [resultItem1, resultItem2], severe: [resultItem3]}
-    const sorted = results.reduce((acc: any, cur: any) => {
-      if (acc[cur.impact]) acc[cur.impact].push(cur);
-      else acc[cur.impact] = [cur];
-      return acc;
-    }, {});
+  askMenu: (results: any, targetLevel) => {
     // process sorted issues into menu form
     const processed: any = [];
-    Object.keys(sorted).forEach((issueLevel: string) => {
+    Object.keys(results).forEach((issueLevel: string) => {
+      // Middle level check
       if (issueLevel === targetLevel) {
-        processed.push(menu.processLevel(issueLevel, sorted[issueLevel], true));
-        sorted[issueLevel].forEach((issue: any) => {
-          processed.push(menu.processLevel(issue, issue.nodes, false, true));
+        processed.push(menu.processLevel(issueLevel, results[issueLevel], true));
+        results[issueLevel].forEach((issue: any) => {
+          processed.push(menu.processLevel(issue.help, issue.nodes, false, true));
         });
-      } else processed.push(menu.processLevel(issueLevel, sorted[issueLevel]));
+      // } else if () {
+        
+        // 
+      } else processed.push(menu.processLevel(issueLevel, results[issueLevel]));
     });
     // compile an array of stringified menu options
     const options = processed.map((option: MenuContents) => menu.stringify(option, option.nested));
