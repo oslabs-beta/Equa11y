@@ -1,4 +1,6 @@
-import { Result } from 'axe-core';
+import { ParsedData, IssueInfo } from './dataParser';
+
+// type issueLevel = typeof issueLevel<keyof typeof issueLevel>
 
 export interface MenuContents {
   levelName: string;
@@ -9,21 +11,21 @@ export interface MenuContents {
 }
 
 interface Dropdown {
-  askMenu(results: Result[], level?: string): string[];
-  processLevel(levelName: string, subLevel: [], opened?: boolean, nested?: boolean): MenuContents;
+  askMenu(results: ParsedData, level?: string): string[];
+  processLevel(levelName: string, subLevel?: IssueInfo[], opened?: boolean, nested?: boolean): MenuContents;
   stringify(levelObj: any, nested: boolean): string;
 }
 
 export const menu: Dropdown = {
-  askMenu: (results: any, targetLevel) => {
+  askMenu: (results, targetLevel) => {
     // process sorted issues into menu form
-    const processed: any = [];
-    Object.keys(results).forEach((issueLevel: string) => {
+    const processed: MenuContents[] = [];
+    (Object.keys(results) as Array<keyof ParsedData>).forEach((issueLevel) => {
       // Middle level check
       if (issueLevel === targetLevel) {
         processed.push(menu.processLevel(issueLevel, results[issueLevel], true));
-        results[issueLevel].forEach((issue: any) => {
-          processed.push(menu.processLevel(issue.help, issue.nodes, false, true));
+        (results[issueLevel] as Array<keyof IssueInfo>).forEach((issue: any) => {
+          processed.push(menu.processLevel(issue.quickFix, issue.specificIssues, false, true));
         });
       // } else if () {
         
@@ -32,10 +34,11 @@ export const menu: Dropdown = {
     });
     // compile an array of stringified menu options
     const options = processed.map((option: MenuContents) => menu.stringify(option, option.nested));
+    // options.push(...prepopulatedManualTests);
     return options;
   },
 
-  processLevel: (levelName, subLevel, opened = false, nested = false) => {
+  processLevel: (levelName, subLevel = [], opened = false, nested = false) => {
     return {
       levelName,
       opened,

@@ -4,21 +4,24 @@ import { wcag } from './wcag';
 interface SpecificIssue {
   recommendation?: string;
   html?: string;
+  expectedOutcome?: string;
 }
 
-interface IssueInfo {
-    dequeId?: Result["id"];
+export interface IssueInfo {
+    dequeId?: string;
     wcagCriteria?: string;
     urlToWCAG?: string;
-    quickFix?: Result["help"];
+    quickFix?: string;
     specificIssues?: SpecificIssue[];
 }
 
-interface ParsedData {
+
+export interface ParsedData {
     minor?: IssueInfo[];
     moderate?: IssueInfo[];
     serious?: IssueInfo[];
     critical?: IssueInfo[];
+    manualTest?: IssueInfo[]; 
     nonEssential?: IssueInfo[];
 }
 
@@ -32,13 +35,12 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
       return parsedSpecificIssue;
     }
     
-    let wcagURLInfo;
-    let wcagCriteriaInfo;
+    let wcagURLInfo: string;
+    let wcagCriteriaInfo: string;
     let foundFlag = false;
 
     const wcagConnector = () => {
       const { id } = curIssue;
-
       for (let i = 0; i < wcag.principles.length; i += 1) {
         for (let j = 0; j < wcag.principles[i].guidelines.length; j += 1) {
           for (let k = 0; k < wcag.principles[i].guidelines[j].successcriteria.length; k += 1) {
@@ -55,15 +57,18 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
         }
         if (foundFlag) break;
       }
-      // If !foundFlag assign to deque url, num = n/a
-
+      if (!foundFlag) {
+        wcagURLInfo = curIssue.helpUrl;
+        wcagCriteriaInfo = 'n/a';
+      }
     }
     const issuesPopulator = (): IssueInfo => {
       const parsedIssue: IssueInfo = {};
+      wcagConnector();
       parsedIssue.dequeId = curIssue.id;
       // error handling if wcag information does not exist for that specific issue -> give deque info
-      parsedIssue.wcagCriteria = 'placeholder'; // wcag.principles[index].guidelines[0].successcriteria[0].num
-      parsedIssue.urlToWCAG = 'placeholder'; //  wcag.principles[index].guidelines[0].successcriteria[0].url
+      parsedIssue.wcagCriteria = wcagCriteriaInfo; // wcag.principles[index].guidelines[0].successcriteria[0].num
+      parsedIssue.urlToWCAG = wcagURLInfo; //  wcag.principles[index].guidelines[0].successcriteria[0].url
       parsedIssue.quickFix = curIssue.help;
       parsedIssue.specificIssues = curIssue.nodes.map((node) => specificIssuePopulator(node));
       return parsedIssue;
@@ -98,6 +103,4 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
 //       ],
 //     },
 //   },
-//   moderate: {},
-//   NonEssential: {},
 // }
