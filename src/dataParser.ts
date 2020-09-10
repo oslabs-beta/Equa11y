@@ -1,6 +1,6 @@
 import { Result, NodeResult } from 'axe-core';
 import { wcag } from './wcag';
-// import manual test object
+import { manualCheckObj, ManualCheckInfo } from './manualCheckObj'
 
 export interface SpecificIssue {
   recommendation?: string;
@@ -22,14 +22,14 @@ export interface ParsedData {
     moderate?: IssueInfo[];
     serious?: IssueInfo[];
     critical?: IssueInfo[];
-    manualTest?: IssueInfo[]; 
+    manualTest?: ManualCheckInfo[]; 
     nonEssential?: IssueInfo[];
 }
 
-export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
+export const dataParser = (dataToBeParsed: Result[], manualCheckObj: ManualCheckInfo[]): ParsedData => {
   // sort issues into common occurances i.e. { critical: [resultItem1, resultItem2], severe: [resultItem3]}
   // instead of returning bind to constant
-  return dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
+    const data = dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
     const specificIssuePopulator = (node: NodeResult): SpecificIssue => {
       const parsedSpecificIssue: SpecificIssue = {}
       parsedSpecificIssue.recommendation = node.failureSummary;
@@ -88,8 +88,13 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
     return parsedData;
   }, {});
   // add manual test to object
+  
+    data.manualTest = manualCheckObj;
+    return data
+  }
+  
   // return BAO
-}
+
 
 //  const demoObj = {
 //   critical: {

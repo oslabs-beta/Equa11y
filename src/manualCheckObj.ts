@@ -1,5 +1,6 @@
 // Manual checks abridged wcag obj
 
+
 export interface ManualCheckInfo {
     num: string;
     level: string;
