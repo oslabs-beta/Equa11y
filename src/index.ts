@@ -24,8 +24,8 @@ export const program: Program = {
     console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
     // Ask for URL/localpath
     try {
-      const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
-      // const inputURL = await prompts.askPath(); // real prompt for publishing
+      // const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
+      const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
@@ -37,7 +37,7 @@ export const program: Program = {
       await program.loop(parsed, inputURL.url);
     } catch (error) {
       spinner.stop();
-      
+
       const errors = await prompts.askError(error);
       if (errors.startOver === 'quit') process.exit(0);
       else if (errors.startOver === 'search again') program.start();
@@ -71,7 +71,6 @@ export const program: Program = {
       }
     }
   },
-
-}
+};
 
 program.start();
