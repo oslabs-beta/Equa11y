@@ -699,7 +699,7 @@ export const wcag: any = {
                               "title": "Providing an alternative for time-based media for audio-only content",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G158.html",
                               "tests": {
-                                "procedure": "1. View the audio-only content while referring to the alternative for time-based media. 2. Check that the dialogue in the transcript matches the dialogue and information presented in the audio-only presentation. 3. If the audio includes multiple voices, check that the transcript identifies who is speaking for all dialogue. 4. Check that at least one of the following is true: 1. The transcript itself can be programmatically determined from the text alternative for the audio-only content 2. The transcript is referred to from the programmatically determined text alternative for the audio-only content 5. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                                "procedure": "1. View the audio-only content while referring to the alternative \n for time-based media. 2. Check that the dialogue in the transcript matches the \n dialogue and information presented in the audio-only presentation.\n 3. If the audio includes multiple voices, check that the transcript \n identifies who is speaking for all dialogue. 4. Check that at least one\n of the following is true: 1. The transcript itself can be programmatically \n determined from the text alternative for the audio-only content \n2. The transcript is referred to from the programmatically determined \ntext alternative for the audio-only content 5. If the alternate version(s) \n are on a separate page, check for the availability of link(s) to allow \n the user to get to the other versions.",
                                 "expected-results": "all of the above checks are true."
                               }
                             },
@@ -708,7 +708,7 @@ export const wcag: any = {
                               "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL17.html",
                               "tests": {
-                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application has audio-only media content and is expected to supply a text alternative, or has media that is expected to be replaced entirely with a transcript or similar text alternative. 2. Check for a control that indicates that activating it will supply static alternative content for the media. Activate the control. 3. Verify that the media control is replaced with alternate content, and that assistive technologies represent the change to the user interface.",
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that\n references a Silverlight application through an object tag.\n That application has audio-only media content and is expected to supply a text\n alternative, or has media that is expected to be replaced entirely with \na transcript or similar text alternative. 2. Check for a control that indicates\n that activating it will supply static alternative content for the media.\n Activate the control. 3. Verify that the media control is replaced with alternate\n content, and that assistive technologies represent the change to the user interface.",
                                 "expected-results": "#3 is true."
                               }
                             }
@@ -722,7 +722,7 @@ export const wcag: any = {
                               "title": "Providing an alternative for time-based media for video-only content",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G159.html",
                               "tests": {
-                                "procedure": "1. View the video-only content while referring to the alternative for time-based media. 2. Check that the information in the transcript includes the same information that is in the video-only presentation. 3. If the video includes multiple people or characters, check that the transcript identifies which person or character is associated with each action described. 4. Check that at least one of the following is true: 1. The transcript itself can be programmatically determined from the text alternative for the video-only content 2. The transcript is referred to from the programmatically determined text alternative for the video-only content 5. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                                "procedure": "1. View the video-only content while referring to the alternative \nfor time-based media. 2. Check that the information in the transcript\n includes the same information that is in the video-only presentation.\n 3. If the video includes multiple people or characters, check that the \ntranscript identifies which person or character is associated with each action described.\n 4. Check that at least one of the following is true: 1. The transcript\n itself can be programmatically determined from the text alternative for the \nvideo-only content 2. The transcript is referred to from the programmatically determined \ntext alternative for the video-only content 5. If the alternate version(s) are on a \nseparate page, check for the availability of link(s) to allow the user to get to \nthe other versions.",
                                 "expected-results": "all of the above checks are true."
                               }
                             },
@@ -731,7 +731,7 @@ export const wcag: any = {
                               "title": "Providing audio that describes the important video content and describing it as such",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G166.html",
                               "tests": {
-                                "procedure": "For a Web page that contains video-only content: 1. Check that there is link to an audio alternative which describes the contents of the video immediately before or after the video-only content.",
+                                "procedure": "For a Web page that contains video-only content: 1. Check that there\n is link to an audio alternative which describes the contents of the\n video immediately before or after the video-only content.",
                                 "expected-results": "Check #1 is true."
                               }
                             },
@@ -757,7 +757,7 @@ export const wcag: any = {
                       "title": "Using the track element to provide audio descriptions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H96.html",
                       "tests": {
-                        "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind descriptions in the language of the video",
+                        "procedure": "For each video element used to play a video: 1. Check that the video contains \na track element of kind descriptions in the language of the video",
                         "expected-results": "Check #1 is true."
                       }
                     }
@@ -770,7 +770,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F30.html",
                       "tests": {
-                        "procedure": "1. Check each text alternative to see if it is not actually a text alternative for the non-text content.",
+                        "procedure": "1. Check each text alternative to see if it is not actually a text alternative \nfor the non-text content.",
                         "expected-results": "If step #1 is true then this failure condition applies and content fails the Success Criterion."
                       }
                     },
@@ -779,7 +779,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F67.html",
                       "tests": {
-                        "procedure": "For all non-text content that requires a long description 1. Check that the long description serves the same purpose or presents the same information as the non-text content.",
+                        "procedure": "For all non-text content that requires a long description 1. Check that the long \ndescription serves the same purpose or presents the same information as the \nnon-text content.",
                         "expected-results": "If step #1 is false, then this failure condition applies and the content fails this Success Criterion."
                       }
                     }
@@ -804,7 +804,7 @@ export const wcag: any = {
                       "title": "Providing open (always visible) captions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G93.html",
                       "tests": {
-                        "procedure": "1. Watch the synchronized media with closed captioning turned off. 2. Check that captions (of all dialogue and important sounds) are visible.",
+                        "procedure": "1. Watch the synchronized media with closed captioning turned off.\n 2. Check that captions (of all dialogue and important sounds) are visible.",
                         "expected-results": "#2 is true."
                       }
                     },
@@ -813,7 +813,7 @@ export const wcag: any = {
                       "title": "Providing closed captions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G87.html",
                       "tests": {
-                        "procedure": "1. Turn on the closed caption feature of the media player 2. View the synchronized media content 3. Check that captions (of all dialogue and important sounds) are visible",
+                        "procedure": "1. Turn on the closed caption feature of the media player 2. View\n the synchronized media content 3. Check that captions (of all dialogue and \nimportant sounds) are visible",
                         "expected-results": "#3 is true."
                       }
                     },
@@ -822,7 +822,7 @@ export const wcag: any = {
                       "title": "Providing closed captions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G87.html",
                       "tests": {
-                        "procedure": "1. Turn on the closed caption feature of the media player 2. View the synchronized media content 3. Check that captions (of all dialogue and important sounds) are visible",
+                        "procedure": "1. Turn on the closed caption feature of the media player 2. View\n the synchronized media content 3. Check that captions (of all dialogue and \nimportant sounds) are visible",
                         "expected-results": "#3 is true."
                       },
                       "using": [
@@ -831,7 +831,7 @@ export const wcag: any = {
                           "title": "Providing captions through synchronized text streams in SMIL 1.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM11.html",
                           "tests": {
-                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with captions 3. Check whether captions are displayed",
+                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with \ncaptions 3. Check whether captions are displayed",
                             "expected-results": "#3 is true"
                           }
                         },
@@ -840,7 +840,7 @@ export const wcag: any = {
                           "title": "Providing captions through synchronized text streams in SMIL 2.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM12.html",
                           "tests": {
-                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with captions 3. Check whether captions are displayed",
+                            "procedure": "1. Enabled caption preference in player, if present 2. Play file with \ncaptions 3. Check whether captions are displayed",
                             "expected-results": "#3 is true"
                           }
                         },
@@ -849,7 +849,7 @@ export const wcag: any = {
                           "title": "Using the track element to provide captions",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H95.html",
                           "tests": {
-                            "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind captions in the language of the video.",
+                            "procedure": "For each video element used to play a video: 1. Check that the video contains\n a track element of kind captions in the language of the video.",
                             "expected-results": "Check #1 is true."
                           }
                         },
@@ -858,7 +858,7 @@ export const wcag: any = {
                           "title": "Applying captions to prerecorded synchronized media",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH9.html",
                           "tests": {
-                            "procedure": "Watch all video content displayed by your Flash movie. Ensure that: 1. Captions are available for all audio content, either turned on by default or as a user preference. 2. The captions properly describe all audio information contained in the video.",
+                            "procedure": "Watch all video content displayed by your Flash movie. Ensure that: 1. \nCaptions are available for all audio content, either turned on by default \nor as a user preference. 2. The captions properly describe all audio information \ncontained in the video.",
                             "expected-results": "#1 and #2 are true"
                           }
                         },
@@ -867,7 +867,7 @@ export const wcag: any = {
                           "title": "Providing Script-Embedded Text Captions for MediaElement Content",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL16.html",
                           "tests": {
-                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application plays media that is expected to have text captioning. 2. Check that a text area in the user interface shows captions for the media.",
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that \nreferences a Silverlight application through an object tag. The application \nplays media that is expected to have text captioning. 2. Check that a text area in \nthe user interface shows captions for the media.",
                             "expected-results": "#2 is true."
                           }
                         },
@@ -876,7 +876,7 @@ export const wcag: any = {
                           "title": "Using Separate Text-Format Text Captions for MediaElement Content",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL28.html",
                           "tests": {
-                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application plays media that is expected to have text captioning. 2. Check that the text area in the textbox shows captions for the media, and that the captions synchronize with media in an expected way.",
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that \nreferences a Silverlight application through an object tag. That application \nplays media that is expected to have text captioning. 2. Check that the text area in\n the textbox shows captions for the media, and that the captions synchronize with \nmedia in an expected way.",
                             "expected-results": "#2 is true."
                           }
                         }
@@ -892,7 +892,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F8.html",
                       "tests": {
-                        "procedure": "1. View the material with captioning turned on. 2. Check that all dialogue is accompanied by a caption. 3. Check that all important sounds are captioned.",
+                        "procedure": "1. View the material with captioning turned on. 2. Check that all dialogue \nis accompanied by a caption. 3. Check that all important sounds are captioned.",
                         "expected-results": "If check #2 and check #3 are false, then this failure condition applies and the content fails the Success Criterion."
                       }
                     },
@@ -901,7 +901,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F75.html",
                       "tests": {
-                        "procedure": "1. Check for captions on synchronized media alternatives. 2. Check that the synchronized media alternative does not provide more information than is presented on the page in text. NOTE: Synchronized media alternatives often use different words to present what is on the page but it should not present new information on the topic of the page.",
+                        "procedure": "1. Check for captions on synchronized media alternatives. 2. Check that the \nsynchronized media alternative does not provide more information than is presented \non the page in text. NOTE: Synchronized media alternatives often use different \nwords to present what is on the page but it should not present new information \non the topic of the page.",
                         "expected-results": "If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
                       }
                     },
@@ -910,7 +910,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F74.html",
                       "tests": {
-                        "procedure": "1. Check pages that provide synchronized media alternatives to text. 2. Check that synchronized media is clearly labeled with the text for which it is an alternative.",
+                        "procedure": "1. Check pages that provide synchronized media alternatives to text. 2. Check \nthat synchronized media is clearly labeled with the text for which it is an alternative.",
                         "expected-results": "If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
                       }
                     }
@@ -935,7 +935,7 @@ export const wcag: any = {
                       "title": "Providing an alternative for time based media",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G69.html",
                       "tests": {
-                        "procedure": "1. View the synchronized media presentation while referring to the alternative for time-based media. 2. Check that the dialogue in the alternative for time-based media matches the dialogue in the synchronized media presentation. 3. Check that the alternative for time-based media has descriptions of sounds. 4. Check that the alternative for time-based media has descriptions of setting and setting changes. 5. Check that the alternative for time-based media has descriptions of actions and expressions of any 'actors' (people, animals etc). 6. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "procedure": "1. View the synchronized media presentation while referring to the alternative \nfor time-based media. 2. Check that the dialogue in the alternative for \ntime-based media matches the dialogue in the synchronized media presentation. \n3. Check that the alternative for time-based media has descriptions of sounds. \n4. Check that the alternative for time-based media has descriptions of setting and \nsetting changes. 5. Check that the alternative for time-based media has \ndescriptions of actions and expressions of any 'actors' (people, animals etc). \n6. If the alternate version(s) are on a separate page, check for the availability \nof link(s) to allow the user to get to the other versions.",
                         "expected-results": "#2, 3, 4, 5 are true."
                       },
                       "using": [
@@ -944,7 +944,7 @@ export const wcag: any = {
                           "title": "Placing a link to the alternative for time-based media immediately next to the non-text content",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G58.html",
                           "tests": {
-                            "procedure": "1. Check for the presence of a link immediately before or after the non-text content. 2. Check that it is a valid link that points directly to the collated document of this particular synchronized media. 3. Check for the availability of a link or back function to get the user back to the original location of the synchronized media content.",
+                            "procedure": "1. Check for the presence of a link immediately before or after the non-text\n content. 2. Check that it is a valid link that points directly to the \ncollated document of this particular synchronized media. 3. Check for the \navailability of a link or back function to get the user back to the original location \nof the synchronized media content.",
                             "expected-results": "Items #1 through 3 are all true."
                           }
                         },
@@ -953,7 +953,7 @@ export const wcag: any = {
                           "title": "Providing Static Alternative Content for Silverlight Media Playing in a MediaElement",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL17.html",
                           "tests": {
-                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. That application has audio-only media content and is expected to supply a text alternative, or has media that is expected to be replaced entirely with a transcript or similar text alternative. 2. Check for a control that indicates that activating it will supply static alternative content for the media. Activate the control. 3. Verify that the media control is replaced with alternate content, and that assistive technologies represent the change to the user interface.",
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references\n a Silverlight application through an object tag. That application \nhas audio-only media content and is expected to supply a text alternative, or \nhas media that is expected to be replaced entirely with a transcript or similar \ntext alternative. 2. Check for a control that indicates that activating it will \nsupply static alternative content for the media. Activate the control. \n3. Verify that the media control is replaced with alternate content, and that assistive \ntechnologies represent the change to the user interface.",
                             "expected-results": "#3 is true."
                           }
                         }
@@ -979,7 +979,7 @@ export const wcag: any = {
                       "title": "Providing a second, user-selectable, audio track that includes audio descriptions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G78.html",
                       "tests": {
-                        "procedure": "1. Check that the ability exists to turn on the audio track that includes audio descriptions. For example, by using a control within the content itself or by selecting a control or preference in the media player or operating system. 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used to convey important information regarding visual content",
+                        "procedure": "1. Check that the ability exists to turn on the audio track that \nincludes audio descriptions. For example, by using a control within the content \nitself or by selecting a control or preference in the media player or operating system.\n 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used \nto convey important information regarding visual content",
                         "expected-results": "Checks #1 and #3 are true."
                       }
                     },
@@ -990,7 +990,7 @@ export const wcag: any = {
                           "title": "Providing a second, user-selectable, audio track that includes audio descriptions",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G78.html",
                           "tests": {
-                            "procedure": "1. Check that the ability exists to turn on the audio track that includes audio descriptions. For example, by using a control within the content itself or by selecting a control or preference in the media player or operating system. 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used to convey important information regarding visual content",
+                            "procedure": "1. Check that the ability exists to turn on the audio track that \nincludes audio descriptions. For example, by using a control within the content \nitself or by selecting a control or preference in the media player or operating system.\n 2. Listen to the synchronized media 3. Check to see if gaps in dialogue are used \nto convey important information regarding visual content",
                             "expected-results": "Checks #1 and #3 are true."
                           }
                         },
@@ -999,7 +999,7 @@ export const wcag: any = {
                           "title": "Accessing Alternate Audio Tracks in Silverlight Media",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
                           "tests": {
-                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that \napplication plays media and the media is expected to support an alternate audio track \nfor the video. 2. Verify that the application user interface presents a control \nthat enables the user to cause the media to play with an alternate audio track. \n3. Activate that control. Verify that the audio portion of the media player output as \nplayed through the computer's audio system is now playing the alternate audio track.",
                             "expected-results": "#2 and #3 are true."
                           }
                         }
@@ -1010,7 +1010,7 @@ export const wcag: any = {
                       "title": "Providing a version of a movie with audio descriptions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G173.html",
                       "tests": {
-                        "procedure": "1. Open the version of the media that includes audio description. 2. Listen to the movie. 3. Check to see if gaps in dialogue are used to convey important information regarding visual content. 4. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "procedure": "1. Open the version of the media that includes audio description. 2. \nListen to the movie. 3. Check to see if gaps in dialogue are used to convey important \ninformation regarding visual content. 4. If the alternate version(s) are on a \nseparate page, check for the availability of link(s) to allow the user to get \nto the other versions.",
                         "expected-results": "#3 and #4 are true."
                       },
                       "using": [
@@ -1019,7 +1019,7 @@ export const wcag: any = {
                           "title": "Providing audio description in SMIL 1.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM6.html",
                           "tests": {
-                            "procedure": "1. Find method for turning on audio description from content/player (unless it is always played by default) 2. Play file with audio description 3. Check whether audio description is played",
+                            "procedure": "1. Find method for turning on audio description from content/player \n(unless it is always played by default) 2. Play file with audio description \n3. Check whether audio description is played",
                             "expected-results": "#3 is true"
                           }
                         },
@@ -1028,7 +1028,7 @@ export const wcag: any = {
                           "title": "Providing audio description in SMIL 2.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM7.html",
                           "tests": {
-                            "procedure": "1. Find method for turning on audio description from content/player (unless it is always played by default) 2. Play file with audio description 3. Check whether audio description is played",
+                            "procedure": "1. Find method for turning on audio description from content/player \n(unless it is always played by default) 2. Play file with audio description \n3. Check whether audio description is played",
                             "expected-results": "#3 is true"
                           }
                         },
@@ -1037,7 +1037,7 @@ export const wcag: any = {
                           "title": "Applying audio descriptions to Flash video",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH26.html",
                           "tests": {
-                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: 1. Audio descriptions have been made available using separate sound files. 2, A button is provided that allows users to enable or disable the audio descriptions",
+                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: \n1. Audio descriptions have been made available using separate sound files. \n2, A button is provided that allows users to enable or disable the audio descriptions",
                             "expected-results": "#1 and #2 are true"
                           }
                         },
@@ -1046,7 +1046,7 @@ export const wcag: any = {
                           "title": "Accessing Alternate Audio Tracks in Silverlight Media",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
                           "tests": {
-                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that \napplication plays media and the media is expected to support an alternate audio track \nfor the video. 2. Verify that the application user interface presents a control \nthat enables the user to cause the media to play with an alternate audio track. \n3. Activate that control. Verify that the audio portion of the media player \noutput as played through the computer's audio system is now playing the alternate audio track.",
                             "expected-results": "#2 and #3 are true."
                           }
                         },
@@ -1061,7 +1061,7 @@ export const wcag: any = {
                       "title": "Providing a movie with extended audio descriptions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G8.html",
                       "tests": {
-                        "procedure": "1. Open the version of the movie that includes extended audio descriptions. 2. Check that the video halts for extended audio description when there is not enough space to include necessary narration between the natural dialogue. 3. Check that the necessary information is in the audio description. 4. If the alternate version(s) are on a separate page, check for the availability of link(s) to allow the user to get to the other versions.",
+                        "procedure": "1. Open the version of the movie that includes extended audio descriptions. \n2. Check that the video halts for extended audio description when there is not \nenough space to include necessary narration between the natural dialogue. 3. \nCheck that the necessary information is in the audio description. 4. If the alternate \nversion(s) are on a separate page, check for the availability of link(s) \nto allow the user to get to the other versions.",
                         "expected-results": "Checks #2, #3 and #4 are true."
                       },
                       "using": [
@@ -1070,7 +1070,7 @@ export const wcag: any = {
                           "title": "Adding extended audio description in SMIL 1.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM1.html",
                           "tests": {
-                            "procedure": "1. Play file with extended audio descriptions 2. Play file with audio description 3. Check whether video freezes in places and plays extended audio description",
+                            "procedure": "1. Play file with extended audio descriptions 2. Play file with audio \ndescription 3. Check whether video freezes in places and plays extended audio \ndescription",
                             "expected-results": "#3 is true"
                           }
                         },
@@ -1079,7 +1079,7 @@ export const wcag: any = {
                           "title": "Adding extended audio description in SMIL 2.0",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/smil/SM2.html",
                           "tests": {
-                            "procedure": "1. Play file with extended audio description 2. Check whether video freezes in places and plays extended audio description",
+                            "procedure": "1. Play file with extended audio description 2. Check whether video \nfreezes in places and plays extended audio description",
                             "expected-results": "#2 is true"
                           }
                         },
@@ -1088,7 +1088,7 @@ export const wcag: any = {
                           "title": "Applying audio descriptions to Flash video",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH26.html",
                           "tests": {
-                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: 1. Audio descriptions have been made available using separate sound files. 2. A button is provided that allows users to enable or disable the audio descriptions",
+                            "procedure": "When Flash content contains video with an audio soundtrack, confirm that: \n1. Audio descriptions have been made available using separate sound files. \n2. A button is provided that allows users to enable or disable the audio descriptions",
                             "expected-results": "#1 and #2 are true"
                           }
                         },
@@ -1097,7 +1097,7 @@ export const wcag: any = {
                           "title": "Accessing Alternate Audio Tracks in Silverlight Media",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL1.html",
                           "tests": {
-                            "procedure": "1. Open the HTML page for a Silverlight application, where that application plays media and the media is expected to support an alternate audio track for the video. 2. Verify that the application user interface presents a control that enables the user to cause the media to play with an alternate audio track. 3. Activate that control. Verify that the audio portion of the media player output as played through the computer's audio system is now playing the alternate audio track.",
+                            "procedure": "1. Open the HTML page for a Silverlight application, where that application \nplays media and the media is expected to support an alternate audio track \nfor the video. 2. Verify that the application user interface presents a control \nthat enables the user to cause the media to play with an alternate audio track. \n3. Activate that control. Verify that the audio portion of the media player \noutput as played through the computer's audio system is now playing the alternate audio track.",
                             "expected-results": "#2 and #3 are true."
                           }
                         },
@@ -1112,7 +1112,7 @@ export const wcag: any = {
                       "title": "Using a static text alternative to describe a talking head video",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G203.html",
                       "tests": {
-                        "procedure": "1. Check that there is no important time-based information in the video track 2. Check that the programmatically associated description of the media contains any context of the content that is not contained in the audio track (e.g. speaker identification, credits, context)",
+                        "procedure": "1. Check that there is no important time-based information in the video track \n2. Check that the programmatically associated description of the media contains any \ncontext of the content that is not contained in the audio track (e.g. speaker \nidentification, credits, context)",
                         "expected-results": "All checks are true."
                       }
                     }
@@ -1125,7 +1125,7 @@ export const wcag: any = {
                       "title": "Using the track element to provide audio descriptions",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H96.html",
                       "tests": {
-                        "procedure": "For each video element used to play a video: 1. Check that the video contains a track element of kind descriptions in the language of the video.",
+                        "procedure": "For each video element used to play a video: 1. Check that the video contains \na track element of kind descriptions in the language of the video.",
                         "expected-results": "Check #1 is true."
                       }
                     }
@@ -2125,7 +2125,7 @@ export const wcag: any = {
                       "title": "Ordering the content in a meaningful sequence",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G57.html",
                       "tests": {
-                        "procedure": "1. Linearize content using a standard approach for the technology (e.g., removing layout styles or running a linearization tool 2. Check to see if the order of content yields the same meaning as the original",
+                        "procedure": "1. Linearize content using a standard approach for the technology \n(e.g., removing layout styles or running a linearization tool 2. Check to see if \nthe order of content yields the same meaning as the original",
                         "expected-results": "Check #2 is true."
                       }
                     },
@@ -2140,7 +2140,7 @@ export const wcag: any = {
                           "title": "Ordering the content in a meaningful sequence",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G57.html",
                           "tests": {
-                            "procedure": "1. Linearize content using a standard approach for the technology (e.g., removing layout styles or running a linearization tool 2. Check to see if the order of content yields the same meaning as the original",
+                            "procedure": "1. Linearize content using a standard approach for the technology \n(e.g., removing layout styles or running a linearization tool 2. Check to see if \nthe order of content yields the same meaning as the original",
                             "expected-results": "Check #2 is true."
                           },
                           "using": [
@@ -2149,7 +2149,7 @@ export const wcag: any = {
                               "title": "Using a Unicode right-to-left mark (RLM) or left-to-right mark (LRM) to mix text direction inline",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H34.html",
                               "tests": {
-                                "procedure": "1. Examine the source for places where text changes direction. 2. When text changes direction, check whether neutral characters such as spaces or punctuation occur adjacent to text that is rendered in the non-default direction. 3. When #2 is true and the HTML bidirectional algorithm would produce the wrong placement of the neutral characters, check whether the neutral characters are followed by Unicode right-to-left or left-to-right marks that cause neutral characters to be placed as part of the preceding characters.",
+                                "procedure": "1. Examine the source for places where text changes direction. \n2. When text changes direction, check whether neutral characters such as spaces or \npunctuation occur adjacent to text that is rendered in the non-default direction. \n3. When #2 is true and the HTML bidirectional algorithm would produce the wrong \nplacement of the neutral characters, check whether the neutral characters are \nfollowed by Unicode right-to-left or left-to-right marks that cause neutral characters \nto be placed as part of the preceding characters.",
                                 "expected-results": "Check #3 is true."
                               }
                             },
@@ -2158,7 +2158,7 @@ export const wcag: any = {
                               "title": "Using the dir attribute on an inline element to resolve problems with nested directional runs",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H56.html",
                               "tests": {
-                                "procedure": "1. Examine the text direction of text in the document 2. If the text direction is right-to-left, check that for the ancestor element that has a dir attribute, the attribute has the value 'rtl' 3. If the text direction is left-to-right, check that there is no ancestor element with a dir attribute, or that for the ancestor element that has a dir attribute, the attribute has the value 'ltr'",
+                                "procedure": "1. Examine the text direction of text in the document 2. If the text \ndirection is right-to-left, check that for the ancestor element that has a dir \nattribute, the attribute has the value 'rtl' 3. If the text direction is left-to-right, \ncheck that there is no ancestor element with a dir attribute, or that for the ancestor \nelement that has a dir attribute, the attribute has the value 'ltr'",
                                 "expected-results": "Checks #2 and #3 are true for all text."
                               }
                             },
@@ -2167,7 +2167,7 @@ export const wcag: any = {
                               "title": "Positioning content based on structural markup",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C6.html",
                               "tests": {
-                                "procedure": "For content which uses CSS for positioning 1. Remove the style information from the document or turn off use of style sheets in the user agent. 2. Check that the structural relations and the meaning of the content are preserved.",
+                                "procedure": "For content which uses CSS for positioning 1. Remove the style information \nfrom the document or turn off use of style sheets in the user agent. \n2. Check that the structural relations and the meaning of the content are preserved.",
                                 "expected-results": "Check #2 is true."
                               }
                             },
@@ -2176,7 +2176,7 @@ export const wcag: any = {
                               "title": "Using CSS letter-spacing to control spacing within a word",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C8.html",
                               "tests": {
-                                "procedure": "For each word that appears to have non-standard spacing between characters: 1. Check whether the CSS letter-spacing property was used to control spacing.",
+                                "procedure": "For each word that appears to have non-standard spacing between characters: \n1. Check whether the CSS letter-spacing property was used to control spacing.",
                                 "expected-results": "Check #1 is true."
                               }
                             }
@@ -2189,7 +2189,7 @@ export const wcag: any = {
                       "title": "Making the DOM order match the visual order",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C27.html",
                       "tests": {
-                        "procedure": "1. Visually examine the order of the content in the Web page as it is presented to the end user. 2. Examine the elements in the DOM using a tool that allows you to see the DOM. 3. Ensure that the order of the content in the source code sections match the visual presentation of the content in the Web page. (e.g., for an English language page the order is from top to bottom and from left to right.) ",
+                        "procedure": "1. Visually examine the order of the content in the Web page \nas it is presented to the end user. \n2. Examine the elements in the DOM using \na tool that allows you to see the DOM. \n3. Ensure that the order of the content in the source code \nsections match the visual presentation of the content in the Web page. \n(e.g., for an English language page the order \nis from top to bottom and from left to right.) ",
                         "expected-results": "Step #3 is true."
                       }
                     },
@@ -2198,7 +2198,7 @@ export const wcag: any = {
                       "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH15.html",
                       "tests": {
-                        "procedure": "1. Use a screen reader to navigate through the Flash movie, one element at a time. 2. Check that the order in which the screen reader announces the content, matches the logical visual order. 3. When focus has been placed inside the Flash movie, press the Tab key repeatedly to traverse its contents by keyboard. 4. Verify that all interactive and focusable elements are reachable by keyboard, in a logical order.",
+                        "procedure": "1. Use a screen reader to navigate through \nthe Flash movie, one element at a time. \n2. Check that the order in which the screen reader \nannounces the content, matches the logical visual order. \n3. When focus has been placed inside the Flash movie, \npress the Tab key repeatedly to traverse its contents by keyboard. \n4. Verify that all interactive and focusable elements \nare reachable by keyboard, in a logical order.",
                         "expected-results": "Checks #2 and #4 are true."
                       }
                     },
@@ -2207,7 +2207,7 @@ export const wcag: any = {
                       "title": "Ensuring correct tab and reading order in PDF documents",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF3.html",
                       "tests": {
-                        "procedure": "1. Verify that the content is in the correct reading order by one of the following: - Read the PDF document with a screen reader or a tool that reads aloud, listening to hear that each element is read in the correct order. - Use a tool that exposes the document through the accessibility API, and verify that the reading order is correct. 2. Verify that the tab order is correct for focusable content by one of the following: - Use the tab key to traverse the focus order in the document. - Use a tool that is capable of showing the page object entry that specifies the tab order setting to open the PDF document and view the setting.",
+                        "procedure": "1. Verify that the content is in the correct \nreading order by one of the following: \n- Read the PDF document with a screen reader or a tool that reads aloud, \nlistening to hear that each element is read in the correct order. \n- Use a tool that exposes the document through the accessibility API, \nand verify that the reading order is correct. \n2. Verify that the tab order is correct for focusable content \nby one of the following: \n- Use the tab key to traverse the focus order in the document. \n- Use a tool that is capable of showing the page object entry \nthat specifies the tab order setting to open the PDF document \nand view the setting.",
                         "expected-results": "#1 and Check #2 are true."
                       }
                     },
@@ -2216,7 +2216,7 @@ export const wcag: any = {
                       "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL34.html",
                       "tests": {
-                        "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. 2. Engage the screen reader. Press the TAB key to traverse the sequence of elements inside the Silverlight content area. 3. Verify that the order in which elements are traversed in a tab sequence is also the expected order of the elements as they are presented visually, particularly in such cases where the order of each element is significant per SC 1.3.2.",
+                        "procedure": "1. Using a browser that supports Silverlight, \nopen an HTML page that references a Silverlight application \nthrough an object tag. \n2. Engage the screen reader. \nPress the TAB key to traverse the sequence of elements \ninside the Silverlight content area. \n3. Verify that the order in which elements are traversed \nin a tab sequence is also the expected order of the elements \nas they are presented visually, particularly in such cases \nwhere the order of each element is significant per SC 1.3.2.",
                         "expected-results": "#3 is true."
                       }
                     }
@@ -2230,7 +2230,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F34.html",
                       "tests": {
-                        "procedure": "1. Examine the document for visually formatted tables. 2. Check whether the tables are created using white space characters to layout the tabular data.",
+                        "procedure": "1. Examine the document for visually formatted tables. \n2. Check whether the tables are created using \nwhite space characters to layout the tabular data.",
                         "expected-results": "If step #2 is true, then this failure condition applies and the content fails these Success Criteria."
                       }
                     },
@@ -2239,7 +2239,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F33.html",
                       "tests": {
-                        "procedure": "1. Examine the document for data or information presented in columnar format. 2. Check whether the columns are created using white space characters to lay out the information.",
+                        "procedure": "1. Examine the document for data or information presented in columnar format. \n2. Check whether the columns are created using white space \ncharacters to lay out the information.",
                         "expected-results": "If step #2 is true, then this failure condition applies and the content fails these Success Criteria."
                       }
                     },
@@ -2248,7 +2248,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F32.html",
                       "tests": {
-                        "procedure": "For each word that appears to have non-standard spacing between characters: 1. Check whether any words in the text of the content contain white space characters.",
+                        "procedure": "For each word that appears to have \nnon-standard spacing between characters: \n1. Check whether any words in the text of the content contain \nwhite space characters.",
                         "expected-results": "If step #1 is true, then this failure condition applies and the content fails this Success Criterion."
                       }
                     },
@@ -2257,7 +2257,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F49.html",
                       "tests": {
-                        "procedure": "1. Linearize the content in either of the following ways: - Present the content in source code order - Remove the table markup from around the content 2. Check that the linear reading order matches any meaningful sequence conveyed through presentation.",
+                        "procedure": "1. Linearize the content in either of the following ways: \n- Present the content in source code order \n- Remove the table markup from around the content \n2. Check that the linear reading order matches \nany meaningful sequence conveyed through presentation.",
                         "expected-results": "If check #2 is false, then this failure condition applies and the content fails this Success Criterion."
                       }
                     },
@@ -2266,7 +2266,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F1.html",
                       "tests": {
-                        "procedure": "For content which uses CSS for positioning: 1. Remove the style information from the document or turn off use of style sheets in the user agent. 2. Check that the reading order of the content is correct and the meaning of the content is preserved.",
+                        "procedure": "For content which uses CSS for positioning: \n1. Remove the style information from the document \nor turn off use of style sheets in the user agent. \n2. Check that the reading order of the content is correct \nand the meaning of the content is preserved.",
                         "expected-results": "If step #2 is false, then this failure condition applies and the content fails this Success Criterion."
                       }
                     }
@@ -2298,7 +2298,7 @@ export const wcag: any = {
                       "title": "Providing textual identification of items that otherwise rely only on sensory information to be understood",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G96.html",
                       "tests": {
-                        "procedure": "Find all references in the Web page that mention the shape, size, or position of an object. For each such item: 1. Check that the reference contains additional information that allows the item to be located and identified without any knowledge of its shape, size, or relative position.",
+                        "procedure": "Find all references in the Web page that mention the \nshape, size, or position of an object. \nFor each such item: \n1. Check that the reference contains additional \ninformation that allows the item to be located and identified \nwithout any knowledge of its shape, size, or relative position.",
                         "expected-results": "Check #1 is true"
                       }
                     }
@@ -2312,7 +2312,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F14.html",
                       "tests": {
-                        "procedure": "1. Examine the Web page for textual references to content within the Web page. 2. Check that the references do not rely on only the visual shape or location of the content.",
+                        "procedure": "1. Examine the Web page for textual references \nto content within the Web page. \n2. Check that the references do not rely on \nonly the visual shape or location of the content.",
                         "expected-results": "If step #2 is false, then this failure condition applies and the content fails this Success Criterion."
                       }
                     },
@@ -2321,7 +2321,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F26.html",
                       "tests": {
-                        "procedure": "For each instruction that refers to non-text marks that convey information: 1. Check whether there are other means to determine the information conveyed by the non-text marks.",
+                        "procedure": "For each instruction that refers to non-text marks \nthat convey information: \n1. Check whether there are other means to determine \nthe information conveyed by the non-text marks.",
                         "expected-results": "If #1 is false, then this failure condition applies and the content fails this Success Criterion."
                       }
                     }
@@ -3761,7 +3761,7 @@ export const wcag: any = {
                       "title": "Ensuring that users are not trapped in content",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G21.html",
                       "tests": {
-                        "procedure": "1. Tab through content from start to finish. 2, Check to see that keyboard focus is not trapped in any of the content. 3. If keyboard focus appears to be trapped in any of the content, check that help information is available explaining how to exit the content and can be accessed via the keyboard.",
+                        "procedure": "1. Tab through content from start to finish. \n2. Check to see that keyboard focus is not trapped in any of the content. \n3. If keyboard focus appears to be trapped in any of the content, \ncheck that help information is available explaining \nhow to exit the content and can be accessed via the keyboard.",
                         "expected-results": "#2 is false"
                       }
                     },
@@ -3770,7 +3770,7 @@ export const wcag: any = {
                       "title": "Providing keyboard access to a Flash object and avoiding a keyboard trap",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH17.html",
                       "tests": {
-                        "procedure": "For a Flash content on a web page: 1. If possible, confirm that the source of the Flash content imports and initializes the SWFFocus class 2. Press the tab key to move through tabbable items on the page 3. Confirm that it is possible to tab into the Flash content 4. Continue tabbing and confirm that it is possible to tab out of the flash content",
+                        "procedure": "For a Flash content on a web page: \n1. If possible, confirm that the source of the Flash content \nimports and initializes the SWFFocus class. \n2. Press the tab key to move through tabbable items on the page \n3. Confirm that it is possible to tab into the Flash content \n4. Continue tabbing and confirm that it is possible to \ntab out of the flash content",
                         "expected-results": "Checks 3 and 4 are true"
                       }
                     }
@@ -3784,7 +3784,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F10.html",
                       "tests": {
-                        "procedure": "1. Using a keyboard, navigate through the content. 2. Check to see that the keyboard focus is not 'trapped' and it is possible to move keyboard focus out of the plug-in content without closing the user agent or restarting the system.",
+                        "procedure": "1. Using a keyboard, navigate through the content. \n2. Check to see that the keyboard focus is not 'trapped' \nand it is possible to move keyboard focus out of the \nplug-in content without closing the user agent \nor restarting the system.",
                         "expected-results": "If the keyboard focus becomes 'trapped,' then this failure condition applies and content fails the Success Criterion and conformance requirement 5."
                       }
                     }
@@ -4297,7 +4297,7 @@ export const wcag: any = {
                       "title": "Ensuring that no component of the content flashes more than three times in any 1-second period",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G19.html",
                       "tests": {
-                        "procedure": "1. Check that there are no more than three flashes during any 1-second period. 2. If there are three flashes, check that the Light/Dark status at the end of the 1-second period is the same as at the start.",
+                        "procedure": "1. Check that there are no more than three flashes \nduring any 1-second period. \n2. If there are three flashes, check that the \nLight/Dark status at the end of the 1-second period \nis the same as at the start.",
                         "expected-results": "Both Step 1 and Step 2 are true."
                       }
                     },
@@ -4306,7 +4306,7 @@ export const wcag: any = {
                       "title": "Keeping the flashing area small enough",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G176.html",
                       "tests": {
-                        "procedure": "1. The small safe area is calculated. 2. Check that only one area of the screen is flashing at any time. 3. Check that the flashing content would fit into a contiguous container whose area is less than the small safe area.",
+                        "procedure": "1. The small safe area is calculated. \n2. Check that only one area of the screen is flashing at any time. \n3. Check that the flashing content would fit into \na contiguous container whose area is less than the small safe area.",
                         "expected-results": "Checks #2 and #3 are true."
                       }
                     },
@@ -4315,7 +4315,7 @@ export const wcag: any = {
                       "title": "Using a tool to ensure that content does not violate the general flash threshold or red flash threshold",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G15.html",
                       "tests": {
-                        "procedure": "Check to see to see that content does not violate the general flash and/or red flash threshold 1. Use a tool to determine that neither the General Flash nor Red Flash threshold were exceeded",
+                        "procedure": "Check to see to see that content does not violate \nthe general flash and/or red flash threshold \n1. Use a tool to determine that neither the General Flash \nnor Red Flash threshold were exceeded",
                         "expected-results": "Check #1 is true."
                       }
                     }
@@ -4532,7 +4532,7 @@ export const wcag: any = {
                       "title": "Placing the interactive elements in an order that follows sequences and relationships within the content",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G59.html",
                       "tests": {
-                        "procedure": "1. Determine the order of interactive elements in the content. 2. Determine the logical order of interactive elements. 3. Check that the order of the interactive elements in the content is the same as the logical order.",
+                        "procedure": "1. Determine the order of interactive elements in the content. \n2. Determine the logical order of interactive elements. \n3. Check that the order of the interactive elements in the content \nis the same as the logical order.",
                         "expected-results": "Check #3 is true."
                       }
                     },
@@ -4545,7 +4545,7 @@ export const wcag: any = {
                           "title": "Creating a logical tab order through links, form controls, and objects",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H4.html",
                           "tests": {
-                            "procedure": "1. Check if tabindex is used 2. If tabindex is used, check that the tab order specified by the tabindex attributes follows relationships in the content.",
+                            "procedure": "1. Check if tabindex is used \n2. If tabindex is used, check that the tab order specified by the tabindex \nattributes follows relationships in the content.",
                             "expected-results": "Check #2 is true."
                           }
                         },
@@ -4554,7 +4554,7 @@ export const wcag: any = {
                           "title": "Using the tabIndex property to specify a logical reading order and a logical tab order in Flash",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH15.html",
                           "tests": {
-                            "procedure": "1. Use a screen reader to navigate through the Flash movie, one element at a time. 2. Check that the order in which the screen reader announces the content, matches the logical visual order. 3. When focus has been placed inside the Flash movie, press the Tab key repeatedly to traverse its contents by keyboard. 4. Verify that all interactive and focusable elements are reachable by keyboard, in a logical order.",
+                            "procedure": "1. Use a screen reader to navigate through \nthe Flash movie, one element at a time. \n2. Check that the order in which the screen reader \nannounces the content, matches the logical visual order. \n3. When focus has been placed inside the Flash movie, \npress the Tab key repeatedly to traverse its contents by keyboard. \n4. Verify that all interactive and focusable elements \nare reachable by keyboard, in a logical order.",
                             "expected-results": "Checks #2 and #4 are true."
                           }
                         },
@@ -4563,7 +4563,7 @@ export const wcag: any = {
                           "title": "Making the DOM order match the visual order",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/css/C27.html",
                           "tests": {
-                            "procedure": "1. Visually examine the order of the content in the Web page as it is presented to the end user. 2. Examine the elements in the DOM using a tool that allows you to see the DOM. 3. Ensure that the order of the content in the source code sections match the visual presentation of the content in the Web page. (e.g., for an English language page the order is from top to bottom and from left to right.)",
+                            "procedure": "1. Visually examine the order of the content in the Web page \nas it is presented to the end user. \n2. Examine the elements in the DOM using a tool \nthat allows you to see the DOM. \n3. Ensure that the order of the content in the source code \nsections match the visual presentation of the content in the Web page. \n(e.g., for an English language page the order is from top to bottom \nand from left to right.)",
                             "expected-results": "Step #3 is true."
                           }
                         },
@@ -4572,7 +4572,7 @@ export const wcag: any = {
                           "title": "Ensuring correct tab and reading order in PDF documents",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF3.html",
                           "tests": {
-                            "procedure": "1. Verify that the content is in the correct reading order by one of the following: - Read the PDF document with a screen reader or a tool that reads aloud, listening to hear that each element is read in the correct order. - Use a tool that exposes the document through the accessibility API, and verify that the reading order is correct. 2. Verify that the tab order is correct for focusable content by one of the following: - Use the tab key to traverse the focus order in the document - Use a tool that is capable of showing the page object entry that specifies the tab order setting to open the PDF document and view the setting.",
+                            "procedure": "1. Verify that the content is in the correct \nreading order by one of the following: \n- Read the PDF document with a screen reader or a tool that reads aloud, \nlistening to hear that each element is read in the correct order. \n- Use a tool that exposes the document through the accessibility API, and verify that the reading order is correct. \n2. Verify that the tab order is correct for focusable content by one of the following: \n- Use the tab key to traverse the focus order in the document \n- Use a tool that is capable of showing the page object entry \nthat specifies the tab order setting to open the PDF document \nand view the setting.",
                             "expected-results": "#1 and Check #2 are true."
                           }
                         },
@@ -4581,7 +4581,7 @@ export const wcag: any = {
                           "title": "Using the Silverlight Default Tab Sequence and Altering Tab Sequences With Properties",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL34.html",
                           "tests": {
-                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. 2. Engage the screen reader. Press the TAB key to traverse the sequence of elements inside the Silverlight content area. 3. Verify that the order in which elements are traversed in a tab sequence is also the expected order of the elements as they are presented visually, particularly in such cases where the order of each element is significant per SC 1.3.2.",
+                            "procedure": "1. Using a browser that supports Silverlight, open \nan HTML page that references a Silverlight application through an object tag. \n2. Engage the screen reader. Press the TAB key \nto traverse the sequence of elements inside the Silverlight content area. \n3. Verify that the order in which elements are \ntraversed in a tab sequence is also the expected order of the \nelements as they are presented visually, particularly in such \ncases where the order of each element is significant per SC 1.3.2.",
                             "expected-results": "#3 is true."
                           }
                         }
@@ -4596,7 +4596,7 @@ export const wcag: any = {
                           "title": "Inserting dynamic content into the Document Object Model immediately following its trigger element",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR26.html",
                           "tests": {
-                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. 2. Check that the dialogs are triggered from the click event of a button or a link. 3. Using a tool that allows you to inspect the DOM generated by script, check that the dialog is next in the DOM.",
+                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. \n2. Check that the dialogs are triggered from the click event of a button or a link. \n3. Using a tool that allows you to inspect the DOM generated by script, \ncheck that the dialog is next in the DOM.",
                             "expected-results": "#2 and #3 are true."
                           }
                         },
@@ -4605,7 +4605,7 @@ export const wcag: any = {
                           "title": "Creating Custom Dialogs in a Device Independent Way",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR37.html",
                           "tests": {
-                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. 2. Check that the dialogs can be opened by tabbing to the area and hitting enter. 3. Check that, once opened, the dialog is next in the tab order. 4. Check that the dialogs are triggered from the click event of a button or a link. 5. Using a tool that allows you to inspect the DOM generated by script, check that the dialog is next in the DOM.",
+                            "procedure": "1. Find all areas of the page that trigger dialogs that are not pop-up windows. \n2. Check that the dialogs can be opened by tabbing to the area and hitting enter. \n3. Check that, once opened, the dialog is next in the tab order. \n4. Check that the dialogs are triggered from \nthe click event of a button or a link. \n5. Using a tool that allows you to inspect the DOM generated by script, \ncheck that the dialog is next in the DOM.",
                             "expected-results": "Checks #2, #3, #4 and #5 are true."
                           }
                         },
@@ -4614,7 +4614,7 @@ export const wcag: any = {
                           "title": "Reordering page sections using the Document Object Model",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR27.html",
                           "tests": {
-                            "procedure": "1. Find all components in the Web Unit which can be reordered via drag and drop. 2. Check that there is also a mechanism to reorder them using menus build of lists of links. 3, Check that the menus are contained within the reorderable items in the DOM. 4. Check that scripts for reordering are triggered only from the onclick event of links. 5. Check that items are reordered in the DOM, not only visually.",
+                            "procedure": "1. Find all components in the Web Unit which can be reordered via drag and drop. \n2. Check that there is also a mechanism to reorder them using menus build of lists of links. \n3. Check that the menus are contained within the reorderable items in the DOM. \n4. Check that scripts for reordering are triggered only from the onclick event of links. \n5. Check that items are reordered in the DOM, not only visually.",
                             "expected-results": "#2 through #5 are true."
                           }
                         }
@@ -4630,7 +4630,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that does not preserve meaning and operability",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F44.html",
                       "tests": {
-                        "procedure": "1. If tabindex is used, check that the tab order specified by the tabindex attributes follows relationships in the content.",
+                        "procedure": "1. If tabindex is used, check that the tab order \nspecified by the tabindex attributes follows relationships in the \ncontent.",
                         "expected-results": "If check #1 is false, then this failure condition applies and content fails the Success Criterion."
                       }
                     },
@@ -4639,7 +4639,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent to their trigger control in the sequential navigation order",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F85.html",
                       "tests": {
-                        "procedure": "For each menu or dialog embedded on a Web page that is opened via a trigger control: 1, Activate the trigger control via the keyboard. - Check whether focus is in the menu or dialog. - Check whether advancing the focus in the sequential navigation order puts focus in the menu or dialog. 2. Dismiss the menu or dialog. - Check whether focus is on the trigger control. - Check whether advancing the focus backwards in the sequential navigation order puts focus in the trigger control.",
+                        "procedure": "For each menu or dialog embedded on a Web page that is \nopened via a trigger control: \n1. Activate the trigger control via the keyboard. \n- Check whether focus is in the menu or dialog. \n- Check whether advancing the focus in the sequential navigation order \nputs focus in the menu or dialog. \n2. Dismiss the menu or dialog. \n- Check whether focus is on the trigger control. \n- Check whether advancing the focus backwards in the sequential \nnavigation order puts focus in the trigger control.",
                         "expected-results": "- If both points under step 1 are false, then this failure condition applies and the content fails this success criterion. - If both points under step 2 are false, then this failure condition applies and the content fails this success criterion."
                       }
                     }
@@ -5227,7 +5227,7 @@ export const wcag: any = {
                       "title": "Ensuring that drag-and-drop actions can be cancelled",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G210.html",
                       "tests": {
-                        "procedure": "For content that is draggable, check whether the drag-and-drop action can be reversed by: 1. Releasing the picked-up item outside a drop target 2. Dragging the picked-up item back to its old position 3. A confirmation dialog or an undo control appears after the item has been dropped",
+                        "procedure": "For content that is draggable, check whether the \ndrag-and-drop action can be reversed by: \n1. Releasing the picked-up item outside a drop target. \n2. Dragging the picked-up item back to its old position. \n3. A confirmation dialog or an undo \ncontrol appears after the item has been dropped.",
                         "expected-results": "At least one option of #1, #2, #3 is true"
                       }
                     },
@@ -5236,7 +5236,7 @@ export const wcag: any = {
                       "title": "Matching the accessible name to the visible label",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G211.html",
                       "tests": {
-                        "procedure": "1. For input controls, examine each input that has adjacent text which serves as its label 2. For each input, check that the entire string of text (disregarding letter case and punctuation) matches the accessible name for the input, according to the accessible name computation 3. For buttons, links, menus and other non-input controls, examine each control that contains text which serves as its label 4. For each non-input control, check that the entire string of text (disregarding letter case and punctuation) matches the accessible name for the input",
+                        "procedure": "1. For input controls, examine each input that has \nadjacent text which serves as its label. \n2. For each input, check \nthat the entire string of text (disregarding letter case and \npunctuation) matches the accessible name for the input, according to \nthe accessible name computation. \n3. For buttons, links, menus and \nother non-input controls, examine each control that contains text \nwhich serves as its label. \n4. For each non-input control, check \nthat the entire string of text (disregarding letter case and \npunctuation) matches the accessible name for the input",
                         "expected-results": "Checks #2 and #4 are true"
                       }
                     },
@@ -5338,7 +5338,7 @@ export const wcag: any = {
                       "title": "Provide conventional controls and an application setting for motion activated input",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G213.html",
                       "tests": {
-                        "procedure": "For each input that performs a function in response to a motion sensor: 1. Check that there is a mechanism to perform the same function that does not rely on a sensor. 2. Check that there is a user setting which disables the motion detection.",
+                        "procedure": "For each input that performs a function in response to a motion sensor: 1. Check that there \nis a mechanism to perform the same function that does not rely on a sensor. 2. Check that there is a \nuser setting which disables the motion detection.",
                         "expected-results": "Check #1 and #2 are true."
                       }
                     },
@@ -5888,7 +5888,7 @@ export const wcag: any = {
                       "title": "Using \"activate\" rather than \"focus\" as a trigger for changes of context",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G107.html",
                       "tests": {
-                        "procedure": "1. Using a keyboard, cycle focus through all content 2. Check that no changes of context occur when any component receives focus.",
+                        "procedure": "1. Using a keyboard, cycle focus through all content 2. Check that no changes of context \noccur when any component receives focus.",
                         "expected-results": "#2 is true"
                       }
                     }
@@ -5906,7 +5906,7 @@ export const wcag: any = {
                       "title": "Giving users advanced warning when opening a new window",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html",
                       "tests": {
-                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is initiated by a user request: 1. Check that there is a warning spoken in assistive technology that this link opens to a new window. 2. Check that there is a visual warning in text that this link opens to a new window.",
+                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is \ninitiated by a user request: 1. Check that there is a warning spoken in assistive technology that this \nlink opens to a new window. 2. Check that there is a visual warning in text that this link opens to a \nnew window.",
                         "expected-results": "Checks #1 and check #2 are true."
                       }
                     }
@@ -5919,7 +5919,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F55.html",
                       "tests": {
-                        "procedure": "1. Use the keyboard to verify that you can get to all interactive elements using the keyboard. 2. Check that when focus is placed on each element, focus remains there until user moves it.",
+                        "procedure": "1. Use the keyboard to verify that you can get to all interactive elements using the keyboard.\n 2. Check that when focus is placed on each element, focus remains there until user moves it.",
                         "expected-results": "If #2 is false then this failure condition applies and content fails the Success Criterion."
                       }
                     }
@@ -5956,7 +5956,7 @@ export const wcag: any = {
                           "title": "Providing submit buttons",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H32.html",
                           "tests": {
-                            "procedure": "1. Find all forms in the content 2. For each form, check that it has a submit button (input type=\"submit\", input type=\"image\", or button type=\"submit\")",
+                            "procedure": "1. Find all forms in the content 2. For each form, check that it has a submit button \n(input type=\"submit\", input type=\"image\", or button type=\"submit\")",
                             "expected-results": "#2 is true"
                           }
                         },
@@ -5965,7 +5965,7 @@ export const wcag: any = {
                           "title": "Using a button with a select element to perform an action",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H84.html",
                           "tests": {
-                            "procedure": "For each select element/button element combination: 1. Check that focus (including keyboard focus) on an option in the select element does not result in any actions 2. Check that selecting the button performs the action associated with the current select value",
+                            "procedure": "For each select element/button element combination: 1. Check that focus (including \nkeyboard focus) on an option in the select element does not result in any actions 2. Check that \nselecting the button performs the action associated with the current select value",
                             "expected-results": "All checks are true."
                           }
                         },
@@ -5974,7 +5974,7 @@ export const wcag: any = {
                           "title": "Providing submit buttons in Flash",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH4.html",
                           "tests": {
-                            "procedure": "1. Find all interactive control instances (that are not submit buttons) in the flash movie that can initiate a change of context, e.g. a combobox, radio button or checkbox. 2. For each instance, confirm that the event handler(s) responsible for the change of context are not associated with the controls themselves, but with a separate button instead.",
+                            "procedure": "1. Find all interactive control instances (that are not submit buttons) in the flash \nmovie that can initiate a change of context, e.g. a combobox, radio button or checkbox. 2. For each \ninstance, confirm that the event handler(s) responsible for the change of context are not associated \nwith the controls themselves, but with a separate button instead.",
                             "expected-results": "#2 is true"
                           }
                         },
@@ -5983,7 +5983,7 @@ export const wcag: any = {
                           "title": "Providing submit buttons with the submit-form action in PDF forms",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF15.html",
                           "tests": {
-                            "procedure": "1. For each page that submits a form, visually verify that the form contains a submit button and check one of the following: - Tab to the button and check that it submits the form in response to user action to select the button. - Open the PDF document with a tool that is capable of showing the submit-form action and check that the button action is to submit the form.",
+                            "procedure": "1. For each page that submits a form, visually verify that the form contains a submit \nbutton and check one of the following: - Tab to the button and check that it submits the form in \nresponse to user action to select the button. - Open the PDF document with a tool that is capable of \nshowing the submit-form action and check that the button action is to submit the form.",
                             "expected-results": "#1 is true for each page that contains a form."
                           }
                         },
@@ -5992,7 +5992,7 @@ export const wcag: any = {
                           "title": "Implementing a Submit-Form Pattern in Silverlight",
                           "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL10.html",
                           "tests": {
-                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. To test UI Automation based behavior such as reading AutomationProperties.HelpText, use Microsoft Windows as platform. 2. Verify that the user interface design of the form includes a clearly indicated Submit button (a control that adequately communicates to users that activating it will cause input to be submitted and might cause a change of context). 3. Provide values for the various input fields of the form, and verify that doing so does not in and of itself change the context. 4. Verify that if change of context occurs at all, that action is delayed until after the Submit button is activated.",
+                            "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a \nSilverlight application through an object tag. To test UI Automation based behavior such as reading \nAutomationProperties.HelpText, use Microsoft Windows as platform. 2. Verify that the user interface \ndesign of the form includes a clearly indicated Submit button (a control that adequately \ncommunicates to users that activating it will cause input to be submitted and might cause a change \nof context). 3. Provide values for the various input fields of the form, and verify that doing so \ndoes not in and of itself change the context. 4. Verify that if change of context occurs at all, \nthat action is delayed until after the Submit button is activated.",
                             "expected-results": "#2, #3, and #4 are true."
                           }
                         }
@@ -6003,7 +6003,7 @@ export const wcag: any = {
                       "title": "Describing what will happen before a change to a form control that causes a change of context to occur is made",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G13.html",
                       "tests": {
-                        "procedure": "1. Locate content where changing the setting of a form control results in a change of context 2. Check to see that an explanation of what will happen when the control is changed is available prior to the controls activation",
+                        "procedure": "1. Locate content where changing the setting of a form control results in a change of \ncontext 2. Check to see that an explanation of what will happen when the control is changed is available \nprior to the controls activation",
                         "expected-results": "Check #2 is true"
                       }
                     },
@@ -6012,7 +6012,7 @@ export const wcag: any = {
                       "title": "Using an onchange event on a select element without causing a change of context",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR19.html",
                       "tests": {
-                        "procedure": "1. Navigate to the trigger select element (in this example, the one to select continents) and change the value of the select. 2. Navigate to the select element that is updated by the trigger (in this example, the one to select countries). 3. Check that the matching option values are displayed in the other select element. 4. Navigate to the trigger select element, navigate through the options but do not change the value. 5. Check that the matching option values are still displayed in the associated element. - It is recommended that the select elements are tested with an assistive technology to verify that the changes to the associated element are recognized.",
+                        "procedure": "1. Navigate to the trigger select element (in this example, the one to select continents) \nand change the value of the select. 2. Navigate to the select element that is updated by the trigger (in \nthis example, the one to select countries). 3. Check that the matching option values are displayed in \nthe other select element. 4. Navigate to the trigger select element, navigate through the options but do \nnot change the value. 5. Check that the matching option values are still displayed in the associated \nelement. - It is recommended that the select elements are tested with an assistive technology to verify \nthat the changes to the associated element are recognized.",
                         "expected-results": "Step #3 and #5 are true."
                       }
                     }
@@ -6025,7 +6025,7 @@ export const wcag: any = {
                       "title": "Giving users advanced warning when opening a new window",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html",
                       "tests": {
-                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is initiated by a user request: 1. Check that there is a warning spoken in assistive technology that this link opens to a new window. 2. Check that there is a visual warning in text that this link opens to a new window.",
+                        "procedure": "For each link that opens automatically in a new window or tab when a change of context is \ninitiated by a user request: 1. Check that there is a warning spoken in assistive technology that this \nlink opens to a new window. 2. Check that there is a visual warning in text that this link opens to a \nnew window.",
                         "expected-results": "Checks #1 and check #2 are true."
                       }
                     }
@@ -6038,7 +6038,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 3.2.2 due to automatically submitting a form and given a value",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F36.html",
                       "tests": {
-                        "procedure": "1. Enter data in all fields on page starting at top. 2. Enter data in last field and exit from it (tab out of it). 3. Check whether leaving the last field causes change of context.",
+                        "procedure": "1. Enter data in all fields on page starting at top. 2. Enter data in last field and exit \nfrom it (tab out of it). 3. Check whether leaving the last field causes change of context.",
                         "expected-results": "If step #3 is true, then this failure condition applies and content fails the Success Criterion."
                       }
                     },
@@ -6047,7 +6047,7 @@ export const wcag: any = {
                       "title": "Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/failures/F37.html",
                       "tests": {
-                        "procedure": "1. Find each form in a page. 2. For each form control that is a radio button, check box or an item in a select list, check if changing the selection of the control launches a new window. 3. For each new window resulting from step 2, check if the user is warned in advance.",
+                        "procedure": "1. Find each form in a page. 2. For each form control that is a radio button, check box or \nan item in a select list, check if changing the selection of the control launches a new window. 3. For \neach new window resulting from step 2, check if the user is warned in advance.",
                         "expected-results": "If step #3 is false, then this failure condition applies and content fails the Success Criterion."
                       }
                     }
@@ -6275,7 +6275,7 @@ export const wcag: any = {
                               "title": "Providing text descriptions to identify required fields that were not completed",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G83.html",
                               "tests": {
-                                "procedure": "1. Fill out a form, deliberately leaving one or more required (mandatory) fields blank, and submit it. 2. Check that a text description is provided identifying the mandatory field(s) that was not completed. 3. Check that other data previously entered by the user is re-displayed, unless the data is in a security related field where it would be inappropriate to retain the data for re-display (e.g. password).",
+                                "procedure": "1. Fill out a form, deliberately leaving one or more required (mandatory) fields \nblank, and submit it. 2. Check that a text description is provided identifying the mandatory \nfield(s) that was not completed. 3. Check that other data previously entered by the user is \nre-displayed, unless the data is in a security related field where it would be inappropriate to \nretain the data for re-display (e.g. password).",
                                 "expected-results": "#2 and #3 are true"
                               }
                             },
@@ -6284,7 +6284,7 @@ export const wcag: any = {
                               "title": "Using Aria-Invalid to Indicate An Error Field",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html",
                               "tests": {
-                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. Check that aria-invalid is not set to true when a validation failure does not exist. 2. Check that aria-invalid is set to true when a validation failure does exist. 3. Check that the programmatically associated labels / programmatically associated instructional text for the field provide enough information to understand the error.",
+                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. \nCheck that aria-invalid is not set to true when a validation failure does not exist. 2. Check \nthat aria-invalid is set to true when a validation failure does exist. 3. Check that the \nprogrammatically associated labels / programmatically associated instructional text for the \nfield provide enough information to understand the error.",
                                 "expected-results": "Checks #1-3 are true."
                               }
                             },
@@ -6293,7 +6293,7 @@ export const wcag: any = {
                               "title": "Providing client-side validation and alert",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18.html",
                               "tests": {
-                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an alert describing the error is provided.",
+                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an \nalert describing the error is provided.",
                                 "expected-results": "#2 is true"
                               }
                             },
@@ -6302,7 +6302,7 @@ export const wcag: any = {
                               "title": "Indicating required form controls in PDF forms",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF5.html",
                               "tests": {
-                                "procedure": "For each form field that is required, verify that validation information and instructions are provided by applying the following: 1. Check that the required status is indicated in the form control's label. 2. Leave the field blank and submit the form. Check that an alert describing the error is provided. 3. Use a tool that exposes the document through the accessibility API, and verify that the required property is indicated.",
+                                "procedure": "For each form field that is required, verify that validation information and \ninstructions are provided by applying the following: 1. Check that the required status is \nindicated in the form control's label. 2. Leave the field blank and submit the form. Check that \nan alert describing the error is provided. 3. Use a tool that exposes the document through the \naccessibility API, and verify that the required property is indicated.",
                                 "expected-results": "#1, #2, and #3 are true."
                               }
                             },
@@ -6311,7 +6311,7 @@ export const wcag: any = {
                               "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL35.html",
                               "tests": {
-                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application is expected to contain form fields, and a Submit pattern for form interaction as described in. 2. Navigate through the items of a form until an editable field is read. Enter a value that triggers the validation. 3. Navigate to Submit button and activate it to attempt to submit the form. 4. Verify that a Validation Summary now appears, and is focusable. 5. Verify that the Validation Summary provides enough information to correct any error. 6. Navigate back to input elements that have validation issues. Correct the errors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. Verify that Validation Summary is no longer displayed and that the screen reader does not focus to/read any further validation information.",
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a \nSilverlight application through an object tag. The application is expected to contain form \nfields, and a Submit pattern for form interaction as described in. 2. Navigate through the items \nof a form until an editable field is read. Enter a value that triggers the validation. 3. \nNavigate to Submit button and activate it to attempt to submit the form. 4. Verify that a \nValidation Summary now appears, and is focusable. 5. Verify that the Validation Summary provides \nenough information to correct any error. 6. Navigate back to input elements that have validation \nissues. Correct the errors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. \nVerify that Validation Summary is no longer displayed and that the screen reader does not focus \nto/read any further validation information.",
                                 "expected-results": "#4, #5, and #8 are true."
                               }
                             }
@@ -6325,7 +6325,7 @@ export const wcag: any = {
                               "title": "Using aria-alertdialog to Identify Errors",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA18.html",
                               "tests": {
-                                "procedure": "1. Trigger the error that causes the alertdialog to appear. 2. Determine that the alertdialog contains at least one focusable control, and the focus moves to that control when the alertdialog opens. 3. Determine that the tab order is constrained within the alertdialog while it is open, and when the dialog is dismissed, the focus moves back to the position it had before the dialog opene, if possible. 4. Examine the element with role=\"alertdialog\" applied. 5. Determine that either the aria-label or aria-labelledby attribute has been correctly used to give the alertdialog an accessible name. 6. Determine that the contents of the alertdialog identifies the input error. 7. Determine whether contents of the alertdialog suggests how to fix the error.",
+                                "procedure": "1. Trigger the error that causes the alertdialog to appear. 2. Determine that the \nalertdialog contains at least one focusable control, and the focus moves to that control when \nthe alertdialog opens. 3. Determine that the tab order is constrained within the alertdialog \nwhile it is open, and when the dialog is dismissed, the focus moves back to the position it had \nbefore the dialog opene, if possible. 4. Examine the element with role=\"alertdialog\" applied. \n5. Determine that either the aria-label or aria-labelledby attribute has been correctly used to \ngive the alertdialog an accessible name. 6. Determine that the contents of the alertdialog \nidentifies the input error. 7. Determine whether contents of the alertdialog suggests how to fix \nthe error.",
                                 "expected-results": "Checks 2, 3, 5 and 6 are true. For SC 3.3.3, Check 7 is also true."
                               }
                             },
@@ -6334,7 +6334,7 @@ export const wcag: any = {
                               "title": "Using ARIA role=alert or Live Regions to Identify Errors",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19.html",
                               "tests": {
-                                "procedure": "1. Determine that an empty error container role=alert or aria-live=assertive attribute is present in the DOM at page load. 2. Trigger the error that causes the content in the live region to appear or update. 3. Determine that the error message was injected into the already present error container.",
+                                "procedure": "1. Determine that an empty error container role=alert or aria-live=assertive \nattribute is present in the DOM at page load. 2. Trigger the error that causes the content in \nthe live region to appear or update. 3. Determine that the error message was injected into the \nalready present error container.",
                                 "expected-results": "#1 and #3 are true."
                               }
                             },
@@ -6343,7 +6343,7 @@ export const wcag: any = {
                               "title": "Using Aria-Invalid to Indicate An Error Field",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html",
                               "tests": {
-                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. Check that aria-invalid is not set to true when a validation failure does not exist. 2. Check that aria-invalid is set to true when a validation failure does exist. 3. Check that the programmatically associated labels / programmatically associated instructional text for the field provide enough information to understand the error.",
+                                "procedure": "For each form control that relies on aria-invalid to convey a validation failure: 1. \nCheck that aria-invalid is not set to true when a validation failure does not exist. 2. Check \nthat aria-invalid is set to true when a validation failure does exist. 3. Check that the \nprogrammatically associated labels / programmatically associated instructional text for the \nfield provide enough information to understand the error.",
                                 "expected-results": "Checks #1-3 are true."
                               }
                             },
@@ -6352,7 +6352,7 @@ export const wcag: any = {
                               "title": "Providing a text description when the user provides information that is not in the list of allowed values",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G84.html",
                               "tests": {
-                                "procedure": "1. Enter invalid data in a form field. 2. Check that information is provided in text about the problem.",
+                                "procedure": "1. Enter invalid data in a form field. 2. Check that information is provided in text \nabout the problem.",
                                 "expected-results": "#2 is true."
                               }
                             },
@@ -6361,7 +6361,7 @@ export const wcag: any = {
                               "title": "Providing a text description when user input falls outside the required format or values",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G85.html",
                               "tests": {
-                                "procedure": "1. Fill out a form, deliberately enter user input that falls outside the required format or values 2. Check that a text description is provided that identifies the field in error and provides some information about the nature of the invalid entry and how to fix it. 3. Check that other data previously entered by the user is re-displayed, unless the data is in a security related field where it would be inappropriate to retain the data for re-display (e.g. password).",
+                                "procedure": "1. Fill out a form, deliberately enter user input that falls outside the required \nformat or values 2. Check that a text description is provided that identifies the field in error \nand provides some information about the nature of the invalid entry and how to fix it. 3. Check \nthat other data previously entered by the user is re-displayed, unless the data is in a security \nrelated field where it would be inappropriate to retain the data for re-display (e.g. password).",
                                 "expected-results": "#2 and #3 are true"
                               }
                             },
@@ -6370,7 +6370,7 @@ export const wcag: any = {
                               "title": "Providing client-side validation and alert",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18.html",
                               "tests": {
-                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an alert describing the error is provided.",
+                                "procedure": "For form fields that require specific input: 1.Enter invalid data 2. Determine if an \nalert describing the error is provided.",
                                 "expected-results": "#2 is true"
                               }
                             },
@@ -6379,7 +6379,7 @@ export const wcag: any = {
                               "title": "Providing client-side validation and adding error text via the DOM",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR32.html",
                               "tests": {
-                                "procedure": "Create error messages using anchor tags and appropriate scripting via the technique above. 1. Load the page. 2. Enter a valid value in the field(s) associated with an error message and verify that no error messages are displayed. 3. Enter an invalid value in the field(s) associated with an error message and verify that the correct error message for the field is displayed. 4. Verify that the error messages receive focus. 5. Enter a valid value in the field(s) associated with the displayed error message and verify that the error message is removed. 6. Repeat for all fields with associated error messages created via anchor tags. NOTE It is recommended that you also run the above procedure using an assistive technology.",
+                                "procedure": "Create error messages using anchor tags and appropriate scripting via the technique \nabove. 1. Load the page. 2. Enter a valid value in the field(s) associated with an error message \nand verify that no error messages are displayed. 3. Enter an invalid value in the field(s) \nassociated with an error message and verify that the correct error message for the field is \ndisplayed. 4. Verify that the error messages receive focus. 5. Enter a valid value in the field\n(s) associated with the displayed error message and verify that the error message is removed. 6. \nRepeat for all fields with associated error messages created via anchor tags. NOTE It is \nrecommended that you also run the above procedure using an assistive technology.",
                                 "expected-results": "Checks #2, #3, #4, and #5 are all true."
                               }
                             },
@@ -6388,7 +6388,7 @@ export const wcag: any = {
                               "title": "Providing client-side validation and adding error text via the accessible description",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH12.html",
                               "tests": {
-                                "procedure": "When a Flash movie provides interactive forms that can be submitted, confirm that: 1. The validation warnings are placed next to the control visually. 2. The validation warnings are added to the accessible name or description of each control.",
+                                "procedure": "When a Flash movie provides interactive forms that can be submitted, confirm that: \n1. The validation warnings are placed next to the control visually. 2. The validation warnings \nare added to the accessible name or description of each control.",
                                 "expected-results": "#1 and #2 are true"
                               }
                             },
@@ -6397,7 +6397,7 @@ export const wcag: any = {
                               "title": "Indicating when user input falls outside the required format or values in PDF forms",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22.html",
                               "tests": {
-                                "procedure": "For each form field that requires specific input, verify that validation information and instructions are provided by applying the following: 1. Check that the format or value that is required is indicated in the form control's label. 2. Use an erroneous format or value and move off the field: make sure that an alert describing the error is provided.",
+                                "procedure": "For each form field that requires specific input, verify that validation information \nand instructions are provided by applying the following: 1. Check that the format or value that \nis required is indicated in the form control's label. 2. Use an erroneous format or value and \nmove off the field: make sure that an alert describing the error is provided.",
                                 "expected-results": "#1 and #2 are true."
                               }
                             },
@@ -6406,7 +6406,7 @@ export const wcag: any = {
                               "title": "Using the Validation and ValidationSummary APIs to Implement Client Side Forms Validation in Silverlight",
                               "url": "https://www.w3.org/WAI/WCAG21/Techniques/silverlight/SL35.html",
                               "tests": {
-                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a Silverlight application through an object tag. The application is expected to contain form fields, and a Submit pattern for form interaction as described in . 2. Navigate through the items of a form until an editable field is read. Enter a value that triggers the validation. 3, Navigate to Submit button and activate it to attempt to submit the form. 4. Verify that a Validation Summary now appears, and is focusable. 5. Verify that the Validation Summary provides enough information to correct any error. 6. Navigate back to input elements that have validation issues. Correct the errors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. Verify that Validation Summary is no longer displayed and that the screen reader does not focus to/read any further validation information.",
+                                "procedure": "1. Using a browser that supports Silverlight, open an HTML page that references a \nSilverlight application through an object tag. The application is expected to contain form \nfields, and a Submit pattern for form interaction as described in . 2. Navigate through the \nitems of a form until an editable field is read. Enter a value that triggers the validation. 3, \nNavigate to Submit button and activate it to attempt to submit the form. 4. Verify that a Validation Summary \nnow appears, and is focusable. 5. Verify that the Validation Summary provides enough information \nto correct any error. 6. Navigate back to input elements that have validation issues. Correct the \nerrors as suggested. 7. Tab to Submit button. Press ENTER to resubmit. 8. Verify that Validation \nSummary is no longer displayed and that the screen reader does not focus to/read any further \nvalidation information.",
                                 "expected-results": "#4, #5, and #8 are true."
                               }
                             }
@@ -6423,7 +6423,7 @@ export const wcag: any = {
                       "title": "Creating a mechanism that allows users to jump to errors",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G139.html",
                       "tests": {
-                        "procedure": "1. Fill out a form, deliberately leaving a required (mandatory) field blank, and make an input error on another field and submit the form. 2. Check that a text message is provided that identifies the field that is missing required data. 3. Check that a text message is provided that identifies the field with the input error. 4. Check that there is a link to each field that is missing required data from the missing data message 5. Check that there is a link to the list of errors from the error message. NOTE Success Criterion 3.3.2 requires that if an input error is detected and suggestions for correction are known and can be provided without jeopardizing the security or purpose of the content, the suggestions are provided to the user.",
+                        "procedure": "1. Fill out a form, deliberately leaving a required (mandatory) field blank, and make an \ninput error on another field and submit the form. 2. Check that a text message is provided that \nidentifies the field that is missing required data. 3. Check that a text message is provided that \nidentifies the field with the input error. 4. Check that there is a link to each field that is missing \nrequired data from the missing data message 5. Check that there is a link to the list of errors from the \nerror message. NOTE Success Criterion 3.3.2 requires that if an input error is detected and suggestions \nfor correction are known and can be provided without jeopardizing the security or purpose of the \ncontent, the suggestions are provided to the user.",
                         "expected-results": "- If #2 is true, then #4 is true. - If #3 is true, then #5 is true."
                       }
                     },
@@ -7307,6 +7307,4 @@ export const wcag: any = {
       ]
     }
   ]
-};
-
-console.log(JSON.parse(JSON.stringify(wcag)));
+}

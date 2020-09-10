@@ -1,18 +1,19 @@
 import { Result, NodeResult } from 'axe-core';
 import { wcag } from './wcag';
+// import manual test object
 
-interface SpecificIssue {
+export interface SpecificIssue {
   recommendation?: string;
   html?: string;
-  expectedOutcome?: string;
 }
 
 export interface IssueInfo {
     dequeId?: string;
     wcagCriteria?: string;
     urlToWCAG?: string;
-    quickFix?: string;
+    title?: string;
     specificIssues?: SpecificIssue[];
+    impact?: Result['impact'];
 }
 
 
@@ -27,6 +28,7 @@ export interface ParsedData {
 
 export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
   // sort issues into common occurances i.e. { critical: [resultItem1, resultItem2], severe: [resultItem3]}
+  // instead of returning bind to constant
   return dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
     const specificIssuePopulator = (node: NodeResult): SpecificIssue => {
       const parsedSpecificIssue: SpecificIssue = {}
@@ -34,7 +36,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
       parsedSpecificIssue.html = node.html;
       return parsedSpecificIssue;
     }
-    
+
     let wcagURLInfo: string;
     let wcagCriteriaInfo: string;
     let foundFlag = false;
@@ -66,11 +68,11 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
       const parsedIssue: IssueInfo = {};
       wcagConnector();
       parsedIssue.dequeId = curIssue.id;
-      // error handling if wcag information does not exist for that specific issue -> give deque info
       parsedIssue.wcagCriteria = wcagCriteriaInfo; // wcag.principles[index].guidelines[0].successcriteria[0].num
       parsedIssue.urlToWCAG = wcagURLInfo; //  wcag.principles[index].guidelines[0].successcriteria[0].url
-      parsedIssue.quickFix = curIssue.help;
+      parsedIssue.title = curIssue.help;
       parsedIssue.specificIssues = curIssue.nodes.map((node) => specificIssuePopulator(node));
+      parsedIssue.impact = curIssue.impact
       return parsedIssue;
     }
 
@@ -85,6 +87,8 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
     }
     return parsedData;
   }, {});
+  // add manual test to object
+  // return BAO
 }
 
 //  const demoObj = {
