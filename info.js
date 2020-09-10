@@ -15,7 +15,7 @@
         none: [],
         impact: 'critical',
         html:
-          '<input class="gLFyf gsfi" maxlength="2048" name="q" tpe="text" jsaction="paste:puy29d" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search" data-ved="0ahUKEwie_PPbzs3rAhWLonIEHfzeBs8Q39UDCAY">',
+          '<input class="gLFyf gsfi" maxlength="2048" name="q" type="text" jsaction="paste:puy29d" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search" data-ved="0ahUKEwie_PPbzs3rAhWLonIEHfzeBs8Q39UDCAY">',
         target: [Array],
         failureSummary:
           'Fix any of the following:\n' + '  Required ARIA attribute not present: aria-expanded',
