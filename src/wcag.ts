@@ -1,4 +1,4 @@
-{
+export const wcag: any = {
   "principles": [
     {
       "id": "WCAG2:perceivable",
