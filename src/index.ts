@@ -7,6 +7,7 @@ import CLI from 'clui';
 import { prompts } from './prompts';
 import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
+import { manualCheckObj } from './manualCheckObj';
 
 interface Program {
   start(): Promise<void>;
@@ -23,8 +24,8 @@ export const program: Program = {
     console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
     // Ask for URL/localpath
     try {
-      // const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
-      const inputURL = await prompts.askPath(); // real prompt for publishing
+      const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
+      // const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
