@@ -36,7 +36,7 @@ export const program: Program = {
       await program.loop(parsed, inputURL.url);
     } catch (error) {
       spinner.stop();
-
+      
       const errors = await prompts.askError(error);
       if (errors.startOver === 'quit') process.exit(0);
       else if (errors.startOver === 'search again') program.start();
