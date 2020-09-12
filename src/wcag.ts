@@ -7143,7 +7143,6 @@ export const wcag: any = {
                   advisory: [
                     {
                       id: 'TECH:G139',
-                      dq_id: ['form-field-multiple-labels'],
                       title: 'Creating a mechanism that allows users to jump to errors',
                       url: 'https://www.w3.org/WAI/WCAG21/Techniques/general/G139.html',
                       tests: {
@@ -7172,6 +7171,7 @@ export const wcag: any = {
               id: 'WCAG2:labels-or-instructions',
               alt_id: ['minimize-error-cues'],
               num: '3.3.2',
+              dq_id: ['form-field-multiple-labels'],
               url: 'https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions',
               versions: ['2.0', '2.1'],
               level: 'A',
