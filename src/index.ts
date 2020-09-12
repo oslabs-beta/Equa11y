@@ -8,6 +8,7 @@ import { prompts } from './prompts';
 import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
 import { manualCheckObj } from './manualCheckObj';
+import open from 'open';
 
 interface Program {
   start(): Promise<void>;
@@ -24,8 +25,8 @@ export const program: Program = {
     console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
     // Ask for URL/localpath
     try {
-      // const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
-      const inputURL = await prompts.askPath(); // real prompt for publishing
+      const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
+      // const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
@@ -52,7 +53,10 @@ export const program: Program = {
 
     const options = await prompts.askOptions(parsed, targetLevel);
     if (options.res === 'quit') process.exit(0);
-    else if (options.res === 'search again') program.start();
+    else if (options.res.trim().slice(0, 4) === 'http') {
+      open(options.res.trim());
+      program.loop(parsed, path);
+    } else if (options.res === 'search again') program.start();
     // check if nested
     else if (options.res[0] === ' ') {
       // grabs string between arrow and '(n) issues types: TBD total sub issues'

@@ -1,6 +1,5 @@
+import open from 'open';
 import { ParsedData, IssueInfo } from './dataParser';
-
-// type issueLevel = typeof issueLevel<keyof typeof issueLevel>
 
 export interface MenuContents {
   levelName: string;
@@ -90,16 +89,21 @@ export const menu: Dropdown = {
   stringify: (levelObj, nested) => {
     let option = '';
     option += '  '.repeat(nested);
+
     if (nested > 1) {
       // bottom level
-      if (levelObj.levelName.slice(0, 4) === 'http') {
-        option += 'ENTER for more info: ';
-      }
+      // if (levelObj.levelName.slice(0, 4) === 'http') {
+      //   open(levelObj.levelName);
+      // }
       option += levelObj.levelName;
     } else if (nested === 1) {
       // middle level
       option += levelObj.opened ? levelObj.arrows[1] : levelObj.arrows[0];
-      option += ` ${levelObj.levelName} - ENTER for (${levelObj.subLevel.length}) total error location(s)`;
+      if (levelObj.subLevel[0].html !== '') {
+        option += ` ${levelObj.levelName} - ENTER for (${levelObj.subLevel.length}) total error location(s)`;
+      } else {
+        option += ` ${levelObj.levelName} - ENTER for URL to more information`;
+      }
     } else {
       // top level
       option += levelObj.opened ? levelObj.arrows[1] : levelObj.arrows[0];
@@ -109,7 +113,11 @@ export const menu: Dropdown = {
           if (issue.specificIssues.length) subIssues += issue.specificIssues.length;
         });
       }
-      option += ` ${levelObj.levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
+      if (levelObj.levelName !== 'manualTest') {
+        option += ` ${levelObj.levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
+      } else {
+        option += ` ${levelObj.levelName} ENTER for more information regarding manual testing`;
+      }
     }
     return option;
   },
