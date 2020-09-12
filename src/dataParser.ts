@@ -1,6 +1,6 @@
 import { Result, NodeResult } from 'axe-core';
 import { wcag } from './wcag';
-import { manualCheckObj } from './manualCheckObj'
+import { manualCheckObj } from './manualCheckObj';
 
 export interface SpecificIssue {
   recommendation?: string;
@@ -8,37 +8,37 @@ export interface SpecificIssue {
 }
 
 export interface IssueInfo {
-    dequeId?: string;
-    wcagCriteria?: string;
-    urlToWCAG?: string;
-    title?: string;
-    specificIssues?: SpecificIssue[];
-    impact?: Result['impact'];
+  dequeId?: string;
+  wcagCriteria?: string;
+  urlToWCAG?: string;
+  title?: string;
+  specificIssues?: SpecificIssue[];
+  impact?: Result['impact'];
 }
 
-
 export interface ParsedData {
-    minor?: IssueInfo[];
-    moderate?: IssueInfo[];
-    serious?: IssueInfo[];
-    critical?: IssueInfo[];
-    manualTest?: IssueInfo[]; 
-    nonEssential?: IssueInfo[];
+  minor?: IssueInfo[];
+  moderate?: IssueInfo[];
+  serious?: IssueInfo[];
+  critical?: IssueInfo[];
+  manualTest?: IssueInfo[];
+  nonEssential?: IssueInfo[];
 }
 
 export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
   // sort issues into common occurances i.e. { critical: [resultItem1, resultItem2], severe: [resultItem3]}
   // instead of returning bind to constant
-    const data = dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
+  const data = dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
     const specificIssuePopulator = (node: NodeResult): SpecificIssue => {
-      const parsedSpecificIssue: SpecificIssue = {}
+      const parsedSpecificIssue: SpecificIssue = {};
       parsedSpecificIssue.recommendation = node.failureSummary;
       parsedSpecificIssue.html = node.html;
       return parsedSpecificIssue;
-    }
+    };
 
-    let wcagURLInfo: string;
-    let wcagCriteriaInfo: string;
+    // default values for no given wcag information
+    let wcagURLInfo = curIssue.helpUrl;
+    let wcagCriteriaInfo = 'n/a';
     let foundFlag = false;
 
     const wcagConnector = () => {
@@ -47,7 +47,6 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
         for (let j = 0; j < wcag.principles[i].guidelines.length; j += 1) {
           for (let k = 0; k < wcag.principles[i].guidelines[j].successcriteria.length; k += 1) {
             const location = wcag.principles[i].guidelines[j].successcriteria[k];
-
             if (location.dq_id && location.dq_id.includes(id)) {
               foundFlag = true;
               wcagURLInfo = location.url;
@@ -59,11 +58,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
         }
         if (foundFlag) break;
       }
-      if (!foundFlag) {
-        wcagURLInfo = curIssue.helpUrl;
-        wcagCriteriaInfo = 'n/a';
-      }
-    }
+    };
     const issuesPopulator = (): IssueInfo => {
       const parsedIssue: IssueInfo = {};
       wcagConnector();
@@ -71,10 +66,10 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
       parsedIssue.wcagCriteria = wcagCriteriaInfo; // wcag.principles[index].guidelines[0].successcriteria[0].num
       parsedIssue.urlToWCAG = wcagURLInfo; //  wcag.principles[index].guidelines[0].successcriteria[0].url
       parsedIssue.title = curIssue.help;
-      parsedIssue.specificIssues = curIssue.nodes.map((node) => specificIssuePopulator(node));
-      parsedIssue.impact = curIssue.impact
+      parsedIssue.specificIssues = curIssue.nodes.map(node => specificIssuePopulator(node));
+      parsedIssue.impact = curIssue.impact;
       return parsedIssue;
-    }
+    };
 
     const parsedIssue = issuesPopulator();
     if (curIssue.impact === null || curIssue.impact === undefined) {
@@ -88,17 +83,16 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
     return parsedData;
   }, {});
   // add manual test to object
-  
+
   data.manualTest = manualCheckObj;
   // console.log(data)
-  return data
-}
-  
-  // return BAO
+  return data;
+};
 
+// return BAO
 
 //    critical: [
-    // {
+// {
 //       dequeId: 'aria-required-attr',
 //       wcagCriteria: 'n/a',
 //       urlToWCAG: 'https://dequeuniversity.com/rules/axe/3.5/aria-required-attr?application=axe-puppeteer',
@@ -126,7 +120,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
 //       specificIssues: [Array],
 //       impact: 'moderate'
 //     },
-//     
+//
 //   ],
 //   manualTest: [
 //     {

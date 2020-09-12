@@ -27,13 +27,13 @@ export const prompts: Prompts = {
         type: 'list',
         pageSize: 35,
         message: 'anything else?',
-        choices: ['search again', 'quit', ...paths],
+        choices: ['search again', 'quit', new inquirer.Separator(), ...paths],
       },
     ];
     return inquirer.prompt(questions);
   },
 
-  askError: (error) => {
+  askError: error => {
     const questions = [
       {
         name: 'startOver',
