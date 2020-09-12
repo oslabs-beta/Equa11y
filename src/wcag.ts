@@ -4464,9 +4464,9 @@ export const wcag: any = {
             {
               id: 'WCAG2:pause-stop-hide',
               alt_id: ['time-limits-pause'],
-
               num: '2.2.2',
               url: 'https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide',
+              dq_id: ['blink', 'marquee'],
               versions: ['2.0', '2.1'],
               level: 'A',
               handle: 'Pause, Stop, Hide',
