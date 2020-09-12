@@ -91,10 +91,6 @@ export const menu: Dropdown = {
     option += '  '.repeat(nested);
 
     if (nested > 1) {
-      // bottom level
-      // if (levelObj.levelName.slice(0, 4) === 'http') {
-      //   open(levelObj.levelName);
-      // }
       option += levelObj.levelName;
     } else if (nested === 1) {
       // middle level
@@ -113,6 +109,7 @@ export const menu: Dropdown = {
           if (issue.specificIssues.length) subIssues += issue.specificIssues.length;
         });
       }
+      // change hardcoding for manual testing
       if (levelObj.levelName !== 'manualTest') {
         option += ` ${levelObj.levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
       } else {
