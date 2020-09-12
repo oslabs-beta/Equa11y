@@ -25,7 +25,7 @@ export const prompts: Prompts = {
       {
         name: 'res',
         type: 'list',
-        pageSize: 100,
+        pageSize: 35,
         message: 'anything else?',
         choices: ['search again', 'quit', ...paths],
       },

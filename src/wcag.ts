@@ -19,6 +19,7 @@ export const wcag: any = {
               "id": "WCAG2:non-text-content",
               "alt_id": ["text-equiv-all"],
               "num": "1.1.1",
+              "dq_id": ["object-alt", "input-image-alt", "input-button-name", "image-alt", "svg-img-alt", "role-img-alt", "area-alt"],
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content",
               "versions": ["2.0", "2.1"],
               "level": "A",
@@ -1488,6 +1489,7 @@ export const wcag: any = {
               "id": "WCAG2:info-and-relationships",
               "alt_id": ["content-structure-separation-programmatic"],
               "num": "1.3.1",
+              "dq_id": ["definition-list", "dlitem", "listitem", "list", "th-has-data-cells", "td-headers-attr", "td-has-header", "empty-heading", "aria-required-parent", "aria-required-children", "th-has-data-cells", "label"],
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
               "versions": ["2.0", "2.1"],
               "level": "A",
@@ -2435,6 +2437,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:use-of-color",
               "alt_id": ["visual-audio-contrast-without-color"],
+              "dq_id": ["avoid-inline-spacing", "link-in-text-block"],
               "num": "1.4.1",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/use-of-color",
               "versions": ["2.0", "2.1"],
@@ -2520,6 +2523,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:audio-control",
               "alt_id": ["visual-audio-contrast-dis-audio"],
+              "dq_id": ["no-autoplay-audio"],
               "num": "1.4.2",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/audio-control",
               "versions": ["2.0", "2.1"],
@@ -3608,6 +3612,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:keyboard",
               "alt_id": ["keyboard-operation-keyboard-operable"],
+              "dq_id": ["server-side-image-map"],
               "num": "2.1.1",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/keyboard",
               "versions": ["2.0", "2.1"],
@@ -3863,6 +3868,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:timing-adjustable",
               "alt_id": ["time-limits-required-behaviors"],
+              "dq_id": ["meta-refresh"],
               "num": "2.2.1",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable",
               "versions": ["2.0", "2.1"],
@@ -4002,6 +4008,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:pause-stop-hide",
               "alt_id": ["time-limits-pause"],
+              
               "num": "2.2.2",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide",
               "versions": ["2.0", "2.1"],
@@ -4463,6 +4470,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:page-titled",
               "alt_id": ["navigation-mechanisms-title"],
+              "dq_id":["document-title"],
               "num": "2.4.2",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/page-titled",
               "versions": ["2.0", "2.1"],
@@ -4641,6 +4649,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:link-purpose-in-context",
               "alt_id": ["navigation-mechanisms-refs"],
+              "dq_id":["link-name"],
               "num": "2.4.4",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context",
               "versions": ["2.0", "2.1"],
@@ -5091,6 +5100,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:section-headings",
               "alt_id": ["navigation-mechanisms-headings"],
+              "dq_id": ["bypass"],
               "num": "2.4.10",
               "versions": ["2.0", "2.1"],
               "level": "AAA",
@@ -5250,6 +5260,7 @@ export const wcag: any = {
             {
               "id": "WCAG2:label-in-name",
               "alt_id": [],
+              "dq_id":["label-content-name-mismatch"],
               "num": "2.5.3",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/label-in-name",
               "versions": ["2.1"],
@@ -5472,6 +5483,7 @@ export const wcag: any = {
           "successcriteria": [
             {
               "id": "WCAG2:language-of-page",
+              "dq_id":["html-has-lang", "html-lang-valid", "html-xml-lang-mismatch"],
               "alt_id": ["meaning-doc-lang-id"],
               "num": "3.1.1",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page",
@@ -6408,6 +6420,7 @@ export const wcag: any = {
                   "advisory": [
                     {
                       "id": "TECH:G139",
+                      "dq_id":["form-field-multiple-labels"],
                       "title": "Creating a mechanism that allows users to jump to errors",
                       "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G139.html",
                       "tests": {
@@ -6895,6 +6908,7 @@ export const wcag: any = {
               "alt_id": ["ensure-compat-parses"],
               "num": "4.1.1",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/parsing",
+              "dq_id":["duplicate-id", "duplicate-id-active", "duplicate-id-aria"],
               "versions": ["2.0", "2.1"],
               "level": "A",
               "handle": "Parsing",
@@ -6973,6 +6987,7 @@ export const wcag: any = {
               "alt_id": ["ensure-compat-rsv"],
               "num": "4.1.2",
               "url": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value",
+              "dq_id":["aria-valid-attr-value", "aria-input-field-name", "aria-roles", "aria-toggle-field-name", "aria-hidden-focus", "aria-hidden-body", "button-name", "aria-valid-attr", "frame-title", "aria-required-attr", "aria-roledescription"],
               "versions": ["2.0", "2.1"],
               "level": "A",
               "handle": "Name, Role, Value",
