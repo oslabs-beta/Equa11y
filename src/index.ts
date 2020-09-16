@@ -1,14 +1,12 @@
 #!/usr/bin/env node
-
 import chalk from 'chalk';
 import clear from 'clear';
-import figlet from 'figlet';
+import CFonts from 'cfonts';
 import CLI from 'clui';
+import open from 'open';
 import { prompts } from './prompts';
 import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
-import { manualCheckObj } from './manualCheckObj';
-import open from 'open';
 
 interface Program {
   start(): Promise<void>;
@@ -22,11 +20,15 @@ export const program: Program = {
   start: async () => {
     // Heading creation
     clear();
-    console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
+    CFonts.say('equa11y', {
+      font: 'simple3d', space: false, 
+      gradient: ['#ff3333', 'magenta', '#00bebe'],
+      transitionGradient: true,
+    });
     // Ask for URL/localpath
     try {
-      const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
-      // const inputURL = await prompts.askPath(); // real prompt for publishing
+      // const inputURL = { url: 'http://codesmith.io' }; // optional hardcoding for dev
+      const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
@@ -48,7 +50,11 @@ export const program: Program = {
   loop: async (parsed, path, targetLevel) => {
     // Reset the display
     clear();
-    console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
+    CFonts.say('equa11y', {
+      font: 'simple3d', space: false, 
+      gradient: ['#ff3333', 'magenta', '#00bebe'],
+      transitionGradient: true,
+    });
     console.log(chalk.bold('Input URL:'), path);
 
     const options = await prompts.askOptions(parsed, targetLevel);
