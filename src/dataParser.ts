@@ -27,7 +27,6 @@ export interface ParsedData {
 
 export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
   // sort issues into common occurances i.e. { critical: [resultItem1, resultItem2], severe: [resultItem3]}
-  // instead of returning bind to constant
   const data = dataToBeParsed.reduce((parsedData: ParsedData, curIssue: Result) => {
     const specificIssuePopulator = (node: NodeResult): SpecificIssue => {
       const parsedSpecificIssue: SpecificIssue = {};
@@ -41,6 +40,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
     let wcagCriteriaInfo = 'n/a';
     let foundFlag = false;
 
+    // parse through wcag.ts object to see if we've added a dq_id 
     const wcagConnector = () => {
       const { id } = curIssue;
       for (let i = 0; i < wcag.principles.length; i += 1) {
@@ -59,6 +59,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
         if (foundFlag) break;
       }
     };
+
     const issuesPopulator = (): IssueInfo => {
       const parsedIssue: IssueInfo = {};
       wcagConnector();
@@ -82,15 +83,13 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
     }
     return parsedData;
   }, {});
-  // add manual test to object
-
+  // add manual tests to object
   data.manualTests = manualCheckObj;
-  // console.log(data)
   return data;
 };
 
-// return BAO
 
+// Returned parsed example
 //    critical: [
 // {
 //       dequeId: 'aria-required-attr',

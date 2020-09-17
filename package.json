@@ -59,15 +59,9 @@
     "chalk": "^4.1.0",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
-    "configstore": "^5.0.1",
-    "express": "^4.17.1",
-    "figlet": "^1.5.0",
     "inquirer": "^7.3.3",
-    "lodash": "^4.17.20",
-    "minimist": "^1.2.5",
     "open": "^7.2.1",
     "puppeteer": "^5.2.1",
-    "strip-color": "^0.1.0",
-    "touch": "^3.1.0"
+    "strip-color": "^0.1.0"
   }
 }

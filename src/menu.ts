@@ -100,6 +100,7 @@ export const menu: Dropdown = {
       } else {
         option += ` ${levelObj.levelName} - ENTER for URL to more information`;
       }
+      option = chalk.blueBright(option);
     } else {
       // top level
       option += levelObj.opened ? levelObj.arrows[1] : levelObj.arrows[0];

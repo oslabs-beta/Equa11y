@@ -35,8 +35,6 @@ export const program: Program = {
       const parsed = dataParser(data);
       spinner.stop();
 
-      // console.log(parsed);
-      // console.log(parsed.moderate![2].specificIssues!);
       // Ask user for next step
       await program.loop(parsed, inputURL.url);
     } catch (error) {
@@ -59,8 +57,10 @@ export const program: Program = {
     console.log(chalk.bold('Input URL:'), path);
 
     const options = await prompts.askOptions(parsed, targetLevel);
+    // remove color for processing
     options.res = stripColor(options.res);
     if (options.res === 'quit') process.exit(0);
+    // check to see if selection is a link
     else if (options.res.trim().slice(0, 4) === 'http') {
       open(options.res.trim());
       program.loop(parsed, path);
