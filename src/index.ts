@@ -1,14 +1,13 @@
 #!/usr/bin/env node
-
 import chalk from 'chalk';
 import clear from 'clear';
-import figlet from 'figlet';
+import CFonts from 'cfonts';
 import CLI from 'clui';
+import open from 'open';
+import stripColor from 'strip-color';
 import { prompts } from './prompts';
 import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
-import { manualCheckObj } from './manualCheckObj';
-import open from 'open';
 
 interface Program {
   start(): Promise<void>;
@@ -22,18 +21,24 @@ export const program: Program = {
   start: async () => {
     // Heading creation
     clear();
-    console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
+    CFonts.say('equa11y', {
+      font: 'simple3d', space: false, 
+      gradient: ['#ff3333', 'magenta', '#00bebe'],
+      transitionGradient: true,
+    });
     // Ask for URL/localpath
     try {
+<<<<<<< HEAD
       //  const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
+=======
+      // const inputURL = { url: 'http://codesmith.io' }; // optional hardcoding for dev
+>>>>>>> 984a254370d0c11f5a0e73dc8ea21809eb904e1a
       const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
       spinner.stop();
 
-      // console.log(parsed);
-      // console.log(parsed.moderate![2].specificIssues!);
       // Ask user for next step
       await program.loop(parsed, inputURL.url);
     } catch (error) {
@@ -48,11 +53,18 @@ export const program: Program = {
   loop: async (parsed, path, targetLevel) => {
     // Reset the display
     clear();
-    console.log(chalk.cyan(figlet.textSync('Equa11y', { horizontalLayout: 'full' })));
+    CFonts.say('equa11y', {
+      font: 'simple3d', space: false, 
+      gradient: ['#ff3333', 'magenta', '#00bebe'],
+      transitionGradient: true,
+    });
     console.log(chalk.bold('Input URL:'), path);
 
     const options = await prompts.askOptions(parsed, targetLevel);
+    // remove color for processing
+    options.res = stripColor(options.res);
     if (options.res === 'quit') process.exit(0);
+    // check to see if selection is a link
     else if (options.res.trim().slice(0, 4) === 'http') {
       open(options.res.trim());
       program.loop(parsed, path);
@@ -68,7 +80,6 @@ export const program: Program = {
       const arrow = options.res.trim()[0];
       if (arrow === '⇒') {
         const targetLevel = options.res.trim().split(' ')[1];
-        // console.log(targetLevel);
         program.loop(parsed, path, targetLevel);
       } else {
         program.loop(parsed, path);
