@@ -4,6 +4,7 @@ import clear from 'clear';
 import CFonts from 'cfonts';
 import CLI from 'clui';
 import open from 'open';
+import stripColor from 'strip-color';
 import { prompts } from './prompts';
 import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
@@ -58,6 +59,7 @@ export const program: Program = {
     console.log(chalk.bold('Input URL:'), path);
 
     const options = await prompts.askOptions(parsed, targetLevel);
+    options.res = stripColor(options.res);
     if (options.res === 'quit') process.exit(0);
     else if (options.res.trim().slice(0, 4) === 'http') {
       open(options.res.trim());
@@ -74,7 +76,6 @@ export const program: Program = {
       const arrow = options.res.trim()[0];
       if (arrow === '⇒') {
         const targetLevel = options.res.trim().split(' ')[1];
-        // console.log(targetLevel);
         program.loop(parsed, path, targetLevel);
       } else {
         program.loop(parsed, path);

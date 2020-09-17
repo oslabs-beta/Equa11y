@@ -38,6 +38,7 @@
     "@types/inquirer": "^7.3.1",
     "@types/node": "^14.6.4",
     "@types/puppeteer": "^3.0.1",
+    "@types/strip-color": "^0.1.0",
     "@types/through": "0.0.30",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
@@ -66,6 +67,7 @@
     "minimist": "^1.2.5",
     "open": "^7.2.1",
     "puppeteer": "^5.2.1",
+    "strip-color": "^0.1.0",
     "touch": "^3.1.0"
   }
 }

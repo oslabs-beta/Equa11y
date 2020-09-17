@@ -21,7 +21,7 @@ export interface ParsedData {
   moderate?: IssueInfo[];
   serious?: IssueInfo[];
   critical?: IssueInfo[];
-  manualTest?: IssueInfo[];
+  manualTests?: IssueInfo[];
   nonEssential?: IssueInfo[];
 }
 
@@ -84,7 +84,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
   }, {});
   // add manual test to object
 
-  data.manualTest = manualCheckObj;
+  data.manualTests = manualCheckObj;
   // console.log(data)
   return data;
 };
@@ -122,7 +122,7 @@ export const dataParser = (dataToBeParsed: Result[]): ParsedData => {
 //     },
 //
 //   ],
-//   manualTest: [
+//   manualTests: [
 //     {
 //       title: 'For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:',
 //       urlToWCAG: 'https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded'

@@ -1,4 +1,4 @@
-import open from 'open';
+import chalk from 'chalk';
 import { ParsedData, IssueInfo } from './dataParser';
 
 export interface MenuContents {
@@ -108,12 +108,16 @@ export const menu: Dropdown = {
         levelObj.subLevel.forEach((issue: any) => {
           if (issue.specificIssues.length) subIssues += issue.specificIssues.length;
         });
-      }
-      // change hardcoding for manual testing
-      if (levelObj.levelName !== 'manualTest') {
-        option += ` ${levelObj.levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
+      } // build and chalkify based on severity
+      if (levelObj.levelName !== 'manualTests') {
+        let { levelName } = levelObj;
+        if (levelName === 'critical') levelName = chalk.hex('#FF0000')(levelName);
+        else if (levelName === 'serious') levelName = chalk.hex('#E66000')(levelName);
+        else if (levelName === 'moderate') levelName = chalk.hex('#CC0077')(levelName);
+        else levelName = chalk.magentaBright(levelName);
+        option += ` ${levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
       } else {
-        option += ` ${levelObj.levelName} ENTER for more information regarding manual testing`;
+        option += ` ${chalk.hex('#00A5A5')('manualTests')} ENTER for more information regarding manual testing`;
       }
     }
     return option;
