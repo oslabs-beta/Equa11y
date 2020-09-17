@@ -22,17 +22,14 @@ export const program: Program = {
     // Heading creation
     clear();
     CFonts.say('equa11y', {
-      font: 'simple3d', space: false, 
+      font: 'simple3d',
+      space: false,
       gradient: ['#ff3333', 'magenta', '#00bebe'],
       transitionGradient: true,
     });
     // Ask for URL/localpath
     try {
-<<<<<<< HEAD
-      //  const inputURL = { url: 'http://google.com' }; // optional hardcoding for dev
-=======
       // const inputURL = { url: 'http://codesmith.io' }; // optional hardcoding for dev
->>>>>>> 984a254370d0c11f5a0e73dc8ea21809eb904e1a
       const inputURL = await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
@@ -54,7 +51,8 @@ export const program: Program = {
     // Reset the display
     clear();
     CFonts.say('equa11y', {
-      font: 'simple3d', space: false, 
+      font: 'simple3d',
+      space: false,
       gradient: ['#ff3333', 'magenta', '#00bebe'],
       transitionGradient: true,
     });
