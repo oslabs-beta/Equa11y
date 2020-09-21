@@ -27,7 +27,7 @@ export const prompts: Prompts = {
         type: 'list',
         pageSize: 35,
         message: 'anything else?',
-        choices: ['search again', 'quit', new inquirer.Separator(), ...paths],
+        choices: ['refresh', 'new url','quit', new inquirer.Separator(), ...paths],
       },
     ];
     return inquirer.prompt(questions);
