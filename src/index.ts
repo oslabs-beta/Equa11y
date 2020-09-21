@@ -10,7 +10,7 @@ import { puppet } from './puppeteer';
 import { dataParser, ParsedData } from './dataParser';
 
 interface Program {
-  start(): Promise<void>;
+  start(path?: string): Promise<void>;
   loop(parsed: ParsedData, path: string, targetLevel?: string): Promise<void>;
 }
 
@@ -18,7 +18,7 @@ const { Spinner } = CLI;
 const spinner = new Spinner('Loading, please wait!');
 
 export const program: Program = {
-  start: async () => {
+  start: async (path) => {
     // Heading creation
     clear();
     CFonts.say('equa11y', {
@@ -30,7 +30,7 @@ export const program: Program = {
     // Ask for URL/localpath
     try {
       // const inputURL = { url: 'http://codesmith.io' }; // optional hardcoding for dev
-      const inputURL = await prompts.askPath(); // real prompt for publishing
+      const inputURL = (path) ? { url: path } : await prompts.askPath(); // real prompt for publishing
       spinner.start();
       const data = await puppet(inputURL.url);
       const parsed = dataParser(data);
@@ -43,7 +43,7 @@ export const program: Program = {
 
       const errors = await prompts.askError(error);
       if (errors.startOver === 'quit') process.exit(0);
-      else if (errors.startOver === 'search again') program.start();
+      else if (errors.startOver === 'new url') program.start();
     }
   },
 
@@ -66,7 +66,8 @@ export const program: Program = {
     else if (options.res.trim().slice(0, 4) === 'http') {
       open(options.res.trim());
       program.loop(parsed, path);
-    } else if (options.res === 'search again') program.start();
+    } else if (options.res === 'new url') program.start();
+    else if (options.res === 'refresh') program.start(path);
     // check if nested
     else if (options.res[0] === ' ') {
       // grabs string between arrow and '(n) issues types: TBD total sub issues'
