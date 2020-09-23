@@ -1,4 +1,4 @@
-# Equa11y
+# equa11y
 
 ### Welcome to equa11y, an easy to use command-line tool for accessiblity testing.
 
@@ -13,6 +13,8 @@ npm i equa11y
 ```
 npx equal
 ```
+
+Note: you must place 'http://' before you type in a url.
 
 ### Contribue
 
