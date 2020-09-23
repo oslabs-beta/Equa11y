@@ -17,7 +17,7 @@ interface Dropdown {
     opened?: boolean,
     nested?: number,
   ): MenuContents;
-  stringify(levelObj: any, nested: number): string;
+  stringify(levelObj: MenuContents): string;
 }
 
 export const menu: Dropdown = {
@@ -26,6 +26,7 @@ export const menu: Dropdown = {
     const processed: MenuContents[] = [];
     (Object.keys(results) as Array<keyof ParsedData>).forEach(issueLevel => {
       if (targetLevel) {
+        if (targetLevel === 'manual') targetLevel = 'manualTests';
         // Bottom level conditional: targetLevel is given...
         if (targetLevel!.split(' ').length > 1) {
           // ....and it is more than 1 word long
@@ -72,7 +73,7 @@ export const menu: Dropdown = {
       }
     });
     // Stringify the array of processed menu options
-    const options = processed.map((option: MenuContents) => menu.stringify(option, option.nested));
+    const options = processed.map((option: MenuContents) => menu.stringify(option));
     return options;
   },
 
@@ -86,39 +87,40 @@ export const menu: Dropdown = {
     };
   },
 
-  stringify: (levelObj, nested) => {
+  stringify: (levelObj) => {
+    const { opened, nested, arrows, subLevel } = levelObj;
+    let { levelName } = levelObj; // let for chalifying later on
     let option = '';
     option += '  '.repeat(nested);
 
     if (nested > 1) {
-      option += levelObj.levelName;
+      option += levelName;
     } else if (nested === 1) {
       // middle level
-      option += levelObj.opened ? levelObj.arrows[1] : levelObj.arrows[0];
-      if (levelObj.subLevel[0].html !== '') {
-        option += ` ${levelObj.levelName} - ENTER for (${levelObj.subLevel.length}) total error location(s)`;
+      option += opened ? arrows[1] : arrows[0];
+      if (subLevel[0].html !== '') {
+        option += ` ${levelName} - ENTER for (${subLevel.length}) total error location(s)`;
       } else {
-        option += ` ${levelObj.levelName} - ENTER for URL to more information`;
+        option += ` ${levelName} - ENTER for URL to more information`;
       }
       option = chalk.blueBright(option);
     } else {
       // top level
-      option += levelObj.opened ? levelObj.arrows[1] : levelObj.arrows[0];
+      option += opened ? arrows[1] : arrows[0];
       let subIssues = 0;
-      if (levelObj.subLevel.length) {
-        levelObj.subLevel.forEach((issue: any) => {
+      if (subLevel.length) {
+        subLevel.forEach((issue: any) => {
           if (issue.specificIssues.length) subIssues += issue.specificIssues.length;
         });
       } // build and chalkify based on severity
-      if (levelObj.levelName !== 'manualTests') {
-        let { levelName } = levelObj;
+      if (levelName !== 'manualTests') {
         if (levelName === 'critical') levelName = chalk.hex('#FF0000')(levelName);
         else if (levelName === 'serious') levelName = chalk.hex('#E66000')(levelName);
         else if (levelName === 'moderate') levelName = chalk.hex('#CC0077')(levelName);
         else levelName = chalk.magentaBright(levelName);
-        option += ` ${levelName} (${levelObj.subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
+        option += ` ${levelName} (${subLevel.length}) issues type(s), (${subIssues}) total error location(s)`;
       } else {
-        option += ` ${chalk.hex('#00A5A5')('manualTests')} ENTER for more information regarding manual testing`;
+        option += ` ${chalk.hex('#00A5A5')('manual tests')} ENTER for more information regarding manual testing`;
       }
     }
     return option;
