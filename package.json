@@ -10,6 +10,9 @@
     "prod": "tsc && node ./build/server/server.js",
     "lint": "eslint src/** --color"
   },
+  "bin": {
+    "equa11y": "./build/index.js"
+  },
   "files": [
     "build"
   ],
