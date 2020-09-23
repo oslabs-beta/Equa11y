@@ -21,7 +21,7 @@ describe('process objects', () => {
   })
 
   describe('given multiple arguments', () => {
-    const bottomObj = menu.processLevel('bottom level', [], false, 2);
+    const bottomObj = menu.processLevel('bottom level', [], true, 2);
   
     it('should have a levelName', () => {
       expect(bottomObj.levelName).toBe('bottom level');
@@ -30,7 +30,7 @@ describe('process objects', () => {
       expect(bottomObj.subLevel).toStrictEqual([]);
     })
     it('should have an opened boolean', () => {
-      expect(bottomObj.opened).toBe(false);
+      expect(bottomObj.opened).toBe(true);
     })
     it('should have a nested number', () => {
       expect(bottomObj.nested).toBe(2);
