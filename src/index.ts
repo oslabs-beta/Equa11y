@@ -22,7 +22,8 @@ export const program: Program = {
     // Heading creation
     clear();
     CFonts.say('equa11y', {
-      font: 'simple3d', space: false, 
+      font: 'simple3d',
+      space: false,
       gradient: ['#ff3333', 'magenta', '#00bebe'],
       transitionGradient: true,
     });
@@ -50,7 +51,8 @@ export const program: Program = {
     // Reset the display
     clear();
     CFonts.say('equa11y', {
-      font: 'simple3d', space: false, 
+      font: 'simple3d',
+      space: false,
       gradient: ['#ff3333', 'magenta', '#00bebe'],
       transitionGradient: true,
     });
