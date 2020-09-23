@@ -10,9 +10,6 @@
     "prod": "tsc && node ./build/server/server.js",
     "lint": "eslint src/** --color"
   },
-  "bin": {
-    "equal": "./build/index.js"
-  },
   "files": [
     "build"
   ],
@@ -71,6 +68,7 @@
     "axe-puppeteer": "^1.1.0",
     "cfonts": "^2.8.6",
     "chalk": "^4.1.0",
+    "chromium": "^3.0.2",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
     "inquirer": "^7.3.3",
