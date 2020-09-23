@@ -43,7 +43,7 @@ export const program: Program = {
 
       const errors = await prompts.askError(error);
       if (errors.startOver === 'quit') process.exit(0);
-      else if (errors.startOver === 'new url') program.start();
+      else if (errors.startOver === 'search again') program.start();
     }
   },
 
