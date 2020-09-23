@@ -16,21 +16,21 @@ npx equal
 
 ### Contribue
 
-##### Find us on GitHub: https://github.com/oslabs-beta/Equa11y
+##### Find us on [GitHub](https://github.com/oslabs-beta/equa11y)
 
 ### More Information
 
-##### Find us on the web: https://www.equa11y.com
+##### Find us on the [web](https://www.equa11y.com)
 
 ### Authors
 
-##### Heather Friedman
+##### Heather Friedman | [LinkedIn](https://www.linkedin.com/in/hgfriedman/) | [GitHub](https://github.com/heatherfriedman)
 
-##### Tjolanda Sullivan
+##### Tjolanda Sullivan | [LinkedIn](https://www.linkedin.com/in/willhack/) | [GitHub](https://github.com/willhack)
 
-##### Taylor Riley Du
+##### Taylor Riley Du | [LinkedIn](https://www.linkedin.com/in/taylorsriley/) | [GitHub](https://github.com/taylordu)
 
-##### Will Hack
+##### Will Hack | [LinkedIn]() | [GitHub]()
 
 ### License
 
