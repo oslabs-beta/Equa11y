@@ -14,6 +14,8 @@ npm i equa11y
 npx equal
 ```
 
+Note: you must place 'http://' before you type in a url.
+
 ### Contribue
 
 ##### Find us on [GitHub](https://github.com/oslabs-beta/equa11y)
