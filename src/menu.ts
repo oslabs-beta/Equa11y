@@ -5,7 +5,6 @@ export interface MenuContents {
   levelName: string;
   opened: boolean;
   nested: number;
-  arrows: string[];
   subLevel: any[];
 }
 
@@ -82,14 +81,14 @@ export const menu: Dropdown = {
       levelName,
       opened,
       nested,
-      arrows: ['⇒', '⇓', '⇨', '⇩'],
       subLevel,
     };
   },
 
   stringify: (levelObj) => {
-    const { opened, nested, arrows, subLevel } = levelObj;
+    const { opened, nested, subLevel } = levelObj;
     let { levelName } = levelObj; // let for chalifying later on
+    const arrows = ['⇒', '⇓', '⇨', '⇩'];
     let option = '';
     option += '  '.repeat(nested);
 
@@ -124,5 +123,5 @@ export const menu: Dropdown = {
       }
     }
     return option;
-  },
+  }
 };

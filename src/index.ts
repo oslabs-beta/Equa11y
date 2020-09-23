@@ -56,7 +56,7 @@ export const program: Program = {
       gradient: ['#ff3333', 'magenta', '#00bebe'],
       transitionGradient: true,
     });
-    console.log(chalk.bold('Input URL:'), path);
+    console.log(chalk.bold('Testing:'), path);
 
     const options = await prompts.askOptions(parsed, targetLevel);
     // remove color for processing
