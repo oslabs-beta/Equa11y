@@ -1,4 +1,4 @@
-import inquirer from 'inquirer';
+import { prompt, Separator } from 'inquirer';
 import { menu } from './menu';
 
 interface Prompts {
@@ -13,10 +13,10 @@ export const prompts: Prompts = {
       {
         name: 'url',
         type: 'input',
-        message: 'Input URL:',
+        message: 'Input URL or path:',
       },
     ];
-    return inquirer.prompt(questions);
+    return prompt(questions);
   },
 
   askOptions: (results, target) => {
@@ -27,10 +27,10 @@ export const prompts: Prompts = {
         type: 'list',
         pageSize: 35,
         message: 'anything else?',
-        choices: ['refresh', 'new url','quit', new inquirer.Separator(), ...paths],
+        choices: ['refresh', 'new url','quit', new Separator(), ...paths],
       },
     ];
-    return inquirer.prompt(questions);
+    return prompt(questions);
   },
 
   askError: error => {
@@ -42,6 +42,6 @@ export const prompts: Prompts = {
         choices: ['search again', 'quit'],
       },
     ];
-    return inquirer.prompt(questions);
+    return prompt(questions);
   },
 };
