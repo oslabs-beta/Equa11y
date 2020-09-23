@@ -1,6 +1,6 @@
 {
   "name": "equa11y",
-  "version": "4.0.6",
+  "version": "4.2.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -9,9 +9,6 @@
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "prod": "tsc && node ./build/server/server.js",
     "lint": "eslint src/** --color"
-  },
-  "bin": {
-    "equal": "./build/index.js"
   },
   "files": [
     "build"
