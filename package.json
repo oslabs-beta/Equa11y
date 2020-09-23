@@ -20,7 +20,13 @@
     "type": "git",
     "url": "git+https://github.com/oslabs-beta/Equa11y.git"
   },
-  "keywords": [],
+  "keywords": [
+    "accessility",
+    "cli",
+    "testing",
+    "test",
+    "accessible"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
