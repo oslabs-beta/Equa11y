@@ -76,9 +76,9 @@ export const program: Program = {
     }
     // Parse leading arrow
     else {
-      const arrow = options.res.trim()[0];
+      const arrow = options.res[0];
       if (arrow === '⇒') {
-        const targetLevel = options.res.trim().split(' ')[1];
+        const targetLevel = options.res.split(' ')[1];
         program.loop(parsed, path, targetLevel);
       } else {
         program.loop(parsed, path);
