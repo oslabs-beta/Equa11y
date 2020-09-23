@@ -1,6 +1,6 @@
 {
   "name": "equa11y",
-  "version": "4.1.1",
+  "version": "4.1.0",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -68,7 +68,6 @@
     "axe-puppeteer": "^1.1.0",
     "cfonts": "^2.8.6",
     "chalk": "^4.1.0",
-    "chromium": "^3.0.2",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
     "inquirer": "^7.3.3",
