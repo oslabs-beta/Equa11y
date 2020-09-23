@@ -1,6 +1,6 @@
 {
   "name": "equa11y",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -21,18 +21,23 @@
     "url": "git+https://github.com/oslabs-beta/Equa11y.git"
   },
   "keywords": [
-    "accessility",
+    "accessibility",
     "cli",
     "testing",
     "test",
-    "accessible"
+    "accessible",
+    "wcag",
+    "a11y",
+    "axe-core",
+    "TDD",
+    "BDD"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Heather Friedman, Tjolanda Sullivan, Taylor Riley Du, Will Hack",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/oslabs-beta/Equa11y/issues"
   },
-  "homepage": "https://github.com/oslabs-beta/Equa11y#readme",
+  "homepage": "http://www.equa11y.com",
   "devDependencies": {
     "@types/axe-core": "^2.0.7",
     "@types/chalk": "^2.2.0",

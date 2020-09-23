@@ -20,7 +20,7 @@ npx equal
 
 ### More Information
 
-##### Find us on the [web](https://www.equa11y.com)
+##### Find us on the [web](http://www.equa11y.com)
 
 ### Authors
 
