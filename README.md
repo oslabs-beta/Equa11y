@@ -1,4 +1,4 @@
-# Equa11y
+# equa11y
 
 ### Welcome to equa11y, an easy to use command-line tool for accessiblity testing.
 
