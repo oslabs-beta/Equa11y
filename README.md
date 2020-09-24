@@ -33,7 +33,7 @@ To quit at any point use 'ctrl + c'.
 
 ##### Taylor Riley Du | [LinkedIn](https://www.linkedin.com/in/taylorsriley/) | [GitHub](https://github.com/taylordu)
 
-##### Will Hack | [LinkedIn]() | [GitHub]()
+##### Will Hack | [LinkedIn](https://www.linkedin.com/in/willhack/) | [GitHub](https://github.com/willhack)
 
 ### License
 
