@@ -25,6 +25,8 @@ To quit at any point use 'ctrl + c'.
 
 ##### Find us on the [web](http://www.equa11y.com)
 
+##### Read about us on [Medium](https://medium.com/better-programming/introducing-equa11y-a-command-line-testing-tool-for-web-accessibility-aa29205eed55)
+
 ### Authors
 
 ##### Heather Friedman | [LinkedIn](https://www.linkedin.com/in/hgfriedman/) | [GitHub](https://github.com/heatherfriedman)
