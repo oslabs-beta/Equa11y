@@ -23,7 +23,7 @@ To quit at any point use 'ctrl + c'.
 
 ### More Information
 
-##### Find us on the [web](http://www.equa11y.com)
+##### Find us on the [web](http://equa11y-website.herokuapp.com/)
 
 ##### Read about us on [Medium](https://medium.com/better-programming/introducing-equa11y-a-command-line-testing-tool-for-web-accessibility-aa29205eed55)
 
